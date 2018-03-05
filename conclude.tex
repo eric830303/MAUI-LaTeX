@@ -1,0 +1,5 @@
+\section{CONCLUSION AND FUTURE WORK}
+\label{sec:conclude}
+In this paper, we propose a novel framework, successfully taking advantage of aging-induced clock skews by inserting limited number of DCCs into the clock tree, to enhance circuit aging tolerance. We transform the problem to a Boolean satisfiability formulation which is then solved by using MiniSat. Experiments demonstrate that our framework gains an average of 25.05\% aging tolerance via inserting at most 17 DCCs and is experimentally verified to be runtime-efficient.
+
+Process variations (PVs) may shift the delay of each gate, leading to inaccuracy of our optimization results. As indicated in~\cite{wang2010impact}, the transistor with a higher (lower) fresh $V_{th}$ ages at a lower (higher) rate. That is, the variation in $V_{th}$ can be gradually compensated in the aging process. It is demonstrated in~\cite{wang2010impact} that a PV-induced delay shift of 6.2\% can be reduced to 1.6\% after 10-year aging. Even though it is not significant compared to the improvement achieved by our work, we plan to consider the impact of PVs in the future so as to make the proposed idea more robust.
