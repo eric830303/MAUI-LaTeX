@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  16 MAR 2018 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  17 MAR 2018 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1005,7 +1005,7 @@ tex.map}
 
 ]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
 ) (./motivate.tex
 <figures/Motivating_example.png, id=15, 1262.7175pt x 502.20958pt>
 File: figures/Motivating_example.png Graphic file (type png)
@@ -1033,7 +1033,7 @@ w_chart.png>]
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 44.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 42.
 (pdftex.def)             Requested size: 226.79846pt x 107.45465pt.
 
 Underfull \hbox (badness 1552) in paragraph at lines 81--83
@@ -1051,7 +1051,7 @@ File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 85.
+line 83.
 (pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
 
 <figures/A_examlpe_of_DCC_placement2.png, id=36, 1078.36208pt x 459.7175pt>
@@ -1059,7 +1059,7 @@ File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 85.
+line 83.
 (pdftex.def)             Requested size: 226.79846pt x 96.6838pt.
 
 Overfull \hbox (1.86592pt too wide) in paragraph at lines 91--91
@@ -1098,17 +1098,17 @@ File: figures/DCC_reduction.png Graphic file (type png)
 <use figures/DCC_reduction.png>
 Package pdftex.def Info: figures/DCC_reduction.png used on input line 153.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
-) (./exp.tex
-<figures/Experimental_result_(CG).png, id=44, 860.9766pt x 293.898pt>
+) (./exp.tex [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlp
+e_of_DCC_placement2.png> <./figures/DCC_reduction.png>] <figures/Experimental_r
+esult_(CG).png, id=50, 860.9766pt x 293.898pt>
 File: figures/Experimental_result_(CG).png Graphic file (type png)
 
 <use figures/Experimental_result_(CG).png>
 Package pdftex.def Info: figures/Experimental_result_(CG).png used on input lin
 e 11.
 (pdftex.def)             Requested size: 378.0pt x 129.0285pt.
- [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlpe_of_DCC_pla
-cement2.png> <./figures/DCC_reduction.png>] <figures/Aging_impacted_on_DCC.png,
- id=51, 2186.92032pt x 1265.47781pt>
+
+<figures/Aging_impacted_on_DCC.png, id=51, 2186.92032pt x 1265.47781pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use figures/Aging_impacted_on_DCC.png>
@@ -1144,7 +1144,7 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 Here is how much of TeX's memory you used:
  20712 strings out of 492995
  389121 string characters out of 6132705
- 677494 words of memory out of 5000000
+ 676494 words of memory out of 5000000
  24009 multiletter control sequences out of 15000+600000
  580772 words of font info for 120 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1167,7 +1167,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (7 pages, 2432827 bytes).
+Output written on maui.pdf (7 pages, 2433033 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
