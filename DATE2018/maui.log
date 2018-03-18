@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  17 MAR 2018 15:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  18 MAR 2018 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -907,7 +907,14 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
-(./maui.aux)
+(./maui.aux
+
+LaTeX Warning: Label `eq:lxy2' multiply defined.
+
+
+LaTeX Warning: Label `eq:lyz2' multiply defined.
+
+)
 \openout1 = `maui.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 373.
@@ -1020,20 +1027,24 @@ File: figures/Notations.png Graphic file (type png)
 <use figures/Notations.png>
 Package pdftex.def Info: figures/Notations.png used on input line 13.
 (pdftex.def)             Requested size: 201.60077pt x 102.1587pt.
- [2]) (./framework.tex
-<figures/Flow_chart.png, id=24, 576.7146pt x 407.6028pt>
+ [2]
+Overfull \hbox (7.03566pt too wide) detected at line 84
+[]
+ []
+
+) (./framework.tex [3 <./figures/Motivating_example.png> <./figures/Notations.p
+ng>] <figures/Flow_chart.png, id=32, 576.7146pt x 407.6028pt>
 File: figures/Flow_chart.png Graphic file (type png)
 
 <use figures/Flow_chart.png>
 Package pdftex.def Info: figures/Flow_chart.png used on input line 24.
 (pdftex.def)             Requested size: 226.79846pt x 160.29541pt.
- [3 <./figures/Motivating_example.png> <./figures/Notations.png> <./figures/Flo
-w_chart.png>]
-<figures/All_types_of_DCCs.png, id=34, 1117.84291pt x 529.64542pt>
+
+<figures/All_types_of_DCCs.png, id=33, 1117.84291pt x 529.64542pt>
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 42.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 44.
 (pdftex.def)             Requested size: 226.79846pt x 107.45465pt.
 
 Underfull \hbox (badness 1552) in paragraph at lines 81--83
@@ -1046,20 +1057,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
-<figures/A_examlpe_of_DCC_placement1.png, id=35, 1083.04625pt x 461.05583pt>
+[4 <./figures/Flow_chart.png> <./figures/All_types_of_DCCs.png>]
+<figures/A_examlpe_of_DCC_placement1.png, id=39, 1083.04625pt x 461.05583pt>
 File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 83.
+line 85.
 (pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
 
-<figures/A_examlpe_of_DCC_placement2.png, id=36, 1078.36208pt x 459.7175pt>
+<figures/A_examlpe_of_DCC_placement2.png, id=40, 1078.36208pt x 459.7175pt>
 File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 83.
+line 85.
 (pdftex.def)             Requested size: 226.79846pt x 96.6838pt.
 
 Overfull \hbox (1.86592pt too wide) in paragraph at lines 91--91
@@ -1071,7 +1083,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
-[4 <./figures/All_types_of_DCCs.png>]
+
 Underfull \hbox (badness 1655) in paragraph at lines 133--135
 \OT1/ptm/m/n/9 sider the DCC in-ser-tion shown in Fig-ure 4(a)[]: if the in-ser
 -
@@ -1092,15 +1104,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 []$\OT1/ptm/m/n/9 ,
  []
 
-<figures/DCC_reduction.png, id=43, 738.09084pt x 547.37833pt>
+<figures/DCC_reduction.png, id=41, 738.09084pt x 547.37833pt>
 File: figures/DCC_reduction.png Graphic file (type png)
 
 <use figures/DCC_reduction.png>
 Package pdftex.def Info: figures/DCC_reduction.png used on input line 153.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
-) (./exp.tex [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlp
-e_of_DCC_placement2.png> <./figures/DCC_reduction.png>] <figures/Experimental_r
-esult_(CG).png, id=50, 860.9766pt x 293.898pt>
+) (./exp.tex [5]
+<figures/Experimental_result_(CG).png, id=47, 860.9766pt x 293.898pt>
 File: figures/Experimental_result_(CG).png Graphic file (type png)
 
 <use figures/Experimental_result_(CG).png>
@@ -1108,14 +1119,21 @@ Package pdftex.def Info: figures/Experimental_result_(CG).png used on input lin
 e 11.
 (pdftex.def)             Requested size: 378.0pt x 129.0285pt.
 
-<figures/Aging_impacted_on_DCC.png, id=51, 2186.92032pt x 1265.47781pt>
+<figures/Aging_impacted_on_DCC.png, id=48, 2186.92032pt x 1265.47781pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use figures/Aging_impacted_on_DCC.png>
 Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
 3.
 (pdftex.def)             Requested size: 201.60077pt x 116.64935pt.
-) (./conclude.tex)
+) (./conclude.tex) [6 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_
+examlpe_of_DCC_placement2.png> <./figures/DCC_reduction.png> <./figures/Aging_i
+mpacted_on_DCC.png
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
+DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
+G to fix this)
+>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1127,12 +1145,12 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6 <./figures/Aging_impacted_on_DCC.png
+[7
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
-DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
-G to fix this)
->] [7 <./figures/Experimental_result_(CG).png>] (./maui.aux)
+ <./figures/Experimental_result_(CG).png>] (./maui.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'maui.run.xml'.
 \openout1 = `maui.run.xml'.
 
@@ -1167,7 +1185,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (7 pages, 2433033 bytes).
+Output written on maui.pdf (7 pages, 2436674 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream

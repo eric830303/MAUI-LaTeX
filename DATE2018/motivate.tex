@@ -15,7 +15,8 @@
     \label{fig:en}
 \end{figure*}
 
-This section introduces an illustrative example which motivates our idea of making aging useful. Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
+In this section, we use two illustrative examples to demonstrate the idea of making clock skew useful, based on the same design in Figure~\ref{fig:sub:example}. The first example is only based on the aging manipulation of clock network, by changing the duty cycle of clock waveform, which is delivered to terminals. The second example is both based on aging manipulation and $V_{th}$ assignment. Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
+%This section introduces an illustrative example which motivates our idea of making aging useful. Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
 
 For each pair of flip-flops (e.g., \ce{FF_i} and \ce{FF_j}) between which there exists at least one logic path from \ce{FF_i} to \ce{FF_j}, the following setup-time (Equation (\ref{eq:tsu})) and hold-time (Equation (\ref{eq:th})) constraints need to be satisfied:
 \begin{equation}
@@ -48,7 +49,9 @@ By re-arranging Equations (\ref{eq:lxy}) and (\ref{eq:lyz}):
 \end {flushleft}
 Therefore, the clock period needs to be larger than 115.5 (dominated by \ce{L_{XY}}) to ensure no setup-time violation over a required lifespan of 10 years. For brevity, we omit the discussion on hold-time constraints, which in our work are actually formulated to ensure no existence of racing due to short paths.
 
-For the objective of minimizing required $T_c$ under aging, we insert one 20\% \textit{duty-cycle converter} (DCC) at the input of buffer 1, and another 80\% DCC at the input of buffer 2. The 20\% (80\%) DCC can decrease (increase) the stress times of downstream clock buffers by converting the clock duty cycle to 20\% (80\%), from a typical duty cycle of 50\%. Therefore, 20\% DCC can mitigate/decelerate the aging of $C_X$ and 80\% DCC can aggravate/accelerate the aging of $C_Y$. In the case of no DCC, $C_X$ and $C_Y$ are degraded by 13\% under 10-year BTI in TSMC 45nm GP standard cell series, while 20\% and 80\% DCCs will degrade $C_X$ and $C_Y$ by 9\% and 16\%, respectively, assuming that the clock paths from the clock source to \ce{FF_X} and \ce{FF_Y} are disjoint.
+%Example 1
+\subsection{Example 1: Aging Manipulation on Clock Network}
+To minimize required $T_c$ under aging, we use \textit{duty-cycle converter} (DCC) to manipulate the aging rates of clock branches. We insert one 20\% DCC at the input of buffer 1, and another 80\% DCC at the input of buffer 2. The 20\% (80\%) DCC can decrease (increase) the stress times of downstream clock buffers by converting the clock duty cycle to 20\% (80\%), from a typical duty cycle of 50\%. Therefore, 20\% DCC can mitigate/decelerate the aging of $C_X$ and 80\% DCC can aggravate/accelerate the aging of $C_Y$. In the case of no DCC, $C_X$ and $C_Y$ are degraded by 13\% under 10-year BTI in TSMC 45nm GP standard cell series, while 20\% and 80\% DCCs will degrade $C_X$ and $C_Y$ by 9\% and 16\%, respectively, assuming that the clock paths from the clock source to \ce{FF_X} and \ce{FF_Y} are disjoint.
 
 Consider the new aging factors (due to effects of various clock duty cycles) in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
@@ -66,6 +69,26 @@ By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
 \hspace{1.2em}\ce{L_{YZ}}: T_c &> 104
 \end{flalign*}
 As it can be seen, we can reduce the required $T_c$ from 115.5 to 108.5 (dominated by \ce{L_{XY}} still), by adding two DCCs in the existing synthesized clock tree to create aging-induced clock skews. The skew for \ce{L_{XY}} (between \ce{FF_X} and \ce{FF_Y}), quantified as 1.16$C_Y$ minus 1.09$C_X$, is useful/beneficial and accounts for the reduction of required $T_c$. A certain level of aging tolerance is thus achieved because aging-induced performance degradation of $D_{XY}$ (plus $T_{cq}$ and $T_{su}$ actually) can be tolerated, by exploring such useful aging-induced clock skews.
+
+%Example 2
+\subsection{Example 2: $V_{th}$ Assignment and Aging Manipulation on Clock Network}
+In the example, the two approaches, $V_{th}$ assignment and aging manipulation, are both considered to further optimize/reduce required $T_c$. The DCC deployment is same with that in the first example, i.e., 20\% DCC and 80\% DCC are inserted at the inputs of buffer 1 and buffer 2, respectively. Moreover, a \textit{HTV(High Threshold Voltage) leader} is inserted at the input of buffer 2. Here, \textit{HTV leader} denotes that, the $V_{th}$ of associated downstream (toward terminals/flip-flops) clock buffers are replaced with higher $V_{th}$. Note that, the so-called downstream clock buffers are those between HTV leader and terminals/flip-flops. For instance, when one HTV leader is inserted at the input of buffer 2, the downstream buffers are those in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, which also include buffer 2 and buffer 3. To include the aging rates of HTV buffers in the setup-time constraint, we assume that, the fresh delay of HTV buffer is 1.2X longer than that of nominal buffer, and aging rates of HTV buffer, with the duty cycle of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%, respectively. Note that, the aging rates of HTV buffer is lower than those of nominal buffer, because the higher/lower $V_{th}$ leads to lower/higher aging rates. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
+\begin{equation}
+	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{(1.2+0.08)}C_Y+T_c$} 
+	\label{eq:lxy2}
+\end{equation}
+\begin{equation}
+	\centering
+	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{(1.2+0.08)}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{(1.2+0.08)}C_Z+T_c$} 
+	\label{eq:lyz2}
+\end{equation}
+By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
+\begin{flalign*}
+	\hspace{1.2em}\ce{L_{XY}}: T_c &> 96.5 &\\
+	\hspace{1.2em}\ce{L_{YZ}}: T_c &> 104
+\end{flalign*}
+
+Apparently, the required $T_c$ is further reduced/optimized from 108.5 to 104 (dominated by \ce{L_{YZ}} rather than \ce{L_{XY}} in the first example), by inserting two DCCs and one HTV leader in the existing synthesized clock network. Note that, there exists a difference between DCC and HTV leader. DCC is a physical gate; however, HTV leader is conceptually an imaginary location, from which we begin reassigning $V_{th}$ of clock buffers toward flip-flops. As it can be seen, when the two approaches, $V_{th}$ assignment and aging manipulation, are applied together in the second example, the skew for \ce{L_{XY}}, which equals 1.28$C_Y$ minus 1.09$C_X$, is higher than that in the first example. Therefore, the new skew for \ce{L_{XY}} is more useful/beneficial and accounts for the further optimization of required $T_c$.
 
 One may note that \textit{clock skew scheduling} (CSS)~\cite{fishburn1990clock}, which derives unequal delays for all clock branches prior to \textit{clock tree synthesis} (CTS), can also optimize a circuit for aging tolerance. However, the optimization potential of general CSS is limited since it is difficult to precisely implement a wide range of clock delays during~\cite{li2011optimal}.
 
