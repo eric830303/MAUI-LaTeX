@@ -1,8 +1,12 @@
 \section{PROPOSED FRAMEWORK (MAUI) BASED ON BOOLEAN SATISFIABILITY (SAT)}
 \label{sec:framework}
+%(1) TVA, DCC are equal
+\begin{comment}
 There exist two basic idea in the proposed framework for aging tolerance. The two idea are based on time-borrowing, so as to mitigate the aging-induced performance degradation of logic network. The first idea is based on aging manipulation by inserting \textit{duty-cycle converters} (DCCs) in the existing clock tree. The second idea is based on V\textsubscript{th} assignment of clock buffers by inserting the technology leaders in the clock tree. This way, we can intentionally create aging-induced and tech-induced clock skews, which can compensate for the performance degradation of the logic circuit based on time borrowing. We formulate the problem using Boolean satisfiability (SAT) and thanks to the efficiency of existing SAT solvers, the optimal solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) of DCCs and technology leaders such that, when aging-induced and tech-induced clock skews are considered, the required clock period of the given circuit under $n$-year BTI is minimized. The clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful (aging-induced and tech-induced) clock skews. The minimum required clock period thus implies maximum level of aging tolerance. Note that, as mentioned in \ref{sec:motivate:exp2}, we re-assign V\textsubscript{th} of clock buffers, based on the insertion of technology leader\footnote{Technology leader is an imaginary location instead of a physical gate such as DCC. It indicates the location where we begin assigning new-V\textsubscript{th} to clock buffers toward flip-flops, but exclude flip-flops (i.e., the V\textsubscript{th} of flip-flops will not be re-assigned to new counterpart.}, from which we begin assigning new-V\textsubscript{th} to the downstream\footnote{The downstream clock buffers are those between imaginary technology leader and flip-flops. We use the adjective "downstream" to describe the clock buffers, based on the direction that clock signal pass toward (i.e., clock signal is generated from clock source, passes through clock buffers, and finally arrives at flip-flops).} clock buffers toward flip-flops.
-%Mention consecutive%
-%The basic idea of our MAUI framework for aging tolerance is to insert \textit{duty-cycle converters} (DCCs) in the existing clock tree, so as to intentionally create aging-induced clock skews which can compensate for the performance degradation of the logic circuit based on time borrowing. We formulate the problem using Boolean satisfiability (SAT) and thanks to the efficiency of existing SAT solvers, the optimal solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) to insert DCCs such that, when aging-induced clock skews are considered, the required clock period of the given circuit under $n$-year BTI is minimized. Note that the clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful aging-induced clock skews. The minimum required clock period thus implies maximum level of aging tolerance.
+\end{comment}
+
+%(1) DATE 2018
+The basic idea of our MAUI framework for aging tolerance is to insert \textit{duty-cycle converters} (DCCs) in the existing clock tree, so as to intentionally create aging-induced clock skews which can compensate for the performance degradation of the logic circuit based on time borrowing. We formulate the problem using Boolean satisfiability (SAT) and thanks to the efficiency of existing SAT solvers, the optimal solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) to insert DCCs such that, when aging-induced clock skews are considered, the required clock period of the given circuit under $n$-year BTI is minimized. Note that the clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful aging-induced clock skews. The minimum required clock period thus implies maximum level of aging tolerance.
 
 %\begin{figure*}
 %	\centering
@@ -27,8 +31,14 @@ There exist two basic idea in the proposed framework for aging tolerance. The tw
 	\caption{The overall flow of MAUI}
 	\label{fig:flow}
 \end{figure}
+
+%(2) TVA, DCC are equal
+\begin{comment}
 The overall flow of our framework is depicted in Figure~\ref{fig:flow}, where a binary search for the minimum clock period ($T_c$) is involved. Formulated based on SAT, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. In the sequel, Section~\ref{subsec:eddcd} explains how the proposed problem of DCC and technology leader deployment/insertion is encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints, HTV leader constraint and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation.
-%The overall flow of our MAUI framework is depicted in Figure~\ref{fig:flow}, where a binary search for the minimum clock period ($T_c$) is involved. Formulated based on SAT, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. In the sequel, Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion is encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe two major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation.
+\end{comment}
+
+%(2) DATE 2018
+The overall flow of our MAUI framework is depicted in Figure~\ref{fig:flow}, where a binary search for the minimum clock period ($T_c$) is involved. Formulated based on SAT, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. In the sequel, Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion is encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe two major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation.
 
 \afterpage{
 \begin{figure}
@@ -38,16 +48,28 @@ The overall flow of our framework is depicted in Figure~\ref{fig:flow}, where a 
 	\label{fig:dcctype}
 \end{figure}
 }
-%\subsection{Encoding for DCC Deployment}
+
+%(3) TVA, DCC are equal
+\begin{comment}
 \subsection{Encoding for DCC and Technology Leader Deployment}
 \label{subsec:eddcd}
 The deployment/insertion problem of DCC and technology leader needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Including the nominal case where no technology leader is inserted, there are ($M$ + 1) possibilities of technology leader insertion for each clock buffer. Note that, when a DCC/technology leader is inserted, it is inserted at the input of a buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)(M + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1)($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
+\end{comment}
 
-%The problem of DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Note that, when a DCC/HTV leader is inserted, it is inserted at the input of a buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
+%(3) DATE 2018
+\subsection{Encoding for DCC Deployment}
+\label{subsec:eddcd}
+The problem of DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Note that, when a DCC/HTV leader is inserted, it is inserted at the input of a buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
 
+%(4) TVA, DCC are equal
+\begin{comment}
 Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are 3 types of DCCs, which are assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. In addition, there is 1 type of technology leader, which is assumed to be a HTV leader. Therefore, three Boolean variables are used for encoding eight possibilities of DCC and technology leader insertion at the input of any buffer. The eight possibilities can be encoded as follows:\newline
+\end{comment}
 
-%Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, two Boolean variables are used for encoding four possibilities of DCC insertion at the input of any buffer. The four possibilities can be encoded as follows:
+%(4) DATE 2018
+Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, two Boolean variables are used for encoding four possibilities of DCC insertion at the input of any buffer. The four possibilities can be encoded as follows:
+%(5) TVA, DCC are equal
+\begin{comment}
 \begin{tabular}{ | l | c | c | }
 	\hline
   	Leader type & DCC type & $\{B_{p,3}, B_{p,2}, B_{p,1}\}$ \\ \hline
@@ -61,7 +83,9 @@ Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are 3 ty
   	(8)\quad HTV & 80\% &  \{1, 1, 1\} \\ \hline 
 \end{tabular}
 \newline
-\begin{comment}%DATE 2018
+\end{comment}
+
+%(5) DATE 2018
 \begin{tabular}{ l c }
   DCC type: & $\left\{B_{p,2},B_{p,1}\right\}$ \\
   (1)\quad None: & \{0,0\} \\
@@ -69,7 +93,7 @@ Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are 3 ty
   (3)\quad 40\%: &  \{1,0\} \\
   (4)\quad 80\%: &  \{1,1\} \\
 \end{tabular}
-\end{comment}
+
 \afterpage{
 \begin{figure*}
     \centering
