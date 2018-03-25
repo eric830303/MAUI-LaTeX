@@ -114,9 +114,7 @@ Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%,
 For example, in Figure~\ref{fig:sub:dcci2}, a 20\% DCC and an 80\% DCC are inserted at buffer 3 and buffer 5, respectively. Therefore, $\left\{B_{3,2}, B_{3,1}\right\}$ = \{0, 1\}, $\left\{B_{5,2}, B_{5,1}\right\}$ = \{1, 1\}, and $\left\{B_{p,2}, B_{p,1}\right\}$ = \{0, 0\} for $p$ = 1, 2, 4, 6 or 7.
 
 The 20\% DCC will mitigate the aging of buffer 3 and its downstream buffers, while the 80\% DCC will aggravate the aging of buffer 5 and its downstream buffers. It can be found that, if a DCC is deployed deep in the clock tree (i.e., close to the flip-flops), the number of buffers affected is limited and thus the overall impact of aging mitigation/aggravation on $C_i$/$C_j$ may be insignificant, which diminishes the benefit from deploying DCCs for aging tolerance. To avoid this phenomenon, we set a rule of prohibiting DCC deployment at a clock tree level larger/deeper than a specified boundary. This rule also greatly reduces the complexity of our SAT-based formulation because a significant fraction of buffers are excluded from being considered for DCC deployment. For example, in Figure~\ref{fig:dcctype}, those dashed buffers and their downstream buffers are excluded. 
-
 %We will experimentally show that excluding buffers deep in the clock tree leads to marginal loss on aging tolerance, while saving runtime and DCCs.
-
 \subsection{DCC Constraints and Corresponding Clauses}
 \label{subsec:dccccc}
 

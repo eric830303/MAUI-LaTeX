@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  25 MAR 2018 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  25 MAR 2018 22:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1040,13 +1040,13 @@ File: figures/All_types_of_DCCs.png Graphic file (type png)
 Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 87.
 (pdftex.def)             Requested size: 226.79846pt x 107.45465pt.
 
-Underfull \hbox (badness 1552) in paragraph at lines 125--127
+Underfull \hbox (badness 1552) in paragraph at lines 123--125
 \OT1/ptm/m/n/9 in-ser-tion and ac-cord-ing to the en-cod-ing scheme ex-plained 
 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
@@ -1055,7 +1055,7 @@ File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 129.
+line 127.
 (pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
 
 <figures/A_examlpe_of_DCC_placement2.png, id=36, 1078.36208pt x 459.7175pt>
@@ -1063,36 +1063,36 @@ File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 129.
+line 127.
 (pdftex.def)             Requested size: 226.79846pt x 96.6838pt.
 
-Overfull \hbox (1.86592pt too wide) in paragraph at lines 135--135
+Overfull \hbox (1.86592pt too wide) in paragraph at lines 133--133
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
 
  []
 
 [4 <./figures/All_types_of_DCCs.png>]
-Underfull \hbox (badness 1655) in paragraph at lines 177--179
+Underfull \hbox (badness 1655) in paragraph at lines 175--177
 \OT1/ptm/m/n/9 sider the DCC in-ser-tion shown in Fig-ure 4(a)[]: if the in-ser
 -
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 177--179
+Underfull \hbox (badness 2142) in paragraph at lines 175--177
 \OT1/ptm/m/n/9 tion of a 40% DCC at buffer 1 causes a tim-ing vi-o-la-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 [] \OMS/cmsy/m/n/9 ^ [] ^ [] ^
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 []$\OT1/ptm/m/n/9 ,
  []
 
@@ -1100,7 +1100,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 File: figures/DCC_reduction.png Graphic file (type png)
 
 <use figures/DCC_reduction.png>
-Package pdftex.def Info: figures/DCC_reduction.png used on input line 197.
+Package pdftex.def Info: figures/DCC_reduction.png used on input line 195.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
 ) (./exp.tex
 <figures/Experimental_result_(CG).png, id=44, 860.9766pt x 293.898pt>
@@ -1119,7 +1119,12 @@ File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
 3.
 (pdftex.def)             Requested size: 201.60077pt x 116.64935pt.
-) (./conclude.tex)
+) (./TVA.tex) (./conclude.tex) [6 <./figures/Aging_impacted_on_DCC.png
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
+DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
+G to fix this)
+>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1131,15 +1136,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6 <./figures/Aging_impacted_on_DCC.png
+[7
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
-DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
-G to fix this)
->] [7 <./figures/Experimental_result_(CG).png>] (./maui.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+ <./figures/Experimental_result_(CG).png>] (./maui.aux)
 Package logreq Info: Writing requests to 'maui.run.xml'.
 \openout1 = `maui.run.xml'.
 
@@ -1149,11 +1148,11 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20712 strings out of 492995
- 389121 string characters out of 6132705
+ 20718 strings out of 492995
+ 389169 string characters out of 6132705
  677494 words of memory out of 5000000
- 24009 multiletter control sequences out of 15000+600000
- 580772 words of font info for 120 fonts, out of 8000000 for 9000
+ 24011 multiletter control sequences out of 15000+600000
+ 582496 words of font info for 122 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,13n,50p,10375b,12050s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -1174,7 +1173,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (7 pages, 2433001 bytes).
+Output written on maui.pdf (7 pages, 2434111 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
