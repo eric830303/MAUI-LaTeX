@@ -1,19 +1,48 @@
 \section{FURTHER OPTIMIZATION BY V\textsubscript{TH} ASSIGNMENT}
 \label{sec:TVA}
 % (1)
-In the section, V\textsubscript{th} assignment and aging manipulation are applied together to further optimize the required $T_c$. In addition to aging manipulation based on DCC insertion/deployment, we re-assign the threshold voltage of certain clock buffers, such that the latencies of the buffers are changed, so are the slacks, which give us the opportunity to further mitigate the aging-induced degradation of logic network based on timing borrowing. The section is organized as follows:  We use the circuit in Figure~\ref{fig:sub:example} to demonstrate the results when V\textsubscript{th} assignment is applied. 2) Technology leader: In order to simplify the complexity of SAT formulation when V\textsubscript{th} assignment is considered, we introduce a mechanism/rule of V\textsubscript{th} assignment.
+In the section, V\textsubscript{th} assignment and aging manipulation are applied together to further optimize the required $T_c$. In addition to aging manipulation based on DCC insertion/deployment, we re-assign the threshold voltage of certain clock buffers, such that the latencies of the buffers are changed, so are the slacks, which give us the opportunity to further mitigate the aging-induced degradation of logic network based on timing borrowing. The section is organized as follows:~\ref{sec:TVA:example} demonstrates how V\textsubscript{th} assignment further optimizes the required $T_c$.~\ref{sec:TVA:leader} introduces the rule/mechanism of V\textsubscript{th} assignment, followed by~\ref{sec:TVA:leaderconstraint}, which explains how we convert the rule/mechanism into CNF clauses.~\ref{sec:TVA:timingconstraint} introduces the new timing constraints when V\textsubscript{th} assignment is considered. Finally,~\ref{sec:TVA:experiment} shows the experimental results, which is optimized based on DCC insertion and V\textsubscript{th} assignment.
 
-\subsection{Motivating Example}
+% (2)
+\subsection{Motivating Example considering V\textsubscript{th} assignment}
 \label{sec:TVA:example}
+We use the illustrative example to explain how we further improve the aging tolerance by comparing the example in Section~\ref{sec:motivate} and the counterpart in this section. The example in Section~\ref{sec:motivate} only considers the aging manipulation based on DCC deployment/insertion; however, in this section, the two approaches, DCC deployment and V\textsubscript{th} assignment are applied together to optimize/reduce required $T_c$. We let the DCC deployment same with that in the first example (in Section~\ref{sec:motivate}), i.e., 20\% DCC and 80\% DCC are inserted at the inputs of buffer 1 and buffer 2, respectively. Moreover, we begin re-assigning high V\textsubscript{th} to the certain clock buffers, which are in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}. In other words, buffer 2 and its downstream buffers are re-assigned to high V\textsubscript{th}. To include the aging rates of HTV (High Threshold Voltage, or High-V\textsubscript{th}) buffers in the setup-time constraint, we assume that, the fresh/non-aging delay of HTV buffer is 1.2X longer than that of nominal buffer (whose V\textsubscript{th} are not reassigned), and aging rates of HTV buffer, with the duty cycle of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%, respectively. Note that, the aging rates of HTV buffer are lower than those of nominal buffer, because the higher/lower V\textsubscript{th} leads to lower/higher aging rates~\cite{chen2013novel}. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
+\begin{equation}
+	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{(1.2+0.08)}C_Y+T_c$} 
+	\label{eq:lxy2}
+\end{equation}
+\begin{equation}
+	\centering
+	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{(1.2+0.08)}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{(1.2+0.08)}C_Z+T_c$} 
+	\label{eq:lyz2}
+\end{equation}
+By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
+\begin{flalign*}
+	\hspace{1.2em}\ce{L_{XY}}: T_c &> 96.5 &\\
+	\hspace{1.2em}\ce{L_{YZ}}: T_c &> 104
+\end{flalign*}
 
+Apparently, the required $T_c$ is further reduced/optimized from 108.5 (in Section~\ref{sec:motivate}) to 104 by inserting two DCCs and V\textsubscript{th} assignment in the existing synthesized clock network. We also observe that, the required $T_c$ is not dominated by \ce{L_{XY}} anymore (in Section~\ref{sec:motivate}); instead, it turns out that \ce{L_{YZ}} dominates $T_c$. As it can be seen, when the two approaches, V\textsubscript{th} assignment and aging manipulation  (by DCC insertion), are applied together, the skew for \ce{L_{XY}}, which equals 1.28$C_Y$ minus 1.09$C_X$, is larger than that in Section~\ref{sec:motivate}. Therefore, the new skew for \ce{L_{XY}} is more useful/beneficial and accounts for the better optimization of required $T_c$. 
+Additionally, when it comes to the timing-borrowing mechanism of the two examples, there exists a difference: The timing-borrowing mechanism in Section~\ref{sec:motivate}, is achieved by the aging-induced clock skew, caused by manipulating the duty-cycle delivered to flip-flops. However, in the example, the timing-borrowing mechanism is based on aging-induced clock skew and \textit{tech-induced} clock skew, which is caused by manipulating the technology of clock buffers, i.e., re-assign the V\textsubscript{th} of clock buffers. 
+
+% (3)
 \subsection{Technology Leader}
 \label{sec:TVA:leader}
+When V\textsubscript{th} assignment is considered, how to select candidate clock buffers appears as a problem. The so-called candidate buffers are those whose V\textsubscript{th} will be re-assigned (i.e., their technology is changed). Because the count and the combination of candidate buffers are numerous, we need to reduce the complexity of the problem. Thus, we introduce the rule of V\textsubscript{th} assignment by explaining \textit{technology leader}. 
 
+If the clock buffer is chosen as the \textit{technology leader}, the clock buffer and its downstream buffers are regarded as candidate buffers. In other words, the technology of the leader and the downstream buffers will be replaced with new counterpart. For example, in~\ref{sec:TVA:example}, buffer 2 is actually chosen as the technology leader, so that the candidate buffers are buffer 2 and its downstream buffers, which also include buffer 3. Note that, there exists a difference between DCC and technology leader. DCC is a physical gate; however, technology leader is conceptually an imaginary location, from which we begin manipulating the technology of clock buffers toward flip-flops.
+
+\begin{comment}
+Moreover, a \textit{technology leader} is inserted at the input of buffer 2. Here, \textit{technology leader} denotes that, the technology of downstream (toward terminals/flip-flops) clock buffers are replaced with new technology, such that the V\textsubscript{th} of the buffers are changed. Note that, the so-called downstream clock buffers are those between technology leader and terminals/flip-flops. For instance, when one technology leader is inserted at the input of buffer 2, the downstream buffers are those in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, which also include buffer 2 and buffer 3, but exclude flip-flops. Therefore, we can find that, for the clock buffers, which are in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, their technology is replaced with the new counterpart. Note that, in the example, we consider one type of new technology: HTV (High Threshold Voltage or High-V\textsubscript{th}) technology. Thus, the associated technology leader is named \textit{HTV leader}, which assigns high-V\textsubscript{th} to the downstream clock buffers. 
+\end{comment}
+% (4)
 \subsection{Leader Constraint}
 \label{sec:TVA:leaderconstraint}
 
+% (5)
 \subsection{Timing Constraint considering DCC and Leader}
 \label{sec:TVA:timingconstraint}
 
+% (6)
 \subsection{Experimental Results}
 \label{sec:TVA:experiment}
