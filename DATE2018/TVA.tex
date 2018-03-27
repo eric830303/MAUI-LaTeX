@@ -32,17 +32,22 @@ When V\textsubscript{th} assignment is considered, how to select candidate clock
 
 If the clock buffer is chosen as the \textit{technology leader}, the clock buffer and its downstream buffers are regarded as candidate buffers. In other words, the technology of the leader and the downstream buffers will be replaced with new counterpart. For example, in~\ref{sec:TVA:example}, buffer 2 is actually chosen as the technology leader, so that the candidate buffers are buffer 2 and its downstream buffers, which also include buffer 3. Note that, there exists a difference between DCC and technology leader. DCC is a physical gate; however, technology leader is conceptually an imaginary location, from which we begin manipulating the technology of clock buffers toward flip-flops.
 
-\begin{comment}
-Moreover, a \textit{technology leader} is inserted at the input of buffer 2. Here, \textit{technology leader} denotes that, the technology of downstream (toward terminals/flip-flops) clock buffers are replaced with new technology, such that the V\textsubscript{th} of the buffers are changed. Note that, the so-called downstream clock buffers are those between technology leader and terminals/flip-flops. For instance, when one technology leader is inserted at the input of buffer 2, the downstream buffers are those in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, which also include buffer 2 and buffer 3, but exclude flip-flops. Therefore, we can find that, for the clock buffers, which are in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, their technology is replaced with the new counterpart. Note that, in the example, we consider one type of new technology: HTV (High Threshold Voltage or High-V\textsubscript{th}) technology. Thus, the associated technology leader is named \textit{HTV leader}, which assigns high-V\textsubscript{th} to the downstream clock buffers. 
-\end{comment}
+
 % (4)
-\subsection{Leader Constraint}
-\label{sec:TVA:leaderconstraint}
+\subsection{Proposed Framework considering V\textsubscript{th} Assignment}
+\label{sec:TVA:framework}
 
 % (5)
-\subsection{Timing Constraint considering DCC and Leader}
+\subsection{Encoding for DCC and Technology Leader Deployment}
+\label{sec:TVA:leader_encode}
+% (6)
+\subsection{Technology Leader Constraint}
+\label{sec:TVA:leaderconstraint}
+
+% (7)
+\subsection{Timing Constraint considering DCC and Technology Leader}
 \label{sec:TVA:timingconstraint}
 
-% (6)
+% (8)
 \subsection{Experimental Results}
 \label{sec:TVA:experiment}
