@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  28 MAR 2018 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  28 MAR 2018 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1065,13 +1065,13 @@ Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input
 line 126.
 (pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
 
-<figures/A_examlpe_of_DCC_placement2.png, id=35, 1078.36208pt x 459.7175pt>
+<figures/A_examlpe_of_DCC_placement2.png, id=35, 909.3975pt x 420.57124pt>
 File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
 line 126.
-(pdftex.def)             Requested size: 226.79846pt x 96.6838pt.
+(pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
 
 Overfull \hbox (1.86592pt too wide) in paragraph at lines 133--133
 [] 
@@ -1109,17 +1109,17 @@ File: figures/DCC_reduction.png Graphic file (type png)
 <use figures/DCC_reduction.png>
 Package pdftex.def Info: figures/DCC_reduction.png used on input line 195.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
-) (./exp.tex
-<figures/Experimental_result_(CG).png, id=43, 860.9766pt x 293.898pt>
+) (./exp.tex [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlp
+e_of_DCC_placement2.png> <./figures/DCC_reduction.png>] <figures/Experimental_r
+esult_(CG).png, id=48, 860.9766pt x 293.898pt>
 File: figures/Experimental_result_(CG).png Graphic file (type png)
 
 <use figures/Experimental_result_(CG).png>
 Package pdftex.def Info: figures/Experimental_result_(CG).png used on input lin
 e 11.
 (pdftex.def)             Requested size: 378.0pt x 129.0285pt.
- [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlpe_of_DCC_pla
-cement2.png> <./figures/DCC_reduction.png>] <figures/Aging_impacted_on_DCC.png,
- id=50, 2186.92032pt x 1265.47781pt>
+
+<figures/Aging_impacted_on_DCC.png, id=49, 2186.92032pt x 1265.47781pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use figures/Aging_impacted_on_DCC.png>
@@ -1136,19 +1136,27 @@ Overfull \hbox (7.03566pt too wide) detected at line 18
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
 DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
 G to fix this)
->] <figures/Flow_chart_tva.png, id=55, 925.4575pt x 652.4375pt>
+>] <figures/Flow_chart_tva.png, id=54, 925.4575pt x 652.4375pt>
 File: figures/Flow_chart_tva.png Graphic file (type png)
 
 <use figures/Flow_chart_tva.png>
 Package pdftex.def Info: figures/Flow_chart_tva.png used on input line 40.
 (pdftex.def)             Requested size: 226.79846pt x 159.88342pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+<figures/example_of_dcc_leader.png, id=55, 932.48375pt x 456.70625pt>
+File: figures/example_of_dcc_leader.png Graphic file (type png)
+
+<use figures/example_of_dcc_leader.png>
+Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 5
+1.
+(pdftex.def)             Requested size: 226.79846pt x 111.07516pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-) (./conclude.tex [7 <./figures/Experimental_result_(CG).png> <./figures/Flow_c
-hart_tva.png>])
+[7 <./figures/Experimental_result_(CG).png> <./figures/Flow_chart_tva.png> <./f
+igures/example_of_dcc_leader.png>]) (./conclude.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1160,9 +1168,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8
-
-] (./maui.aux)
+[8] (./maui.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1175,10 +1181,10 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20731 strings out of 492995
- 389471 string characters out of 6132705
+ 20737 strings out of 492995
+ 389668 string characters out of 6132703
  676494 words of memory out of 5000000
- 24023 multiletter control sequences out of 15000+600000
+ 24028 multiletter control sequences out of 15000+600000
  582496 words of font info for 122 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,13n,50p,10375b,12052s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1200,10 +1206,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (8 pages, 2449039 bytes).
+Output written on maui.pdf (8 pages, 2409344 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
