@@ -61,29 +61,8 @@ The deployment/insertion problem of DCC and technology leader needs to be encode
 \label{subsec:eddcd}
 The problem of DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Note that, when a DCC/HTV leader is inserted, it is inserted at the input of a buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
 
-%(4) TVA, DCC are equal
-\begin{comment}
-Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are 3 types of DCCs, which are assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. In addition, there is 1 type of technology leader, which is assumed to be a HTV leader. Therefore, three Boolean variables are used for encoding eight possibilities of DCC and technology leader insertion at the input of any buffer. The eight possibilities can be encoded as follows:\newline
-\end{comment}
-
 %(4) DATE 2018
 Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, two Boolean variables are used for encoding four possibilities of DCC insertion at the input of any buffer. The four possibilities can be encoded as follows:
-%(5) TVA, DCC are equal
-\begin{comment}
-\begin{tabular}{ | l | c | c | }
-	\hline
-  	Leader type & DCC type & $\{B_{p,3}, B_{p,2}, B_{p,1}\}$ \\ \hline
-  	(1)\quad Nominal V\textsubscript{th} & None & \{0, 0, 0\} \\ \hline
-  	(2)\quad Nominal V\textsubscript{th} &20\% &  \{0, 0, 1\} \\ \hline
-  	(3)\quad Nominal V\textsubscript{th} &40\% &  \{0, 1, 0\} \\ \hline
-  	(4)\quad Nominal V\textsubscript{th} &80\% &  \{0, 1, 1\} \\ \hline
-	(5)\quad HTV & None & \{1, 0, 0\} \\ \hline
-  	(6)\quad HTV & 20\% &  \{1, 0, 1\} \\ \hline
-  	(7)\quad HTV & 40\% &  \{1, 1, 0\} \\ \hline
-  	(8)\quad HTV & 80\% &  \{1, 1, 1\} \\ \hline 
-\end{tabular}
-\newline
-\end{comment}
 
 %(5) DATE 2018
 \begin{tabular}{ l c }
@@ -114,7 +93,8 @@ Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%,
 For example, in Figure~\ref{fig:sub:dcci2}, a 20\% DCC and an 80\% DCC are inserted at buffer 3 and buffer 6, respectively. Therefore, $\left\{B_{3,2}, B_{3,1}\right\}$ = \{0, 1\}, $\left\{B_{5,2}, B_{5,1}\right\}$ = \{1, 1\}, and $\left\{B_{p,2}, B_{p,1}\right\}$ = \{0, 0\} for $p$ = 1, 2, 4, 6 or 7.
 
 The 20\% DCC will mitigate the aging of buffer 3 and its downstream buffers, while the 80\% DCC will aggravate the aging of buffer 6 and its downstream buffers. It can be found that, if a DCC is deployed deep in the clock tree (i.e., close to the flip-flops), the number of buffers affected is limited and thus the overall impact of aging mitigation/aggravation on $C_i$/$C_j$ may be insignificant, which diminishes the benefit from deploying DCCs for aging tolerance. To avoid this phenomenon, we set a rule of prohibiting DCC deployment at a clock tree level larger/deeper than a specified boundary. This rule also greatly reduces the complexity of our SAT-based formulation because a significant fraction of buffers are excluded from being considered for DCC deployment. For example, in Figure~\ref{fig:dcctype}, those dashed buffers and their downstream buffers are excluded. 
-%We will experimentally show that excluding buffers deep in the clock tree leads to marginal loss on aging tolerance, while saving runtime and DCCs.
+
+%(2) B
 \subsection{DCC Constraints and Corresponding Clauses}
 \label{subsec:dccccc}
 
@@ -136,6 +116,7 @@ Any pair of buffers along a single clock path should be constrained in this way.
 
 With DCC constraints and corresponding clauses, we can drastically reduce the possibilities of DCC insertion to be formulated. In the above example where 48 clauses associated with DCC constraints are generated, the number of possibilities drops from 16,384 to 103. In the next subsection, we describe what the 103 possibilities are and how they are translated into the final CNF representation.
 
+%(3) C
 \subsection{Timing Constraints and Corresponding Clauses}
 \label{subsec:tccc}
 Given a pair of flip-flops, if there exists one logic path between them, the timing (i.e. setup-time and hold-time) constraints must be met based on the inequalities~(\ref{eq:tsu}) and~(\ref{eq:th}). Different types of DCCs reveal different aging influence on clock latency. Consider the lifespan specification of 10 years in Figure~\ref{fig:sub:dcci2}: the delay of each clock buffer is changed after 10 years. The clock latency of \ce{FF_i} (i.e., $C_i$) is the sum of clock buffer delays from clock source to \ce{FF_i}: \\

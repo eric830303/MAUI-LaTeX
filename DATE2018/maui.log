@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  29 MAR 2018 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  29 MAR 2018 17:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -914,6 +914,9 @@ LaTeX Warning: Label `eq:lxy2' multiply defined.
 
 LaTeX Warning: Label `eq:lyz2' multiply defined.
 
+
+LaTeX Warning: Label `sec:TVA:dcc_c' multiply defined.
+
 )
 \openout1 = `maui.aux'.
 
@@ -1037,14 +1040,13 @@ File: figures/Flow_chart.png Graphic file (type png)
 Package pdftex.def Info: figures/Flow_chart.png used on input line 30.
 (pdftex.def)             Requested size: 226.79846pt x 187.37167pt.
  Excluding 'comment' comment.
-Excluding 'comment' comment. Excluding 'comment' comment.
 Excluding 'comment' comment. [3 <./figures/Motivating_example.png> <./figures/N
 otations.png> <./figures/Flow_chart.png>]
 <figures/All_types_of_DCCs.png, id=33, 1117.84291pt x 529.64542pt>
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 114.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 93.
 (pdftex.def)             Requested size: 226.79846pt x 107.45465pt.
 
 <figures/A_examlpe_of_DCC_placement1.png, id=34, 1083.04625pt x 461.05583pt>
@@ -1052,7 +1054,7 @@ File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 114.
+line 93.
 (pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
 
 <figures/A_examlpe_of_DCC_placement2.png, id=35, 909.3975pt x 420.57124pt>
@@ -1060,47 +1062,47 @@ File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 114.
+line 93.
 (pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
 
-Underfull \hbox (badness 1552) in paragraph at lines 123--125
+Underfull \hbox (badness 1552) in paragraph at lines 103--105
 \OT1/ptm/m/n/9 in-ser-tion and ac-cord-ing to the en-cod-ing scheme ex-plained 
 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--125
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
 
-Overfull \hbox (1.86592pt too wide) in paragraph at lines 133--133
+Overfull \hbox (1.86592pt too wide) in paragraph at lines 113--113
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
 [4 <./figures/All_types_of_DCCs.png>]
-Underfull \hbox (badness 1655) in paragraph at lines 175--177
+Underfull \hbox (badness 1655) in paragraph at lines 156--158
 \OT1/ptm/m/n/9 sider the DCC in-ser-tion shown in Fig-ure 4(a)[]: if the in-ser
 -
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 175--177
+Underfull \hbox (badness 2142) in paragraph at lines 156--158
 \OT1/ptm/m/n/9 tion of a 40% DCC at buffer 1 causes a tim-ing vi-o-la-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 [] \OMS/cmsy/m/n/9 ^ [] ^ [] ^
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 []$\OT1/ptm/m/n/9 ,
  []
 
@@ -1108,7 +1110,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 File: figures/DCC_reduction.png Graphic file (type png)
 
 <use figures/DCC_reduction.png>
-Package pdftex.def Info: figures/DCC_reduction.png used on input line 195.
+Package pdftex.def Info: figures/DCC_reduction.png used on input line 176.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
 ) (./exp.tex
 <figures/Experimental_result_(CG).png, id=43, 860.9766pt x 293.898pt>
@@ -1150,10 +1152,10 @@ File: figures/example_of_dcc_leader.png Graphic file (type png)
 
 <use figures/example_of_dcc_leader.png>
 Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 5
-3.
+4.
 (pdftex.def)             Requested size: 226.79846pt x 117.15054pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
@@ -1166,9 +1168,9 @@ File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs_and_leaders.png>
 Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
-t line 82.
+t line 83.
 (pdftex.def)             Requested size: 252.0pt x 140.53886pt.
-) (./conclude.tex)
+) (./conclude.tex [8 <./figures/All_types_of_DCCs_and_leaders.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1180,7 +1182,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8 <./figures/All_types_of_DCCs_and_leaders.png>] (./maui.aux)
+[9] (./maui.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1193,13 +1195,13 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20717 strings out of 492995
- 389527 string characters out of 6132703
+ 20718 strings out of 492995
+ 389542 string characters out of 6132703
  677494 words of memory out of 5000000
- 24011 multiletter control sequences out of 15000+600000
+ 24012 multiletter control sequences out of 15000+600000
  577412 words of font info for 106 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 45i,13n,50p,10375b,12052s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,13n,50p,10375b,12053s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.
 pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
@@ -1218,10 +1220,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (8 pages, 2536696 bytes).
+Output written on maui.pdf (9 pages, 2541589 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -46,7 +46,8 @@ The proposed framework, which considers aging manipulation (DCC) and V\textsubsc
 % (5)
 \subsection{Encoding for DCC and Technology Leader Deployment}
 \label{sec:TVA:leader_encode}
-The problem of DCC deployment and technology leader selection needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Note that, each technology represents an individual technology. Including the nominal technology, there are ($M$ + 1) possibilities of technology leader selection for each clock buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)(M + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1)($M$ + 1) possibilities of DCC insertion at the input of buffer $p$.
+The problem of DCC deployment and technology leader selection needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Note that, each technology represents an individual technology. Including the nominal technology, there are ($M$ + 1) possibilities of technology leader selection for each clock buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each clock buffer, there exist two types of Boolean variables, $B_{p,q}$ and $B_{p,r}$, where $1 \leq p \leq P$, $1 \leq q \leq Q \leq r \leq R$, $Q = \lceil \lg (N + 1)\rceil$ and $R = \lceil \lg \{(N + 1)(M + 1\}\rceil$. $B_{p,q}$ are used to encode the ($N$ + 1) possibilities of DCC insertion, and $B_{p,r}$ are used to encode the ($M$ + 1) possibilities of technology leader selection.
+
 
 \begin{figure}
     \centering
@@ -73,9 +74,9 @@ Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are thre
 
 For example, in Figure~\ref{fig:example_dcc_tva}, the DCC deployment is same with that in Figure~\ref{fig:sub:dcci2} (i.e., 20\% DCC at buffer 3 and 80\% DCC at buffer 6), but the buffer 5 is selected as the HTV leader. Thus, the technology of buffer 5, 6 and 7 are replaced with the high-V\textsubscript{th} counterpart. Therefore, $\left\{B_{3,3}, B_{3,2}, B_{3,1}\right\}$ = \{0, 0, 1\}, $\left\{B_{5,3}, B_{5,2}, B_{5,1}\right\}$ = \{1, 0, 0\}, $\left\{B_{6,3}, B_{6,2}, B_{6,1}\right\}$ = \{0, 1, 1\}, and $\left\{B_{p,3}, B_{p,2}, B_{p,1}\right\}$ = \{0, 0, 0\} for $p$ = 1, 2, 4 or 7.
 
-As mentioned in Section~\ref{subsec:eddcd}, the 20\% DCC mitigates the aging of buffer 3 and its downstream buffers, but the 80\% DCC aggravates the aging of buffer 6 and its downstream buffers. Moreover, since the buffer 5 is a HTV leader, buffer 5, 6 and 7 are changed as high-V\textsubscript{th} buffers, implying the latency from buffer 5 to buffer 7 is lengthened. This way, the clock skew becomes larger than that in Figure~\ref{fig:sub:dcci2}, so that the required $T_c$ can be further reduced, based on timing borrowing. Note that, as we mentioned in Section~\ref{sec:TVA:example}, the $T_c$ reduction in Figure~\ref{fig:sub:dcci2} is only due to the useful aging-induced clock skew; however, the  further $T_c$ reduction in Figure~\ref{fig:example_dcc_tva} is both based on useful aging-induced and tech-induced clock skew, which is caused by the V\textsubscript{th} re-assignment of clock buffers.
+As mentioned in Section~\ref{subsec:eddcd}, the 20\% DCC mitigates the aging of buffer 3 and its downstream buffers, but the 80\% DCC aggravates the aging of buffer 6 and its downstream buffers. Moreover, since the buffer 5 is a HTV leader, buffer 5, 6 and 7 are changed as high-V\textsubscript{th} buffers, implying the latency from buffer 5 to buffer 7 is lengthened. This way, the clock skew becomes larger than that in Figure~\ref{fig:sub:dcci2}, so that the required $T_c$ can be further reduced, based on timing borrowing. Note that, as we mentioned in Section~\ref{sec:TVA:example}, the $T_c$ reduction in Figure~\ref{fig:sub:dcci2} is only due to the useful aging-induced clock skew; however, the  further $T_c$ reduction in Figure~\ref{fig:example_dcc_tva} is both based on useful aging-induced and tech-induced clock skew, which is caused by the V\textsubscript{th} re-assignment of clock buffers. 
 % (6)
-\subsection{Technology Leader Constraints and Corresponding Clauses}
+\subsection{Constraints and Corresponding Clauses}
 \label{sec:TVA:leaderconstraint}
 \begin{figure}
     \centering
@@ -84,12 +85,35 @@ As mentioned in Section~\ref{subsec:eddcd}, the 20\% DCC mitigates the aging of 
     \label{fig:g_dcc_leader}
 \end{figure}
 
-Figure~\ref{fig:g_dcc_leader} shows a generalized example of DCC insertion and technology leader selection for a pair of flip-flops (\ce{FF_i} and \ce{FF_j}), where there exist aging-critical paths from \ce{FF_i} to \ce{FF_j}.
+Figure~\ref{fig:g_dcc_leader} shows a generalized example of DCC insertion and technology leader selection for a pair of flip-flops (\ce{FF_i} and \ce{FF_j}), where there exist aging-critical paths from \ce{FF_i} to \ce{FF_j}. As described in Section~\ref{subsec:dccccc}, a path is defined as an aging-critical path if it is possible to determine the clock period of the circuit, in the presence of aging. Each pair of flip-flops between which there exist aging-critical paths needs to be considered. Here, we use the generalized example to illustrate our SAT-based formulation. The generalized example in Figure~\ref{fig:g_dcc_leader} is similar to that in Figure~\ref{fig:dcctype}. In contrast, we add technology leader selection for each clock buffer in Figure~\ref{fig:g_dcc_leader}. Moreover, we can find that, if the clock buffer, which is selected as a technology leader, is deep in the clock tree (i.e., close to flip-flops), the count of V\textsubscript{th}-reassigned buffers is reduced thus the impact of tech-induced clock skew becomes insignificant. The above phenomenon is similar to that in Section ~\ref{subsec:eddcd}, which observes that deeper DCC deployment causes less aging-induced clock skew. Thus, we set a rule of avoiding selecting/inserting leaders/DCCs at a clock tree level, which is larger/deeper than a specified boundary.  The rule greatly reduce the complexity of SAT-based formulation, because a significant fraction of buffers are not considered being inserted DCC at their inputs and being selected as a technology leader. For instance, in Figure~\ref{fig:g_dcc_leader}, dashed buffers and their downstream buffers are not considered. 
+
+In Figure~\ref{fig:g_dcc_leader}, buffers 1 - 7 are candidate locations for DCC insertion and leader selection. According the encoding mechanism explained in Section~\ref{sec:TVA:leader_encode}, one Boolean variables are introduced to encode the two possibilities of leader selection, for each of the seven buffers. Thus, there are totally 128 (=$2^7$) possibilities of leader selection, only for this pair of flip-flops. In contrast, there is a total of 16,384 (= $4^7$) possibilities of DCC  deployment. If we combine the two approaches (i.e., DCC insertion and leader selection) together, there is totally 2,097,152 possibilities. The total count of possibilities can be obtained by multiplying the possibilities of the two approaches (i.e., $4^7*2^7$ = 2,097,152), or can be explained by the eight possibilities of DCC insertion and leader selection, for each of the seven buffers (i.e., $8^7$ = 2,097,152). Apparently, this make SAT-based formulation tricky because of clause explosion. Therefore, we set the following constraints on DCC insertion and technology leader selection.
 
 % (7)
+\subsubsection{DCC Constraints and Corresponding Clauses}
+\label{sec:TVA:dcc_c}
+The dcc constraints are identical to those in Section~\ref{subsec:dccccc}. That is, at most one DCC exists along a single clock path, from clock source to one of flip-flops. The corresponding clauses can be referred to those in Section~\ref{subsec:dccccc}. After applying DCC constraints, the total possibilities of DCC insertion can be reduced from 16,384 (= $4^7$) to 48. 
+
+% (8)
+\subsubsection{Technology Leader Constraints and Corresponding Clauses}
+\label{sec:TVA:dcc_c}
+The leader constraints are similar to DCC constraints. They are defined as follow: At most one technology leader exists along a single clock path, from clock source to one of the flip-flops. To ensure no more than one leader along any clock path, we can use the Boolean variables, which are introduced to encode leader selection, i.e., $B_{p,r}$, where $1 \leq p \leq P$, $\lceil \lg \{(N + 1)\} \rceil = Q \leq r \leq R = \lceil \lg \{(N + 1)(M + 1)\} \rceil$, to generate some clauses which suppress the occurrence of having two leaders along a clock path. Consider buffer 2 (encoded by $\left\{B_{2,3}\right\}$) and buffer 3 (encoded by $\left\{B_{3,3}\right\}$) in Figure~\ref{fig:g_dcc_leader}. If buffer 2 is a leader (i.e., $\{B_{2,3}\} \not\equiv \{0\}$), then buffer 3 must not be a leader (i.e., $\{B_{3,3}\} \equiv \{0, 0\}$), and vice versa. The constraint can be formally written as:
+\begin{gather*}
+\left(\{B_{2,3}\} \equiv \{0\}\right) \lor \left(\{B_{3,3}\} \equiv \{0, 0\}\right)
+\end{gather*}
+Next, it can be translated into one CNF clause:
+\begin{gather*}
+\mbox{\fontsize{7}{8.4}\selectfont ($\neg B_{2,3}\lor\neg B_{3,3}$) )} 
+\end{gather*}
+
+Any pair of buffers along a single clock path should be constrained in this way. Among buffers 1 $\hyphen$ 7 in Figure~\ref{fig:dcctype}, there are 12 pairs: $\langle1, 2\rangle$, $\langle1, 3\rangle$, $\langle1, 4\rangle$, $\langle1, 5\rangle$, $\langle1, 6\rangle$, $\langle1, 7\rangle$, $\langle2, 3\rangle$, $\langle2, 4\rangle$, $\langle3, 4\rangle$, $\langle5, 6\rangle$, $\langle5, 7\rangle$, $\langle6, 7\rangle$. Each pair translates to one clause and a total of 12 clauses will be generated accordingly.
+
+With leader constraints and corresponding clauses, we can drastically reduce the possibilities of leader selection to be formulated. In the above example where 12 clauses associated with leader constraints are generated, the number of possibilities of leader selection drops from 128 (= $2^7$) to 12. If we apply the DCC constraints and the technology leader constraints simultaneously, the total possibilities can be reduced from 2,097,152 to 576 (= $12*48$).
+
+% (9)
 \subsection{Timing Constraint considering DCC and Technology Leader}
 \label{sec:TVA:timingconstraint}
 
-% (8)
+% (10)
 \subsection{Experimental Results}
 \label{sec:TVA:experiment}
