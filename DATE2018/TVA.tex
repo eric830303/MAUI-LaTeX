@@ -46,13 +46,14 @@ The proposed framework, which considers aging manipulation (DCC) and V\textsubsc
 % (5)
 \subsection{Encoding for DCC and Technology Leader Deployment}
 \label{sec:TVA:leader_encode}
+The problem of DCC deployment and technology leader selection needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Note that, each technology represents an individual technology. Including the nominal technology, there are ($M$ + 1) possibilities of technology leader selection for each clock buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)(M + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1)($M$ + 1) possibilities of DCC insertion at the input of buffer $p$.
+
 \begin{figure}
     \centering
     \includegraphics[width=0.9\columnwidth]{example_of_dcc_leader.png}
     \caption{An example with DCC deployment and technology selection}
     \label{fig:example_dcc_tva}
 \end{figure}
-The problem of DCC deployment and technology leader selection needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Note that, each technology represents an individual technology. Including the nominal technology, there are ($M$ + 1) possibilities of technology leader selection for each clock buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)(M + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1)($M$ + 1) possibilities of DCC insertion at the input of buffer $p$.
 
 Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are three types of DCCs, which are assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. In addition, there is one type of technology leader, which is assumed to be a HTV (high threshold voltage or high-V\textsubscript{th}) leader. Note that, if the clock buffer is selected as the HTV leader, the technology of the buffer and the associated downstream ones is replaced with high-V\textsubscript{th} counterpart. Since we assume three types of DCC and one type of technology leader, three Boolean variables are used for encoding eight possibilities of DCC and technology leader at any buffer. The eight possibilities can be encoded as follows:\newline
 
@@ -76,6 +77,14 @@ As mentioned in Section~\ref{subsec:eddcd}, the 20\% DCC mitigates the aging of 
 % (6)
 \subsection{Technology Leader Constraints and Corresponding Clauses}
 \label{sec:TVA:leaderconstraint}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{All_types_of_DCCs_and_leaders.png}
+    \caption{Generalized DCC insertion and technology leader selection for a target pair of flip-flops}
+    \label{fig:g_dcc_leader}
+\end{figure}
+
+Figure~\ref{fig:g_dcc_leader} shows a generalized example of DCC insertion and technology leader selection for a pair of flip-flops (\ce{FF_i} and \ce{FF_j}), where there exist aging-critical paths from \ce{FF_i} to \ce{FF_j}.
 
 % (7)
 \subsection{Timing Constraint considering DCC and Technology Leader}
