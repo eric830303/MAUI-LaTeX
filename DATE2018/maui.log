@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  28 MAR 2018 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  29 MAR 2018 09:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -984,30 +984,30 @@ Package biblatex Info: Reference segment=0 on input line 373.
 . 
 . Activating mapping `default' on line 373.
 .................................................
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 429.
-LaTeX Font Info:    Try loading font information for U+msa on input line 429.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 429.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 429.
 
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 429.
- (./abstract.tex Excluding 'comment' comment.
+
+(./abstract.tex Excluding 'comment' comment.
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-) (./introduction.tex
-Excluding 'comment' comment.) (./related.tex [1{/usr/local/texlive/2017/texmf-v
-ar/fonts/map/pdftex/updmap/pdftex.map}
+)
+(./introduction.tex Excluding 'comment' comment.) (./related.tex [1{/usr/local/
+texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
@@ -1037,16 +1037,32 @@ File: figures/Flow_chart.png Graphic file (type png)
 Package pdftex.def Info: figures/Flow_chart.png used on input line 30.
 (pdftex.def)             Requested size: 226.79846pt x 187.37167pt.
  Excluding 'comment' comment.
+Excluding 'comment' comment. Excluding 'comment' comment.
 Excluding 'comment' comment. [3 <./figures/Motivating_example.png> <./figures/N
 otations.png> <./figures/Flow_chart.png>]
 <figures/All_types_of_DCCs.png, id=33, 1117.84291pt x 529.64542pt>
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 63.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 114.
 (pdftex.def)             Requested size: 226.79846pt x 107.45465pt.
- Excluding 'comment' comment.
-Excluding 'comment' comment.
+
+<figures/A_examlpe_of_DCC_placement1.png, id=34, 1083.04625pt x 461.05583pt>
+File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
+
+<use figures/A_examlpe_of_DCC_placement1.png>
+Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
+line 114.
+(pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
+
+<figures/A_examlpe_of_DCC_placement2.png, id=35, 909.3975pt x 420.57124pt>
+File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
+
+<use figures/A_examlpe_of_DCC_placement2.png>
+Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
+line 114.
+(pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
+
 Underfull \hbox (badness 1552) in paragraph at lines 123--125
 \OT1/ptm/m/n/9 in-ser-tion and ac-cord-ing to the en-cod-ing scheme ex-plained 
 in
@@ -1057,21 +1073,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
-<figures/A_examlpe_of_DCC_placement1.png, id=34, 1083.04625pt x 461.05583pt>
-File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
-
-<use figures/A_examlpe_of_DCC_placement1.png>
-Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 126.
-(pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
-
-<figures/A_examlpe_of_DCC_placement2.png, id=35, 909.3975pt x 420.57124pt>
-File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
-
-<use figures/A_examlpe_of_DCC_placement2.png>
-Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 126.
-(pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
 
 Overfull \hbox (1.86592pt too wide) in paragraph at lines 133--133
 [] 
@@ -1109,17 +1110,17 @@ File: figures/DCC_reduction.png Graphic file (type png)
 <use figures/DCC_reduction.png>
 Package pdftex.def Info: figures/DCC_reduction.png used on input line 195.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
-) (./exp.tex [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlp
-e_of_DCC_placement2.png> <./figures/DCC_reduction.png>] <figures/Experimental_r
-esult_(CG).png, id=48, 860.9766pt x 293.898pt>
+) (./exp.tex
+<figures/Experimental_result_(CG).png, id=43, 860.9766pt x 293.898pt>
 File: figures/Experimental_result_(CG).png Graphic file (type png)
 
 <use figures/Experimental_result_(CG).png>
 Package pdftex.def Info: figures/Experimental_result_(CG).png used on input lin
 e 11.
 (pdftex.def)             Requested size: 378.0pt x 129.0285pt.
-
-<figures/Aging_impacted_on_DCC.png, id=49, 2186.92032pt x 1265.47781pt>
+ [5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlpe_of_DCC_pla
+cement2.png> <./figures/DCC_reduction.png>] <figures/Aging_impacted_on_DCC.png,
+ id=49, 2186.92032pt x 1265.47781pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use figures/Aging_impacted_on_DCC.png>
@@ -1131,19 +1132,20 @@ Overfull \hbox (7.03566pt too wide) detected at line 18
 []
  []
 
-[6 <./figures/Aging_impacted_on_DCC.png
+[6 <./figures/Experimental_result_(CG).png> <./figures/Aging_impacted_on_DCC.pn
+g
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
 DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
 G to fix this)
->] <figures/Flow_chart_tva.png, id=54, 925.4575pt x 652.4375pt>
+>] <figures/Flow_chart_tva.png, id=55, 925.4575pt x 652.4375pt>
 File: figures/Flow_chart_tva.png Graphic file (type png)
 
 <use figures/Flow_chart_tva.png>
 Package pdftex.def Info: figures/Flow_chart_tva.png used on input line 40.
 (pdftex.def)             Requested size: 226.79846pt x 159.88342pt.
 
-<figures/example_of_dcc_leader.png, id=55, 932.48375pt x 456.70625pt>
+<figures/example_of_dcc_leader.png, id=56, 932.48375pt x 456.70625pt>
 File: figures/example_of_dcc_leader.png Graphic file (type png)
 
 <use figures/example_of_dcc_leader.png>
@@ -1155,8 +1157,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[7 <./figures/Experimental_result_(CG).png> <./figures/Flow_chart_tva.png> <./f
-igures/example_of_dcc_leader.png>]) (./conclude.tex)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./figures/Flow_chart_tva.png> <./figures/example_of_dcc_leader.png>]) (./c
+onclude.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1181,11 +1186,11 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20737 strings out of 492995
- 389668 string characters out of 6132703
- 676494 words of memory out of 5000000
- 24028 multiletter control sequences out of 15000+600000
- 582496 words of font info for 122 fonts, out of 8000000 for 9000
+ 20711 strings out of 492995
+ 389293 string characters out of 6132703
+ 677494 words of memory out of 5000000
+ 24006 multiletter control sequences out of 15000+600000
+ 577412 words of font info for 106 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,13n,50p,10375b,12052s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -1206,7 +1211,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (8 pages, 2409344 bytes).
+Output written on maui.pdf (8 pages, 2409379 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
