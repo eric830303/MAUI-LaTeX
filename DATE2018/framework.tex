@@ -32,10 +32,6 @@ The basic idea of our MAUI framework for aging tolerance is to insert \textit{du
 	\label{fig:flow}
 \end{figure}
 
-%(2) TVA, DCC are equal
-\begin{comment}
-The overall flow of our framework is depicted in Figure~\ref{fig:flow}, where a binary search for the minimum clock period ($T_c$) is involved. Formulated based on SAT, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. In the sequel, Section~\ref{subsec:eddcd} explains how the proposed problem of DCC and technology leader deployment/insertion is encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints, HTV leader constraint and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation.
-\end{comment}
 
 %(2) DATE 2018
 The overall flow of our MAUI framework is depicted in Figure~\ref{fig:flow}, where a binary search for the minimum clock period ($T_c$) is involved. Formulated based on SAT, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. In the sequel, Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion is encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe two major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation.
@@ -48,13 +44,6 @@ The overall flow of our MAUI framework is depicted in Figure~\ref{fig:flow}, whe
 	\label{fig:dcctype}
 \end{figure}
 }
-
-%(3) TVA, DCC are equal
-\begin{comment}
-\subsection{Encoding for DCC and Technology Leader Deployment}
-\label{subsec:eddcd}
-The deployment/insertion problem of DCC and technology leader needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Including the nominal case where no technology leader is inserted, there are ($M$ + 1) possibilities of technology leader insertion for each clock buffer. Note that, when a DCC/technology leader is inserted, it is inserted at the input of a buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)(M + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1)($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
-\end{comment}
 
 %(3) DATE 2018
 \subsection{Encoding for DCC Deployment}
