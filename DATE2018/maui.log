@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  2 APR 2018 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  2 APR 2018 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1184,23 +1184,42 @@ File: figures/2DCC_2Leader.png Graphic file (type png)
 Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 134.
 (pdftex.def)             Requested size: 226.79846pt x 114.52223pt.
 
-Underfull \hbox (badness 1655) in paragraph at lines 168--170
-\OT1/ptm/m/n/9 sider the DCC in-ser-tion shown in Fig-ure 4(a)[]: if the in-ser
--
+Underfull \hbox (badness 4608) in paragraph at lines 169--173
+[]\OT1/ptm/m/n/9 In Fig-ure 10[], buffer 1 is on the com-mon clock path.
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 168--170
-\OT1/ptm/m/n/9 tion of a 40% DCC at buffer 1 causes a tim-ing vi-o-la-tion
+Underfull \hbox (badness 10000) in paragraph at lines 169--173
+\OT1/ptm/m/n/9 Con-sider the leader se-lec-tion shown in Fig-ure 10(a)[]: if
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 1810) in paragraph at lines 169--173
+\OT1/ptm/m/n/9 buffer 1 is the HTV leader and the leader se-lec-tion causes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--173
+\OT1/ptm/m/n/9 a tim-ing vi-o-la-tion within 10 years, then the Boolean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--173
+\OT1/ptm/m/n/9 rep-re-sen-ta-tion of leader se-lec-tion and DCC de-ploy-ment,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 [] \OMS/cmsy/m/n/9 ^ [] ^ [] ^
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 []$\OT1/ptm/m/n/9 ,
  []
 
@@ -1256,7 +1275,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (10 pages, 2675799 bytes).
+Output written on maui.pdf (10 pages, 2676164 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
