@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  2 APR 2018 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  3 APR 2018 15:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1205,25 +1205,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--173
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 169--173
-\OT1/ptm/m/n/9 rep-re-sen-ta-tion of leader se-lec-tion and DCC de-ploy-ment,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
-[] \OMS/cmsy/m/n/9 ^ [] ^ [] ^
+Underfull \hbox (badness 2970) in paragraph at lines 180--185
+[]\OT1/ptm/m/n/9 This class tar-gets buffers 2, 3, 4, 5, 6, 7. If buffer 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
-[]$\OT1/ptm/m/n/9 ,
+Underfull \hbox (badness 2073) in paragraph at lines 180--185
+\OT1/ptm/m/n/9 is the HTV leader, and it causes a tim-ing vi-o-la-tion within
  []
 
-) (./conclude.tex) [9]
+) (./conclude.tex [9])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1235,9 +1230,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10
-
- <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>] (./maui.aux)
+[10 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>] (./maui.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1275,7 +1268,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (10 pages, 2676164 bytes).
+Output written on maui.pdf (10 pages, 2676800 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
