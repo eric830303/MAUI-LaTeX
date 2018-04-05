@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  3 APR 2018 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  5 APR 2018 22:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1153,72 +1153,67 @@ File: figures/example_of_dcc_leader.png Graphic file (type png)
 Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 5
 7.
 (pdftex.def)             Requested size: 226.79846pt x 117.15054pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [7 <./figures/Flow_chart_tva.png> <./figures/example_of_dcc_leader.png>]
 <figures/All_types_of_DCCs_and_leaders.png, id=61, 1139.25626pt x 635.37375pt>
 File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs_and_leaders.png>
 Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
-t line 88.
+t line 87.
 (pdftex.def)             Requested size: 252.0pt x 140.53886pt.
  [8 <./figures/All_types_of_DCCs_and_leaders.png>]
 <figures/2DCC_1Leader.png, id=65, 922.44624pt x 438.63875pt>
 File: figures/2DCC_1Leader.png Graphic file (type png)
 
 <use figures/2DCC_1Leader.png>
-Package pdftex.def Info: figures/2DCC_1Leader.png used on input line 129.
+Package pdftex.def Info: figures/2DCC_1Leader.png used on input line 128.
 (pdftex.def)             Requested size: 226.79846pt x 107.84558pt.
 
 <figures/2DCC_2Leader.png, id=66, 910.40125pt x 459.7175pt>
 File: figures/2DCC_2Leader.png Graphic file (type png)
 
 <use figures/2DCC_2Leader.png>
-Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 134.
+Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 133.
 (pdftex.def)             Requested size: 226.79846pt x 114.52223pt.
 
-Underfull \hbox (badness 4608) in paragraph at lines 169--173
+Underfull \hbox (badness 4608) in paragraph at lines 168--172
 []\OT1/ptm/m/n/9 In Fig-ure 10[], buffer 1 is on the com-mon clock path.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 \OT1/ptm/m/n/9 Con-sider the leader se-lec-tion shown in Fig-ure 10(a)[]: if
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 169--173
+Underfull \hbox (badness 1810) in paragraph at lines 168--172
 \OT1/ptm/m/n/9 buffer 1 is the HTV leader and the leader se-lec-tion causes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 \OT1/ptm/m/n/9 a tim-ing vi-o-la-tion within 10 years, then the Boolean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 180--185
+Underfull \hbox (badness 2970) in paragraph at lines 179--184
 []\OT1/ptm/m/n/9 This class tar-gets buffers 2, 3, 4, 5, 6, 7. If buffer 2
  []
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 180--185
+Underfull \hbox (badness 2073) in paragraph at lines 179--184
 \OT1/ptm/m/n/9 is the HTV leader, and it causes a tim-ing vi-o-la-tion within
  []
 
-) (./conclude.tex [9])
+
+LaTeX Warning: Citation 'andres2016' on page 9 undefined on input line 205.
+
+[9]) (./conclude.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1232,7 +1227,15 @@ Before submitting the final camera ready copy, remember to:
 
 [10 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>] (./maui.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                maui
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'maui.run.xml'.
 \openout1 = `maui.run.xml'.
@@ -1244,7 +1247,7 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### bottom level 
 Here is how much of TeX's memory you used:
  20736 strings out of 492995
- 389947 string characters out of 6132703
+ 389947 string characters out of 6132705
  677494 words of memory out of 5000000
  24028 multiletter control sequences out of 15000+600000
  577412 words of font info for 106 fonts, out of 8000000 for 9000
@@ -1268,7 +1271,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on maui.pdf (10 pages, 2676800 bytes).
+Output written on maui.pdf (10 pages, 2677457 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
