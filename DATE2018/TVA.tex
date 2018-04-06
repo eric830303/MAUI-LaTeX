@@ -204,4 +204,18 @@ Considering all of the above cases with the given DCC deployment, a maximum numb
 The proposed framework, which simultaneously considers the two techniques, is implemented in C++ and SAT-based formulation is solved by MiniSat. The experimental environment and benchmark circuits are identical to the previous setting in Section~\ref{sec:exp}.
 Under 10-year aging influence with BTI, the aging rates of clock buffers are obtained from HSPICE. The aging rates of nominal clock buffers with duty cycles of 20\%, 40\%, 50\%, and 80\% are 8.5\%, 12.1\%, 13.5\%, and 16.4\% respectively and the aging rate of logic is obtained by using the same predictive model. The timing information of HTV buffers is estimated from the model in~\cite{andres2016}. The fresh/non-aging delays of HTV buffers are 1.2X longer than that of nominal buffer, and the aging rates with duty cycle of 20\%, 40\%, 50\%, and 80\% are 0.5\%, 4.1\%, 5.4\%, and 8.2\%, respectively.
 
+\begin{table*}
+\centering
+\caption{Experimental results of DCC deployment and HTV assignment}
+	\begin{tabular}{l}
+	\includegraphics[width=1.3\columnwidth]{Experimental_result_DCC_TVA.png}
+	\end{tabular}
+\label{table:exp2}
+\end{table*}
+
+Table~\ref{table:exp2} shows the experimental results, where Column 4 - 6 demonstrate the previous results after applying DCC deployment  and Column 7 - 10 demonstrate the counterparts after applying both DCC deployment and HTV assignment. Column seven demonstrates the optimum clock period after the two techniques are applied together, denoted by $T_{c\_aged\_opt_Leader}$. Column eight demonstrates the used DCC count, and Column nine demonstrates the count of HTV buffers, total count of clock buffers and the ratio of HTV buffers to total clock buffers. The last column demonstrates the improvement, which is the level of aging tolerance and is calculated as:
+\begin{gather*}
+1 - (T_{c\_aged\_opt_Leader} - T_{c\_fresh}) / (T_{c\_aged} - T_{c\_fresh})
+\end{gather*}
+As it can be seen, we can obtain better improvement of aging tolerance after the two techniques are applied together. 
 
