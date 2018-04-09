@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  8 APR 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  9 APR 2018 11:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1233,13 +1233,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--181
 
 LaTeX Warning: Citation 'andres2016' on page 11 undefined on input line 232.
 
-<figures/Experimental_result_DCC_TVA.png, id=75, 1421.31pt x 672.5125pt>
+<figures/Experimental_result_DCC_TVA.png, id=75, 1361.085pt x 565.11125pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
 line 238.
-(pdftex.def)             Requested size: 327.60077pt x 155.00299pt.
+(pdftex.def)             Requested size: 428.39923pt x 177.8644pt.
 ) (./conclude.tex [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>
 ])
 
@@ -1275,12 +1275,12 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### bottom level 
 Here is how much of TeX's memory you used:
  20753 strings out of 492995
- 390299 string characters out of 6132705
+ 390299 string characters out of 6132703
  674483 words of memory out of 5000000
  24042 multiletter control sequences out of 15000+600000
  582210 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 45i,13n,50p,10375b,12053s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,13n,50p,10375b,12051s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1302,7 +1302,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on maui.pdf (12 pages, 3010069 bytes).
+Output written on maui.pdf (12 pages, 2968105 bytes).
 PDF statistics:
  146 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
