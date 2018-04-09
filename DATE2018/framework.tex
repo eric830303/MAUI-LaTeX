@@ -54,13 +54,14 @@ The problem of DCC deployment/insertion needs to be encoded into Boolean represe
 Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, two Boolean variables are used for encoding four possibilities of DCC insertion at the input of any buffer. The four possibilities can be encoded as follows:
 
 %(5) DATE 2018
+{\small
 \begin{tabular}{ c c c }
    & DCC type & $\left\{B_{p,2},B_{p,1}\right\}$ \\
   (1)\quad & None & \{0,0\} \\
   (2)\quad & 20\% &  \{0,1\} \\
   (3)\quad & 40\% &  \{1,0\} \\
   (4)\quad & 80\% &  \{1,1\} \\
-\end{tabular}
+\end{tabular}}
 
 \afterpage{
 \begin{figure*}
@@ -93,9 +94,10 @@ In Figure~\ref{fig:dcctype}, buffers 1 $\hyphen$ 7 are candidate locations for D
 \textbf{\uline{DCC constraint: At most one DCC on a single clock path (from the clock source to one of the flip-flops)}}
 
 In order to ensure no more than one DCC on any clock path, we can use the Boolean variables introduced for DCC insertion, i.e., $B_{p,q} \left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1) \rceil \right)$, to generate some clauses which suppress the occurrence of having two DCCs on a clock path. Consider buffer 2 (encoded by $\left\{B_{2,2}, B_{2,1}\right\}$) and buffer 3 (encoded by $\left\{B_{3,2}, B_{3,1}\right\}$) in Figure~\ref{fig:dcctype}. If there is a DCC at buffer 2 (i.e., $\{B_{2,2}, B_{2,1}\} \not\equiv \{0, 0\}$), then there must no DCC at buffer 3 (i.e., $\{B_{3,2}, B_{3,1}\} \equiv \{0, 0\}$), and vice versa. The constraint can be formally written as:
+{\fontsize{8}{8.4}
 \begin{gather*}
 \left(\{B_{2,2}, B_{2,1}\} \equiv \{0, 0\}\right) \lor \left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 0\}\right)
-\end{gather*}
+\end{gather*}}
 Next, it can be translated into 4 CNF clauses:
 \begin{gather*}
 \mbox{\fontsize{7}{8.4}\selectfont ($\neg B_{2,1}\lor\neg B_{3,1}$) $\land$ ($\neg B_{2,1}\lor\neg B_{3,2}$) $\land$ ($\neg B_{2,2}\lor\neg B_{3,1}$) $\land$ ($\neg B_{2,2}\lor\neg B_{3,2}$)} 
@@ -125,14 +127,16 @@ Given one clock period $T_c$ derived by binary search, one aging-critical path, 
 No DCC is inserted on either clock path
 
 Consider the situation that no DCC is inserted at buffers 1 $\hyphen$ 7. If it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,
+{\fontsize{8}{8.4}
 \begin{gather*}
 \left(\{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb \\
 \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right),
-\end{gather*}
+\end{gather*}}
 equivalent to the following CNF clause:
+{\fontsize{8}{8.4}
 \begin{gather*}
 \left(B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,1} \right),
-\end{gather*}
+\end{gather*}}
 should be generated such that the solver will not output the corresponding deployment in the result if the CNF is satisfiable. In this case, a total of 1 CNF clause is generated.
 \end{class}
 \begin{class}
@@ -142,17 +146,17 @@ Inserting one DCC
 This class can be further classified into 2 sub-classes based on the location of inserted DCCs. \\
 \textit{Class 2-1:} Inserting one DCC on the common clock path
 
-In Figure~\ref{fig:dccinsert}, buffer 1 is on the common clock path. Consider the DCC insertion shown in Figure~\ref{fig:sub:dcci1}: if the insertion of a 40\% DCC at buffer 1 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment, $\left(\{B_{1,2}, B_{1,1}\} \equiv \{1, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right)$, equivalent to the following clause: $\left(\neg B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,1} \right)$, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable. Given that there are 3 choices of DCCs, a total of 3 CNF clauses will be generated in the worst case. \\
+In Figure~\ref{fig:dccinsert}, buffer 1 is on the common clock path. Consider the DCC insertion shown in Figure~\ref{fig:sub:dcci1}: if the insertion of a 40\% DCC at buffer 1 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment, {\fontsize{8}{8.4}$\left(\{B_{1,2}, B_{1,1}\} \equiv \{1, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right)$}, equivalent to the following clause:  {\fontsize{8}{8.4}$\left(\neg B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,1} \right)$}, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable. Given that there are 3 choices of DCCs, a total of 3 CNF clauses will be generated in the worst case. \\
 \textit{Class 2-2:} \mbox{\fontsize{9}{10.8}\selectfont Inserting one DCC on one of the divergent clock paths}
 
-This class targets buffers 2, 3, 4, 5, 6, 7. If the insertion of a 20\% DCC at buffer 3 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment, $\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \dotsb \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right)$, equivalent to the following CNF clause: $\left(B_{3,2} \lor \neg B_{3,1} \lor B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,1} \right)$, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable. This class includes 6 candidates: buffers 2, 3, 4, 5, 6, 7, and each has 3 choices of DCCs. Therefore, a total of 18 CNF clauses will be generated in the worst case.
+This class targets buffers 2, 3, 4, 5, 6, 7. If the insertion of a 20\% DCC at buffer 3 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment,  {\fontsize{8}{8.4}$\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \dotsb \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right)$}, equivalent to the following CNF clause:  {\fontsize{8}{8.4}$\left(B_{3,2} \lor \neg B_{3,1} \lor B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor B_{3,2} \dotsb \lor B_{7,2} \lor B_{7,1} \right)$}, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable. This class includes 6 candidates: buffers 2, 3, 4, 5, 6, 7, and each has 3 choices of DCCs. Therefore, a total of 18 CNF clauses will be generated in the worst case.
 \end{class}
 
 \begin{class}
 \label{class:c3}
 Inserting two DCCs on two clock paths respectively
 
-Given the DCC deployment in Figure~\ref{fig:sub:dcci2} (a 20\% DCC inserted at buffer 3 and a 80\% DCC inserted at buffer 6), if it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment, $\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{5,2}, B_{5,1}\} \equiv \{1, 1\} \right)$, equivalent to the following CNF clause: $\left(B_{3,2} \lor \neg B_{3,1} \lor \neg B_{5,2} \lor \neg B_{5,1} \right)$, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable.
+Given the DCC deployment in Figure~\ref{fig:sub:dcci2} (a 20\% DCC inserted at buffer 3 and a 80\% DCC inserted at buffer 6), if it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment, {\fontsize{8}{8.4}$\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{5,2}, B_{5,1}\} \equiv \{1, 1\} \right)$}, equivalent to the following CNF clause: {\fontsize{8}{8.4}$\left(B_{3,2} \lor \neg B_{3,1} \lor \neg B_{5,2} \lor \neg B_{5,1} \right)$}, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable.
 
 Class 3 considers two buffer locations to insert DCCs, one among buffers \{2, 3, 4\} and the other one among buffers \{5, 6, 7\}; thus, there are totally 9 combinations of buffer locations. Each combination includes two buffers and thus 9 possibilities of choosing one specific DCC for each of the two buffers. Therefore, a total of 81 CNF clauses will be generated in the worst case.
 

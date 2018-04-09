@@ -1,8 +1,7 @@
  \section{FURTHER OPTIMIZATION BY V\textsubscript{TH} ASSIGNMENT}
 \label{sec:TVA}
 % (1)
-In the section, V\textsubscript{th} assignment is introduced to manipulate clock skew for aging tolerance. The idea comes from the aforementioned prior work~\cite{chen2013novel}, which exploits the technique to minimize the aging-induced clock skew, while it does not make the skew useful. Since V\textsubscript{th} assignment can also manipulate the clock skew, why do not we use the technique to achieve aging tolerance? We do. The two techniques,  V\textsubscript{th} assignment and aging manipulation are applied together to further optimize the required $T_c$. In other words, in addition to aging manipulation based on DCC insertion/deployment, we assign the threshold voltage of certain clock buffers, such that the latencies of the buffers are changed, so are the slacks, which give us the opportunity to further mitigate the aging-induced degradation of logic network based on timing borrowing. The section is organized as follows:~\ref{sec:TVA:example} demonstrates how V\textsubscript{th} assignment further optimizes the required $T_c$.~\ref{sec:TVA:leader} introduces the rule/mechanism of V\textsubscript{th} assignment, followed by~\ref{sec:TVA:leaderconstraint}, which explains how we convert the rule/mechanism into CNF clauses.~\ref{sec:TVA:timingconstraint} introduces the new timing constraints when V\textsubscript{th} assignment is considered. Finally,~\ref{sec:TVA:experiment} shows the experimental results, which is optimized based on DCC insertion and V\textsubscript{th} assignment.
-
+In the section, V\textsubscript{th} assignment is introduced to manipulate clock skew for aging tolerance. The idea comes from the aforementioned prior work~\cite{chen2013novel}, which exploits the technique to minimize the aging-induced clock skew, while it does not make the skew useful. Since V\textsubscript{th} assignment can also manipulate the clock skew, why do not we use the technique to achieve aging tolerance? We do. The two techniques,  V\textsubscript{th} assignment and aging manipulation are applied together to further optimize the required $T_c$. In other words, in addition to aging manipulation based on DCC insertion/deployment, we assign the threshold voltage of certain clock buffers, such that the latencies of the buffers are changed, so are the slacks, which give us the opportunity to further mitigate the aging-induced degradation of logic network based on timing borrowing. The section is organized as follows:~\ref{sec:TVA:example} demonstrates how V\textsubscript{th} assignment further optimizes the required $T_c$.~\ref{sec:TVA:leader} introduces the rule/mechanism of V\textsubscript{th} assignment, followed by~\ref{sec:TVA:framework}, which explains how we convert the rule/mechanism into CNF clauses, and  introduces the new timing constraints when V\textsubscript{th} assignment is considered. Finally,~\ref{sec:TVA:experiment} shows the experimental results, which is optimized based on DCC insertion and V\textsubscript{th} assignment.
 % (2)
 %--------------------------------- Motivating Example -------------------------------------------------------
 \subsection{Motivating Example considering V\textsubscript{th} assignment}
@@ -43,11 +42,11 @@ If the clock buffer is chosen as the \textit{technology leader}, the clock buffe
 	\caption{The overall flow of the framework when technology leaders are considered }
 	\label{fig:flow:tva}
 \end{figure}
-The proposed framework, which considers aging manipulation (DCC) and V\textsubscript{th} assignment (technology leader), is depicted in Figure~\ref{fig:flow:tva}. Compared with the leader-free framework in Figure~\ref{fig:flow}, it is also based on a binary search for the minimum clock period ($T_c$) and SAT formulation. The problem, technology leader selection from clock buffers, is formulated as SAT problem, so is the problem of DCC insertion/deployment. In the sequel, Section~\ref{sec:TVA:leader_encode} explains how the problem of DCC insertion and technology leader selection is encoded by Boolean variables. Section~\ref{sec:TVA:leaderconstraint} introduces technology leader constraints, which is similar to DCC constraint. Section~\ref{sec:TVA:leaderconstraint} introduces the timing constraints which consider DCC deployment and technology leader selection. Finally,  Section~\ref{sec:TVA:leaderconstraint} shows the further optimized experimental results, based on DCC deployment and technology leader selection.
+The proposed framework, which considers aging manipulation (DCC) and V\textsubscript{th} assignment (technology leader), is depicted in Figure~\ref{fig:flow:tva}. Compared with the leader-free framework in Figure~\ref{fig:flow}, it is also based on a binary search for the minimum clock period ($T_c$) and SAT formulation. The problem, technology leader selection from clock buffers, is formulated as SAT problem, so is the problem of DCC insertion/deployment. In the sequel, Section~\ref{sec:TVA:leader_encode} explains how the problem of DCC insertion and technology leader selection is encoded by Boolean variables. Section~\ref{sec:TVA:leaderconstraint} introduces technology leader constraints, which is similar to DCC constraint. Section~\ref{sec:TVA:leaderconstraint} introduces the timing constraints which consider DCC deployment and technology leader selection.
 
 %--------------------------------- Encoding -------------------------------------------------------
 % (5)
-\subsection{Encoding for DCC and Technology Leader Deployment}
+\subsubsection{Encoding for DCC and Technology Leader Deployment}
 \label{sec:TVA:leader_encode}
 The problem of DCC deployment and technology leader selection needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Furthermore, we also assume that a total of $M$ types of technology leaders can be chosen. Note that, each type of technology leader represents an individual technology. Including the nominal technology, there are ($M$ + 1) possibilities of technology leader selection for each clock buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each clock buffer, there exist two types of Boolean variables, $B_{p,q}$ and $B_{p,r}$, where $1 \leq p \leq P$, $1 \leq q \leq Q \leq r \leq R$, $Q = \lceil \lg (N + 1)\rceil$ and $R = \lceil \lg \{(N + 1)(M + 1\}\rceil$. $B_{p,q}$ are used to encode the ($N$ + 1) possibilities of DCC insertion, and $B_{p,r}$ are used to encode the ($M$ + 1) possibilities of technology leader selection.
 
@@ -61,6 +60,7 @@ The problem of DCC deployment and technology leader selection needs to be encode
 
 Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are three types of DCCs, which are assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. In addition, there is one type of technology leader, which is assumed to be a high-V\textsubscript{th} (high threshold voltage or high-V\textsubscript{th}) leader. Note that, if the clock buffer is selected as the high-V\textsubscript{th} leader, the technology of the buffer and the associated downstream ones is replaced with high-V\textsubscript{th} counterpart. Since we assume three types of DCC and one type of technology leader, three Boolean variables are used for encoding eight possibilities of DCC and technology leader at any buffer. The eight possibilities can be encoded as follows:
 
+{\small
 \begin{tabular}{  c  c  c  c  }
   	 & Leader type & DCC type & $\{B_{p,3}, B_{p,2}, B_{p,1}\}$ \\ 
   	(1)\quad & Nominal V\textsubscript{th} & None & \{0, 0, 0\} \\ 
@@ -71,16 +71,16 @@ Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are thre
   	(6)\quad & high-V\textsubscript{th} & 20\% &  \{1, 0, 1\} \\ 
   	(7)\quad & high-V\textsubscript{th} & 40\% &  \{1, 1, 0\} \\ 
   	(8)\quad & high-V\textsubscript{th} & 80\% &  \{1, 1, 1\} \\ 
-\end{tabular}
+\end{tabular}}
 
 
-For example, in Figure~\ref{fig:example_dcc_tva}, the DCC deployment is same with that in Figure~\ref{fig:sub:dcci2} (i.e., 20\% DCC at buffer 3 and 80\% DCC at buffer 6), but the buffer 5 is selected as the high-V\textsubscript{th} leader, which is denoted by a black flag. Thus, the technology of buffer 5, 6 and 7 are replaced with the high-V\textsubscript{th} counterpart. Therefore, $\left\{B_{3,3}, B_{3,2}, B_{3,1}\right\}$ = \{0, 0, 1\}, $\left\{B_{5,3}, B_{5,2}, B_{5,1}\right\}$ = \{1, 0, 0\}, $\left\{B_{6,3}, B_{6,2}, B_{6,1}\right\}$ = \{0, 1, 1\}, and $\left\{B_{p,3}, B_{p,2}, B_{p,1}\right\}$ = \{0, 0, 0\} for $p$ = 1, 2, 4 or 7.
+For example, in Figure~\ref{fig:example_dcc_tva}, the DCC deployment is same with that in Figure~\ref{fig:sub:dcci2} (i.e., 20\% DCC at buffer 3 and 80\% DCC at buffer 6), but the buffer 5 is selected as the high-V\textsubscript{th} leader, which is denoted by a black flag. Thus, the technology of buffer 5, 6 and 7 are replaced with the high-V\textsubscript{th} counterpart. Therefore, {\small $\left\{B_{3,3}, B_{3,2}, B_{3,1}\right\}$ = \{0, 0, 1\}}, {\small $\left\{B_{5,3}, B_{5,2}, B_{5,1}\right\}$ = \{1, 0, 0\}}, {\small $\left\{B_{6,3}, B_{6,2}, B_{6,1}\right\}$ = \{0, 1, 1\}}, and {\small $\left\{B_{p,3}, B_{p,2}, B_{p,1}\right\}$ = \{0, 0, 0\}} for $p$ = 1, 2, 4 or 7.
 
 As mentioned in Section~\ref{subsec:eddcd}, the 20\% DCC mitigates the aging of buffer 3 and its downstream buffers, but the 80\% DCC aggravates the aging of buffer 6 and its downstream buffers. Moreover, since the buffer 5 is a high-V\textsubscript{th} leader, buffer 5, 6 and 7 are changed as high-V\textsubscript{th} buffers, implying the latency from buffer 5 to buffer 7 is lengthened. This way, the clock skew becomes larger than that in Figure~\ref{fig:sub:dcci2}, so that the required $T_c$ can be further reduced, based on timing borrowing. Note that, as we mentioned in Section~\ref{sec:TVA:example}, the $T_c$ reduction in Figure~\ref{fig:sub:dcci2} is only due to the useful aging-induced clock skew; however, the  further $T_c$ reduction in Figure~\ref{fig:example_dcc_tva} is both based on useful aging-induced and tech-induced clock skew, which is caused by the V\textsubscript{th} assignment of clock buffers. 
 % (6)
 
 %--------------------------------- Constraints - Preface -------------------------------------------------------
-\subsection{Constraints and Corresponding Clauses}
+\subsubsection{Constraints and Corresponding Clauses}
 \label{sec:TVA:leaderconstraint}
 \begin{figure}
     \centering
@@ -103,7 +103,7 @@ The DCC constraints are identical to those in Section~\ref{subsec:dccccc}. That 
 % (8)
 \subsubsection{Technology Leader Constraints and Corresponding Clauses}
 \label{sec:TVA:dcc_c}
-The leader constraints are similar to DCC constraints. They are defined as follow: At most one technology leader exists along a single clock path, from clock source to one of the flip-flops. To ensure no more than one leader along any clock path, we can use the Boolean variables, which are introduced to encode leader selection, i.e., $B_{p,r}$, where $1 \leq p \leq P$, $\lceil \lg \{(N + 1)\} \rceil = Q \leq r \leq R = \lceil \lg \{(N + 1)(M + 1)\} \rceil$, to generate some clauses which suppress the occurrence of having two leaders along a clock path. Consider buffer 2 (encoded by $\left\{B_{2,3}\right\}$) and buffer 3 (encoded by $\left\{B_{3,3}\right\}$) in Figure~\ref{fig:g_dcc_leader}. If buffer 2 is a leader (i.e., $\{B_{2,3}\} \not\equiv \{0\}$), then buffer 3 must not be a leader (i.e., $\{B_{3,3}\} \equiv \{0, 0\}$), and vice versa. The constraint can be formally written as:
+The leader constraints are similar to DCC constraints. They are defined as follow: At most one technology leader exists along a single clock path, from clock source to one of the flip-flops. To ensure no more than one leader along any clock path, we can use the Boolean variables, which are introduced to encode leader selection, i.e., $B_{p,r}$, where $1 \leq p \leq P$, $\lceil \lg \{(N + 1)\} \rceil = Q \leq r \leq R = \lceil \lg \{(N + 1)(M + 1)\} \rceil$, to generate some clauses which suppress the occurrence of having two leaders along a clock path. Consider buffer 2 (encoded by {\fontsize{8}{8.4}$\left\{B_{2,3}\right\}$}) and buffer 3 (encoded by {\fontsize{8}{8.4}$\left\{B_{3,3}\right\}$}) in Figure~\ref{fig:g_dcc_leader}. If buffer 2 is a leader (i.e., {\fontsize{8}{8.4}$\{B_{2,3}\} \not\equiv \{0\}$}), then buffer 3 must not be a leader (i.e., {\fontsize{8}{8.4}$\{B_{3,3}\} \equiv \{0, 0\}$}), and vice versa. The constraint can be formally written as:
 {
 \fontsize{8}{8.4}
 \begin{gather*}
@@ -119,7 +119,7 @@ With leader constraints and corresponding clauses, we can drastically reduce the
 
 %--------------------------------- Timing Constraints (DCC+TVA) - Preface -----------------------------------------------
 % (9)
-\subsection{Timing Constraints considering DCC and Technology Leader}
+\subsubsection{Timing Constraints considering DCC and Technology Leader}
 \label{sec:TVA:timingconstraint}
 \begin{figure*}
     \centering
@@ -145,18 +145,14 @@ Given one clock period $T_c$ derived by binary search, one aging-critical logic 
 \label{class:c4}
 No buffer on either clock path is selected as a technology leader
 
-Consider the situation that, among buffers 1 $\hyphen$ 7, no buffer is selected as a technology leader. If it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,
-{\fontsize{8}{8.4}
+Consider the situation that, among buffers 1 $\hyphen$ 7, no buffer is selected as a technology leader. If it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,{\fontsize{8}{8.4}
 \begin{gather*}
 \left(\{B_{1,3}, B_{1,2}, B_{1,1}\} \equiv \{0, 0, 0\} \right) 
 \land \left( \{B_{2,3}, B_{2,2}, B_{2,1}\} \equiv \{0, 0, 0\} \right) \\ \land \dotsb 
 \land \left( \{B_{7,3}, B_{7,2}, B_{7,1}\} \equiv \{0, 0, 0\} \right),
-\end{gather*}
-}
+\end{gather*}}
 equivalent to the following CNF clause:
-{\fontsize{8}{8.4}
-$(B_{1,3} \lor B_{1,2} \lor B_{1,1} \lor B_{2,3} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,2} \lor B_{7,1} )$,
-}
+{\fontsize{8}{8.4}$(B_{1,3} \lor B_{1,2} \lor B_{1,1} \lor B_{2,3} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,2} \lor B_{7,1} )$,}
 should be generated such that the solver will not output the corresponding DCC deployment and leader selection in the result if the CNF is satisfiable. In this case, a total of 1 CNF clause is generated.
 \end{class}
 
@@ -177,7 +173,7 @@ In Figure~\ref{fig:dccleaderinsert}, buffer 1 is on the common clock path. Consi
 equivalent to the following clause: 
 {\fontsize{8}{8.4}$(\neg B_{1,3} \lor B_{1,2} \lor B_{1,1} \lor B_{2,3} \lor B_{2,2} \lor B_{2,1} \lor B_{3,3} \lor \neg B_{3,2} \lor B_{3,1} 
 \lor B_{4,3} \lor B_{4,2} \lor B_{4,1} \lor B_{5,3} \lor B_{5,2} \lor B_{5,1} \lor B_{6,3} \lor \neg B_{6,2} \lor B_{6,1}  
-\lor B_{7,3} \lor B_{7,2} \lor B_{7,1} )$}, should be generated such that the solver will not output the leader selection and DCC deployment in the result if the CNF is satisfiable. Given that there are 1 choices of technology leader, a total of 1 CNF clause will be generated in the worst case. \\
+\lor B_{7,3} \lor B_{7,2} \lor B_{7,1} )$}, should be generated such that the solver will not output the leader selection and DCC deployment in the result if the CNF is satisfiable. Given that there are 1 choices of technology leader, a total of 1 CNF clause will be generated in the worst case.
 
 %DATE 2018
 %if the insertion of a 40\% DCC at buffer 1 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment, $\left(\{B_{1,2}, B_{1,1}\} \equiv \{1, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right)$, equivalent to the following clause: $\left(\neg B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor \dotsb \lor B_{7,2} \lor B_{7,1} \right)$, should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable. Given that there are 3 choices of DCCs, a total of 3 CNF clauses will be generated in the worst case. \\
