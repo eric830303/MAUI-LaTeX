@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  9 APR 2018 15:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  11 APR 2018 00:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1162,7 +1162,7 @@ File: figures/example_of_dcc_leader.png Graphic file (type png)
 Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 5
 6.
 (pdftex.def)             Requested size: 226.79846pt x 117.15054pt.
- [8 <./figures/Flow_chart_tva.png> <./figures/example_of_dcc_leader.png>]
+ [8 <./figures/Flow_chart_tva.png>]
 <figures/All_types_of_DCCs_and_leaders.png, id=67, 1139.25626pt x 635.37375pt>
 File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
@@ -1175,8 +1175,8 @@ Underfull \hbox (badness 3240) in paragraph at lines 106--109
  \OT1/ptm/m/it/10 4) Tech-nol-ogy Leader Con-straints and Cor-re-spond-ing
  []
 
-[9 <./figures/All_types_of_DCCs_and_leaders.png>]
-<figures/2DCC_1Leader.png, id=71, 922.44624pt x 438.63875pt>
+[9 <./figures/example_of_dcc_leader.png> <./figures/All_types_of_DCCs_and_leade
+rs.png>] <figures/2DCC_1Leader.png, id=71, 922.44624pt x 438.63875pt>
 File: figures/2DCC_1Leader.png Graphic file (type png)
 
 <use figures/2DCC_1Leader.png>
@@ -1192,10 +1192,6 @@ Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 134.
  [10]
 
 LaTeX Warning: Citation 'andres2016' on page 11 undefined on input line 228.
-
-
-Underfull \vbox (badness 2469) has occurred while \output is active []
-
 
 <figures/Experimental_result_DCC_TVA.png, id=76, 1361.085pt x 565.11125pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
@@ -1239,8 +1235,8 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### bottom level 
 Here is how much of TeX's memory you used:
  20754 strings out of 492995
- 390312 string characters out of 6132703
- 675483 words of memory out of 5000000
+ 390312 string characters out of 6132705
+ 674483 words of memory out of 5000000
  24043 multiletter control sequences out of 15000+600000
  582210 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1267,7 +1263,7 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on maui.pdf (12 pages, 2975485 bytes).
+Output written on maui.pdf (12 pages, 2975607 bytes).
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
