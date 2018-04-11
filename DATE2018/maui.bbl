@@ -655,5 +655,29 @@
     \field{month}{06}
     \field{year}{2011}
   \endentry
+
+  \entry{andres2016}{article}{}
+    \name{author}{1}{}{%
+      {{hash=eaAFG}{%
+         prefix={et},
+         prefixi={e\bibinitperiod},
+         family={al.},
+         familyi={a\bibinitperiod},
+         given={Andres F.\bibnamedelima Gomez},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{aAFGe1}
+    \strng{fullhash}{aAFGe1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Early Selection of Critical Paths for Reliable NBTI
+  Ag-ing-Delay Monitoring}
+    \field{journaltitle}{IEEE Transactions on Very Larger Scale Integration
+  (VLSI) Systems}
+    \field{year}{2016}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
 \endsortlist
 \endinput

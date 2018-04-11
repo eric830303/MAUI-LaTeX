@@ -58,7 +58,7 @@ The problem of DCC deployment and technology leader selection needs to be encode
     \label{fig:example_dcc_tva}
 \end{figure}
 
-Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are three types of DCCs, which are assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. In addition, there is one type of technology leader, which is assumed to be a high-V\textsubscript{th} (high threshold voltage or high-V\textsubscript{th}) leader. Note that, if the clock buffer is selected as the high-V\textsubscript{th} leader, the technology of the buffer and the associated downstream ones is replaced with high-V\textsubscript{th} counterpart. Since we assume three types of DCC and one type of technology leader, three Boolean variables are used for encoding eight possibilities of DCC and technology leader at any buffer. The eight possibilities can be encoded as follows:
+Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are three types of DCCs, which are assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. In addition, there is one type of technology leader, which is assumed to be a high-V\textsubscript{th}. Note that, if the clock buffer is selected as the high-V\textsubscript{th} leader, the technology of the buffer and the associated downstream ones is replaced with high-V\textsubscript{th} counterpart. Since we assume three types of DCC and one type of technology leader, three Boolean variables are used for encoding eight possibilities of DCC and technology leader at any buffer. The eight possibilities can be encoded as follows:
 
 {\small
 \begin{tabular}{  c  c  c  c  }
@@ -222,10 +222,30 @@ Considering all of the above cases with the given DCC deployment, a maximum numb
 
 %--------------------------------- Experimental Results ----------------------------------------------------------------
 % (10)
-\subsection{Experimental Results}
+\subsection{Experimental Setting and Aging Rate Model for High-V\textsubscript{th} Buffer}
 \label{sec:TVA:experiment}
 The proposed framework, which simultaneously considers the two techniques, is implemented in C++ and SAT-based formulation is solved by MiniSat. The experimental environment and benchmark circuits are identical to the previous setting in Section~\ref{sec:exp}.
-Under 10-year aging influence with BTI, the aging rates of clock buffers are obtained from HSPICE. The aging rates of nominal clock buffers with duty cycles of 20\%, 40\%, 50\%, and 80\% are 8.5\%, 12.1\%, 13.5\%, and 16.4\% respectively and the aging rate of logic is obtained by using the same predictive model. The timing information of high-V\textsubscript{th} buffers is estimated from the model in~\cite{andres2016}. The fresh/non-aging delays of high-V\textsubscript{th} buffers are 1.2X longer than that of nominal buffer, and the aging rates with duty cycle of 20\%, 40\%, 50\%, and 80\% are 0.5\%, 4.1\%, 5.4\%, and 8.2\%, respectively.
+Under 10-year aging influence with BTI, the aging rates of clock buffers are obtained from HSPICE. The aging rates of nominal clock buffers with duty cycles of 20\%, 40\%, 50\%, and 80\% are 8.5\%, 12.1\%, 13.5\%, and 16.4\% respectively and the aging rate of logic is obtained by using the same predictive model. The timing information (e.g., latency and aging rate) of high-V\textsubscript{th} buffers is estimated based on the model proposed in~\cite{andres2016}, which discusses the correlation between BTI and fresh V\textsubscript{th} offset. Note that, the offset is usually treated as process variation, while here it is regarded as the gap between high V\textsubscript{th} and nominal counterpart. The correlation is a long-term phenomenon that bridge the V\textsubscript{th} differences among the transistors over a period. Further, a positive/negative V\textsubscript{th} offset leads to a higher/lower fresh Vth, causing a lower/higher aging speed. Therefore, the gap between high and low V\textsubscript{th} will be gradually converged, letting threshold voltages of transistors, whose fresh ones are different, reach a convergent value. Thus, we can  conclude that the gap between high and nominal V\textsubscript{th} will be gradually converged over a specific period. The concept will be used in the latter model to obtain the aging rate of high-Vth buffer. A model in~\cite{andres2016} is proposed to estimate the correlation between fresh V\textsubscript{th} and BTI effects:
+\begin{gather*}
+\Delta V_{th\_nbti} = (1 - S_{v} \cdot \Delta V_{th\_offset})  \cdot A \cdot a^n \cdot t^n
+\end{gather*}
+
+%The fresh/non-aging delays of high-V\textsubscript{th} buffers are 1.2X longer than that of nominal buffer, and the aging rates with duty cycle of 20\%, 40\%, 50\%, and 80\% are 0.5\%, 4.1\%, 5.4\%, and 8.2\%, respectively.
+\begin{comment}
+A. Impact of PV on BTI
+In this section, we discuss the influence of process variation (PV) on BTI. Other works [16][17] do consider the PV effect while performing Monte-Carlo simulations, but ignore the correlation [8] between PV and BTI. The correlation is a long-term phenomenon that bridge the Vth differences among the transistors over a period. Further, a positive/negative Vth offset leads to a higher/lower fresh Vth, causing a lower/higher aging speed. Therefore, the gap between high and low Vth will be gradually converged, letting threshold voltages of transistors, whose fresh ones are different, reach a convergent value.
+B. Model of the Correlation 
+A model in [18] is proposed to estimate the correlation between PV and BTI effects:
+??V?_(th_nbti )=(1-S_v???V?_(th_pv) )?A????^n??t?^n
+(2)
+V_th=??V?_(th_nbti )+??V?_(th_pv)+V_(th_design)  
+(3)
+where ??V?_(th_pv) denotes the fresh threshold voltage offset due to PV, ??V?_(th_nbti ) denotes the BTI-induced Vth shift, V_(th_design) denotes the nominal threshold voltage. S_v depends on ??V?_(th_pv), and can be obtained by following procedures: (i) We assume threshold voltages of all transistors will be convergent after a long period, even if their fresh values are different due to PV. In other words, V_th is fixed regardless of various ??V?_(th_pv), since the aforementioned correlation takes effect. (ii) Therefore, V_th can be obtained by setting ??V?_(th_pv) to 0 in (3). In this way, V_th equals ??V?_(th_nbti) plus V_(th_design). Here, note that V_(th_design) is given by technology and ??V?_(th_nbti) can be calculated using (2) without S_v. (iii) Finally, after the fixed V_th value is obtained in (3), S_v can be obtained with a specified ??V?_(th_pv) in (2). 
+Shortly speaking, given a value of ??V?_(th_pv), we can obtain the value of S_v by assuming threshold voltages are convergent over a long-term period; then, since all the coefficients of (2) are known, the value of ??V?_(th_nbti) can be obtained.
+So far, the conversion from ??V?_(th_pv) to ??V?_(th_nbti) has been constructed. Then, ??V?_(th_nbti) must be transformed to the delay shift. In [15], the delay shift is linearly proportional to ??V?_(th_nbti):
+?t_p=C???V?_(th_nbti)
+(4)
+\end{comment}
 
 \begin{table*}
 \centering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  11 APR 2018 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  11 APR 2018 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -984,7 +984,13 @@ Package biblatex Info: Data encoding 'ascii' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'maui.bbl' found.
 
-(./maui.bbl)
+(./maui.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'andres2016':
+(biblatex)                - Invalid format of field 'month'.
+
+)
 Package biblatex Info: Reference section=0 on input line 373.
 Package biblatex Info: Reference segment=0 on input line 373.
 .................................................
@@ -1189,19 +1195,20 @@ File: figures/2DCC_2Leader.png Graphic file (type png)
 <use figures/2DCC_2Leader.png>
 Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 134.
 (pdftex.def)             Requested size: 226.79846pt x 114.52223pt.
+
+Underfull \vbox (badness 1668) has occurred while \output is active []
+
  [10]
-
-LaTeX Warning: Citation 'andres2016' on page 11 undefined on input line 228.
-
+Excluding 'comment' comment.
 <figures/Experimental_result_DCC_TVA.png, id=76, 1361.085pt x 565.11125pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
-line 234.
+line 254.
 (pdftex.def)             Requested size: 428.39923pt x 177.8644pt.
-) (./conclude.tex [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>
-])
+ [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>]) (./conclude.te
+x) [12 <./figures/Experimental_result_DCC_TVA.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1213,17 +1220,11 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[12 <./figures/Experimental_result_DCC_TVA.png>] (./maui.aux)
+[13
 
-LaTeX Warning: There were undefined references.
-
+] (./maui.aux)
 
 LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                maui
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'maui.run.xml'.
 \openout1 = `maui.run.xml'.
@@ -1234,10 +1235,10 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20754 strings out of 492995
- 390312 string characters out of 6132705
+ 20756 strings out of 492995
+ 390384 string characters out of 6132705
  674483 words of memory out of 5000000
- 24043 multiletter control sequences out of 15000+600000
+ 24045 multiletter control sequences out of 15000+600000
  582210 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,13n,50p,10375b,12051s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1263,10 +1264,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on maui.pdf (12 pages, 2975607 bytes).
+Output written on maui.pdf (13 pages, 2978034 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
