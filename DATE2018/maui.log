@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  13 APR 2018 14:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  13 APR 2018 15:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1200,13 +1200,7 @@ Underfull \vbox (badness 1668) has occurred while \output is active []
 
  [10]
 [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>]
-Underfull \hbox (badness 4713) in paragraph at lines 245--246
- \OT1/ptm/m/it/10 b) Ob-tain the con-ver-gent value of $\OML/cmm/m/it/10 V[]$\O
-T1/ptm/m/it/10 : [][] \OT1/ptm/m/n/10 We set
- []
-
-
-Underfull \hbox (badness 1454) in paragraph at lines 260--261
+Underfull \hbox (badness 1454) in paragraph at lines 262--263
 \OT1/ptm/m/n/10 to cor-re-spond-ing $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 V[]$ \
 OT1/ptm/m/n/10 has been con-structed. Then,
  []
@@ -1216,9 +1210,9 @@ File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
-line 279.
+line 281.
 (pdftex.def)             Requested size: 428.39923pt x 157.2582pt.
-) (./conclude.tex) [12]
+) (./conclude.tex [12])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1230,9 +1224,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[13
-
- <./figures/Experimental_result_DCC_TVA.png>] (./maui.aux)
+[13 <./figures/Experimental_result_DCC_TVA.png>] (./maui.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1274,7 +1266,7 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on maui.pdf (13 pages, 2836090 bytes).
+Output written on maui.pdf (13 pages, 2836266 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
