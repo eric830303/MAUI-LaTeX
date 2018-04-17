@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  17 APR 2018 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  17 APR 2018 23:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -919,9 +919,6 @@ LaTeX Warning: Label `eq:lxy2' multiply defined.
 
 LaTeX Warning: Label `eq:lyz2' multiply defined.
 
-
-LaTeX Warning: Label `sec:TVA:dcc_c' multiply defined.
-
 )
 \openout1 = `maui.aux'.
 
@@ -1178,10 +1175,6 @@ t line 90.
 (pdftex.def)             Requested size: 252.0pt x 140.53886pt.
  [9 <./figures/example_of_dcc_leader.png> <./figures/All_types_of_DCCs_and_lead
 ers.png>]
-Underfull \hbox (badness 3240) in paragraph at lines 109--113
- \OT1/ptm/m/it/10 4) Tech-nol-ogy Leader Con-straints and Cor-re-spond-ing
- []
-
 <figures/2DCC_1Leader.png, id=71, 914.41624pt x 435.6275pt>
 File: figures/2DCC_1Leader.png Graphic file (type png)
 
@@ -1233,10 +1226,10 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20762 strings out of 492995
- 390447 string characters out of 6132703
- 675483 words of memory out of 5000000
- 24051 multiletter control sequences out of 15000+600000
+ 20763 strings out of 492995
+ 390460 string characters out of 6132705
+ 674483 words of memory out of 5000000
+ 24052 multiletter control sequences out of 15000+600000
  582210 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,13n,50p,10375b,12051s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1262,7 +1255,7 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on maui.pdf (13 pages, 2821267 bytes).
+Output written on maui.pdf (13 pages, 2821905 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
