@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  13 APR 2018 15:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  17 APR 2018 18:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1144,7 +1144,7 @@ Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
 3.
 (pdftex.def)             Requested size: 201.60077pt x 116.64935pt.
 ) (./TVA.tex [6 <./figures/DCC_reduction.png>]
-Overfull \hbox (7.03566pt too wide) detected at line 18
+Overfull \hbox (7.03566pt too wide) detected at line 20
 []
  []
 
@@ -1158,7 +1158,7 @@ G to fix this)
 File: figures/Flow_chart_tva.png Graphic file (type png)
 
 <use figures/Flow_chart_tva.png>
-Package pdftex.def Info: figures/Flow_chart_tva.png used on input line 41.
+Package pdftex.def Info: figures/Flow_chart_tva.png used on input line 43.
 (pdftex.def)             Requested size: 226.79846pt x 159.88342pt.
 
 <figures/example_of_dcc_leader.png, id=63, 1060.96375pt x 548.0475pt>
@@ -1166,7 +1166,7 @@ File: figures/example_of_dcc_leader.png Graphic file (type png)
 
 <use figures/example_of_dcc_leader.png>
 Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 5
-6.
+9.
 (pdftex.def)             Requested size: 226.79846pt x 117.15054pt.
  [8 <./figures/Flow_chart_tva.png>]
 <figures/All_types_of_DCCs_and_leaders.png, id=67, 1139.25626pt x 635.37375pt>
@@ -1174,44 +1174,40 @@ File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs_and_leaders.png>
 Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
-t line 87.
+t line 90.
 (pdftex.def)             Requested size: 252.0pt x 140.53886pt.
-
-Underfull \hbox (badness 3240) in paragraph at lines 106--109
+ [9 <./figures/example_of_dcc_leader.png> <./figures/All_types_of_DCCs_and_lead
+ers.png>]
+Underfull \hbox (badness 3240) in paragraph at lines 109--113
  \OT1/ptm/m/it/10 4) Tech-nol-ogy Leader Con-straints and Cor-re-spond-ing
  []
 
-[9 <./figures/example_of_dcc_leader.png> <./figures/All_types_of_DCCs_and_leade
-rs.png>] <figures/2DCC_1Leader.png, id=71, 922.44624pt x 438.63875pt>
+<figures/2DCC_1Leader.png, id=71, 914.41624pt x 435.6275pt>
 File: figures/2DCC_1Leader.png Graphic file (type png)
 
 <use figures/2DCC_1Leader.png>
-Package pdftex.def Info: figures/2DCC_1Leader.png used on input line 129.
-(pdftex.def)             Requested size: 226.79846pt x 107.84558pt.
+Package pdftex.def Info: figures/2DCC_1Leader.png used on input line 133.
+(pdftex.def)             Requested size: 226.79846pt x 108.04248pt.
 
-<figures/2DCC_2Leader.png, id=72, 910.40125pt x 459.7175pt>
+<figures/2DCC_2Leader.png, id=72, 911.405pt x 456.70625pt>
 File: figures/2DCC_2Leader.png Graphic file (type png)
 
 <use figures/2DCC_2Leader.png>
-Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 134.
-(pdftex.def)             Requested size: 226.79846pt x 114.52223pt.
-
-Underfull \vbox (badness 1668) has occurred while \output is active []
-
- [10]
-[11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>]
-Underfull \hbox (badness 1454) in paragraph at lines 262--263
+Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 138.
+(pdftex.def)             Requested size: 226.79846pt x 113.64665pt.
+ [10] [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>]
+Underfull \hbox (badness 1454) in paragraph at lines 266--267
 \OT1/ptm/m/n/10 to cor-re-spond-ing $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 V[]$ \
 OT1/ptm/m/n/10 has been con-structed. Then,
  []
 
-<figures/Experimental_result_DCC_TVA.png, id=79, 1030.85126pt x 378.41376pt>
+<figures/Experimental_result_DCC_TVA.png, id=79, 925.4575pt x 341.275pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
-line 281.
-(pdftex.def)             Requested size: 428.39923pt x 157.2582pt.
+line 285.
+(pdftex.def)             Requested size: 428.39923pt x 157.97781pt.
 ) (./conclude.tex [12])
 
 ** Conference Paper **
@@ -1239,7 +1235,7 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 Here is how much of TeX's memory you used:
  20762 strings out of 492995
  390447 string characters out of 6132703
- 674483 words of memory out of 5000000
+ 675483 words of memory out of 5000000
  24051 multiletter control sequences out of 15000+600000
  582210 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1266,7 +1262,7 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on maui.pdf (13 pages, 2836266 bytes).
+Output written on maui.pdf (13 pages, 2821267 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
