@@ -1,0 +1,28 @@
+ \section{FURTHER OPTIMIZATION BY V\textsubscript{TH} ASSIGNMENT}
+\label{sec:TVA}
+% (1)
+In the section, the technique of V\textsubscript{th} assignment is involved in the proposed framework to manipulate clock skew for aging tolerance. The idea comes from the aforementioned prior work~\cite{chen2013novel}, which exploits the technique to minimize the aging-induced clock skew, while it does not make the skew useful. Since V\textsubscript{th} assignment can also manipulate the clock skew, why do not we use the technique to achieve aging tolerance? We do. The two techniques,  V\textsubscript{th} assignment and aging manipulation, are applied together to further optimize the required $T_c$. In other words, in addition to aging manipulation based on DCC insertion/deployment, we assign the threshold voltages of certain clock buffers, such that the latencies of the buffers are changed, and so are the slacks, which give us the opportunity to further mitigate the aging-induced degradation of logic network based on time borrowing. Note that, we only reassign the threshold voltages of clock buffers rather than the counterparts of logic gates. 
+
+The rest of the section is organized as follows: In Section~\ref{sec:TVA:example}, we use an example to demonstrate the effectiveness of V\textsubscript{th} assignment for aging tolerance and in Section~\ref{sec:TVA:leader} we introduce the rule/mechanism of V\textsubscript{th} assignment, followed by~\ref{sec:TVA:framework}, where we explain how we convert the rule/mechanism into CNF clauses, and  introduces the new timing constraints while V\textsubscript{th} assignment is considered. Finally, in Section~\ref{sec:TVA:experiment}, we show the experimental results, which are optimized by inserting DCC and assigning V\textsubscript{th} of clock buffers.
+% (2)
+%--------------------------------- Motivating Example -------------------------------------------------------
+\subsection{Motivating Example considering V\textsubscript{th} assignment}
+\label{sec:TVA:example}
+We use the illustrative example to explain how we further improve the aging tolerance by comparing the two examples of Section~\ref{sec:motivate} and this section, based on the design in Figure~\ref{fig:sub:example}. The example in Section~\ref{sec:motivate} only considers the aging manipulation based on DCC deployment/insertion; however, in this section, the two techniques, DCC deployment and V\textsubscript{th} assignment are applied together to optimize/reduce required $T_c$. In this example, we let the DCC deployment same with that in the former example (in Section~\ref{sec:motivate}), i.e., 20\% DCC and 80\% DCC are inserted at the inputs of buffer 1 and buffer 2, respectively. Moreover, we begin assigning high V\textsubscript{th} to the certain clock buffers, which are in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}. In other words, buffer 2 and its downstream buffers are assigned to high V\textsubscript{th}. To include the aging rates of high-V\textsubscript{th} buffers in the setup-time constraint, we assume that, the intrinsic delay of high-V\textsubscript{th} buffer is 1.2X longer than that of nominal buffer (whose V\textsubscript{th} are not reassigned), and aging rates of high-V\textsubscript{th} buffer, with the duty cycle of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%, respectively. Note that, the aging rates of high-V\textsubscript{th} buffer are lower than those of nominal buffer, because the higher/lower V\textsubscript{th} leads to lower/higher aging rates~\cite{chen2013novel}. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
+\begin{equation}
+	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{(1.2+0.08)}C_Y+T_c$} 
+	\label{eq:lxy2}
+\end{equation}
+\begin{equation}
+	\centering
+	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{(1.2+0.08)}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{(1.2+0.08)}C_Z+T_c$} 
+	\label{eq:lyz2}
+\end{equation}
+By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
+\begin{flalign*}
+	\hspace{1.2em}\ce{L_{XY}}: T_c &> 96.5 &\\
+	\hspace{1.2em}\ce{L_{YZ}}: T_c &> 104
+\end{flalign*}
+
+Apparently, the required $T_c$ is further reduced/optimized from 108.5 (in Section~\ref{sec:motivate}) to 104 by inserting two DCCs and V\textsubscript{th} assignment in the existing synthesized clock network. We also observe that, the required $T_c$ is not dominated by \ce{L_{XY}} anymore (in Section~\ref{sec:motivate}); instead, it turns out that \ce{L_{YZ}} dominates $T_c$. As it can be seen, when the two techniques, V\textsubscript{th} assignment and aging manipulation  (by DCC insertion), are applied together, the skew for \ce{L_{XY}}, which equals 1.28$C_Y$ minus 1.09$C_X$, is larger than that in Section~\ref{sec:motivate}. Therefore, the new skew for \ce{L_{XY}} is more useful/beneficial and accounts for the better optimization of required $T_c$. 
+Additionally, when it comes to the timing-borrowing mechanism of the two examples, there exists a difference: The timing-borrowing mechanism in Section~\ref{sec:motivate}, is achieved by the aging-induced clock skew, caused by manipulating the duty-cycle delivered to flip-flops. However, in the example, the timing-borrowing mechanism is based on aging-induced clock skew and \textit{tech-induced} clock skew, which is caused by manipulating the technology of clock buffers, i.e., assign the threshold voltages of clock buffers to specific value. 

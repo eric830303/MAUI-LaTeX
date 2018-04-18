@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  17 APR 2018 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  18 APR 2018 12:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1054,37 +1054,37 @@ File: figures/Flow_chart.png Graphic file (type png)
 <use figures/Flow_chart.png>
 Package pdftex.def Info: figures/Flow_chart.png used on input line 30.
 (pdftex.def)             Requested size: 226.79846pt x 187.37167pt.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
 
 <figures/All_types_of_DCCs.png, id=35, 1117.84291pt x 529.64542pt>
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 83.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 55.
 (pdftex.def)             Requested size: 226.79846pt x 107.45465pt.
-
-<figures/A_examlpe_of_DCC_placement1.png, id=36, 1083.04625pt x 461.05583pt>
-File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
-
-<use figures/A_examlpe_of_DCC_placement1.png>
-Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 83.
-(pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
-
-<figures/A_examlpe_of_DCC_placement2.png, id=37, 909.3975pt x 420.57124pt>
-File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
-
-<use figures/A_examlpe_of_DCC_placement2.png>
-Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 83.
-(pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
 
 Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 [4 <./figures/Flow_chart.png> <./figures/All_types_of_DCCs.png>]
+<figures/A_examlpe_of_DCC_placement1.png, id=42, 1083.04625pt x 461.05583pt>
+File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
+
+<use figures/A_examlpe_of_DCC_placement1.png>
+Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
+line 95.
+(pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
+
+<figures/A_examlpe_of_DCC_placement2.png, id=43, 909.3975pt x 420.57124pt>
+File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
+
+<use figures/A_examlpe_of_DCC_placement2.png>
+Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
+line 95.
+(pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
+
 Overfull \hbox (1.86592pt too wide) in paragraph at lines 104--104
 [] 
  []
@@ -1104,8 +1104,7 @@ Underfull \hbox (badness 2005) in paragraph at lines 149--151
 []$\OT1/ptm/m/n/10 , equiv-a-lent to the fol-low-ing clause:
  []
 
-[5 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlpe_of_DCC_plac
-ement2.png>]
+
 Underfull \hbox (badness 1490) in paragraph at lines 152--153
 \OT1/ptm/m/n/10 of a 20% DCC at buffer 3 causes a tim-ing vi-o-la-tion
  []
@@ -1115,16 +1114,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 []$\OT1/ptm/m/n/10 ,
  []
 
-<figures/DCC_reduction.png, id=50, 738.09084pt x 547.37833pt>
+[5] <figures/DCC_reduction.png, id=50, 738.09084pt x 547.37833pt>
 File: figures/DCC_reduction.png Graphic file (type png)
 
 <use figures/DCC_reduction.png>
 Package pdftex.def Info: figures/DCC_reduction.png used on input line 169.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
 ) (./exp.tex
-Underfull \vbox (badness 2653) has occurred while \output is active []
-
-
 <figures/Experimental_result_(CG).png, id=51, 816.04875pt x 377.41pt>
 File: figures/Experimental_result_(CG).png Graphic file (type png)
 
@@ -1140,7 +1136,8 @@ File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
 3.
 (pdftex.def)             Requested size: 201.60077pt x 116.64935pt.
-) (./TVA.tex [6 <./figures/DCC_reduction.png>]
+) (./TVA_1motivate.tex [6 <./figures/A_examlpe_of_DCC_placement1.png> <./figure
+s/A_examlpe_of_DCC_placement2.png> <./figures/DCC_reduction.png>]
 Overfull \hbox (7.03566pt too wide) detected at line 20
 []
  []
@@ -1151,55 +1148,59 @@ g
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
 DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
 G to fix this)
->] <figures/Flow_chart_tva.png, id=62, 925.4575pt x 652.4375pt>
+>]) (./TVA_2techleader.tex) (./TVA_3encoding.tex
+<figures/Flow_chart_tva.png, id=63, 925.4575pt x 652.4375pt>
 File: figures/Flow_chart_tva.png Graphic file (type png)
 
 <use figures/Flow_chart_tva.png>
-Package pdftex.def Info: figures/Flow_chart_tva.png used on input line 43.
+Package pdftex.def Info: figures/Flow_chart_tva.png used on input line 6.
 (pdftex.def)             Requested size: 226.79846pt x 159.88342pt.
 
-<figures/example_of_dcc_leader.png, id=63, 1060.96375pt x 548.0475pt>
+<figures/example_of_dcc_leader.png, id=64, 1060.96375pt x 548.0475pt>
 File: figures/example_of_dcc_leader.png Graphic file (type png)
 
 <use figures/example_of_dcc_leader.png>
-Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 5
-9.
+Package pdftex.def Info: figures/example_of_dcc_leader.png used on input line 2
+2.
 (pdftex.def)             Requested size: 226.79846pt x 117.15054pt.
- [8 <./figures/Flow_chart_tva.png>]
-<figures/All_types_of_DCCs_and_leaders.png, id=67, 1139.25626pt x 635.37375pt>
+ [8 <./figures/Flow_chart_tva.png>])
+(./TVA_4dccleader.tex
+<figures/All_types_of_DCCs_and_leaders.png, id=68, 1139.25626pt x 635.37375pt>
 File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs_and_leaders.png>
 Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
-t line 90.
+t line 6.
 (pdftex.def)             Requested size: 252.0pt x 140.53886pt.
  [9 <./figures/example_of_dcc_leader.png> <./figures/All_types_of_DCCs_and_lead
-ers.png>]
-<figures/2DCC_1Leader.png, id=71, 914.41624pt x 435.6275pt>
+ers.png>]) (./TVA_5timing.tex
+<figures/2DCC_1Leader.png, id=72, 914.41624pt x 435.6275pt>
 File: figures/2DCC_1Leader.png Graphic file (type png)
 
 <use figures/2DCC_1Leader.png>
-Package pdftex.def Info: figures/2DCC_1Leader.png used on input line 133.
+Package pdftex.def Info: figures/2DCC_1Leader.png used on input line 10.
 (pdftex.def)             Requested size: 226.79846pt x 108.04248pt.
 
-<figures/2DCC_2Leader.png, id=72, 911.405pt x 456.70625pt>
+<figures/2DCC_2Leader.png, id=73, 911.405pt x 456.70625pt>
 File: figures/2DCC_2Leader.png Graphic file (type png)
 
 <use figures/2DCC_2Leader.png>
-Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 138.
+Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 15.
 (pdftex.def)             Requested size: 226.79846pt x 113.64665pt.
- [10] [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Leader.png>]
-Underfull \hbox (badness 1454) in paragraph at lines 266--267
+ [10]) (./TVA_6exp_set.tex [11 <./figures/2DCC_1Leader.png> <./figures/2DCC_2Le
+ader.png>]
+Underfull \hbox (badness 1454) in paragraph at lines 40--41
 \OT1/ptm/m/n/10 to cor-re-spond-ing $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 V[]$ \
 OT1/ptm/m/n/10 has been con-structed. Then,
  []
 
-<figures/Experimental_result_DCC_TVA.png, id=79, 925.4575pt x 341.275pt>
+) (./TVA_7exp_result.tex
+<figures/Experimental_result_DCC_TVA.png, id=80, 925.4575pt x 341.275pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
-line 285.
+line 6.
 (pdftex.def)             Requested size: 428.39923pt x 157.97781pt.
 ) (./conclude.tex [12])
 
@@ -1226,13 +1227,13 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20763 strings out of 492995
- 390460 string characters out of 6132705
- 674483 words of memory out of 5000000
+ 20781 strings out of 492995
+ 390790 string characters out of 6132703
+ 677483 words of memory out of 5000000
  24052 multiletter control sequences out of 15000+600000
  582210 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 45i,13n,50p,10375b,12051s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,13n,50p,10375b,12049s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1246,19 +1247,20 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on maui.pdf (13 pages, 2821905 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on maui.pdf (13 pages, 2831167 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 158 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

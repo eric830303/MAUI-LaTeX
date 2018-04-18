@@ -24,23 +24,23 @@ This section introduces an illustrative example which motivates our idea of maki
 
 For each pair of flip-flops (e.g., \ce{FF_i} and \ce{FF_j}) between which there exists at least one logic path from \ce{FF_i} to \ce{FF_j}, the following setup-time (Equation (\ref{eq:tsu})) and hold-time (Equation (\ref{eq:th})) constraints need to be satisfied:
 \begin{equation}
-C_i+T_{cq}+D_{ij}+T_{su}<C_j+T_c
-\label{eq:tsu}
+	\mbox{\fontsize{9}{9.6} $C_i+T_{cq}+D_{ij}+T_{su}<C_j+T_c$}
+	\label{eq:tsu}
 \end{equation}
 \begin{equation}
-C_i+T_{cq}+d_{ij}<C_j+T_h
-\label{eq:th}=
+	\mbox{\fontsize{9}{9.6} $C_i+T_{cq}+d_{ij}<C_j+T_h$}
+	\label{eq:th}
 \end{equation}
 
 Assume that, at year 10, $D_{ij}$ is degraded by 15\%, and both $T_{cq}$ and $T_{su}$ increase by 20\%. By using the predictive model presented in~\cite{wang2010impact},~\cite{wang2007efficient}, we can accurately derive the aging of $C_i$ and $C_j$ due to the regularity and predictability of a typical clock waveform of 50\% duty cycle. In the process technology used (TSMC 45nm GP standard cell series), $C_i$ and $C_j$ are degraded by 13\% under 10-year BTI, i.e., $C_i$ and $C_j$ become 1.13X larger.
 
 To be aging-aware for the example circuit in Figure~\ref{fig:sub:example}, we have to consider aforementioned aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
-\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.13}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.13}C_Y+T_c$} 
+\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.13}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.13}C_Y+T_c$} 
 \label{eq:lxy}
 \end{equation}
 \begin{equation}
-\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{YZ}}:$\quad\textbf{1.13}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.13}C_Z+T_c$} 
+\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:$\quad\textbf{1.13}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.13}C_Z+T_c$} 
 \label{eq:lyz}
 \end{equation}
 where $C_X$ = $C_Y$ = $C_Z$ = 100, $T_{cq}$ = 8, $T_{su}$ = 2, $D_{XY}$ = 90 and $D_{YZ}$ = 80, as shown in Figure~\ref{fig:sub:example}.
@@ -60,12 +60,12 @@ To minimize required $T_c$ under aging, we use \textit{duty-cycle converter} (DC
 
 Consider the new aging factors (due to effects of various clock duty cycles) in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
-\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.16}C_Y+T_c$} 
+\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.16}C_Y+T_c$} 
 \label{eq:lxy2}
 \end{equation}
 \begin{equation}
 \centering
-\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{1.16}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.16}C_Z+T_c$} 
+\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{1.16}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.16}C_Z+T_c$} 
 \label{eq:lyz2}
 \end{equation}
 By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
@@ -80,12 +80,12 @@ As it can be seen, we can reduce the required $T_c$ from 115.5 to 108.5 (dominat
 \label{sec:motivate:exp2}
 In the example, the two approaches, V\textsubscript{th} assignment and aging manipulation, are both applied to further optimize/reduce required $T_c$. We let the DCC deployment same with that in the first example, i.e., 20\% DCC and 80\% DCC are inserted at the inputs of buffer 1 and buffer 2, respectively. Moreover, a \textit{technology leader} is inserted at the input of buffer 2. Here, \textit{technology leader} denotes that, the technology of downstream (toward terminals/flip-flops) clock buffers are replaced with new technology, such that the V\textsubscript{th} of the buffers are changed. Note that, the so-called downstream clock buffers are those between technology leader and terminals/flip-flops. For instance, when one technology leader is inserted at the input of buffer 2, the downstream buffers are those in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, which also include buffer 2 and buffer 3, but exclude flip-flops. Therefore, we can find that, for the clock buffers, which are in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, their technology is replaced with the new counterpart. Note that, in the example, we consider one type of new technology: HTV (High Threshold Voltage or High-V\textsubscript{th}) technology. Thus, the associated technology leader is named \textit{HTV leader}, which assigns high-V\textsubscript{th} to the downstream clock buffers. To include the aging rates of HTV buffers (clock buffers with high-V\textsubscript{th}) in the setup-time constraint, we assume that, the fresh delay of HTV buffer is 1.2X longer than that of nominal buffer, and aging rates of HTV buffer, with the duty cycle of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%, respectively. Note that, the aging rates of HTV buffer are lower than those of nominal buffer, because the higher/lower V\textsubscript{th} leads to lower/higher aging rates. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
-	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{(1.2+0.08)}C_Y+T_c$} 
+	\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{(1.2+0.08)}C_Y+T_c$} 
 	\label{eq:lxy2}
 \end{equation}
 \begin{equation}
 	\centering
-	\mbox{\fontsize{8}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{(1.2+0.08)}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{(1.2+0.08)}C_Z+T_c$} 
+	\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{(1.2+0.08)}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{(1.2+0.08)}C_Z+T_c$} 
 	\label{eq:lyz2}
 \end{equation}
 By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
