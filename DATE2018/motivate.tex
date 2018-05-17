@@ -15,12 +15,9 @@
     \label{fig:en}
 \end{figure*}
 
-\begin{comment} %TVA, DCC are equal
-In this section, we use two illustrative examples to demonstrate the idea of making clock skew useful, based on the design in Figure~\ref{fig:sub:example}. The first example is only based on the aging manipulation of clock network, by changing the duty cycle of clock waveform, which is delivered to terminals/flip-flops. The second example is both based on aging manipulation and V\textsubscript{th} assignment. Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
-\end{comment}
 
 %DATE 2018
-This section introduces an illustrative example which motivates our idea of making aging useful. Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
+This section introduces two illustrative examples which motivates our idea of making clock skew useful, based on the two methodologies: ($i$) Manipulate the aging behaviors of clock paths ()and  Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
 
 For each pair of flip-flops (e.g., \ce{FF_i} and \ce{FF_j}) between which there exists at least one logic path from \ce{FF_i} to \ce{FF_j}, the following setup-time (Equation (\ref{eq:tsu})) and hold-time (Equation (\ref{eq:th})) constraints need to be satisfied:
 \begin{equation}
