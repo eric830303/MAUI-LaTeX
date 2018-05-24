@@ -16,9 +16,9 @@
 \end{figure*}
 
 
-This section introduces two illustrative examples which motivates our idea of making clock skew useful, based on the two methodologies: ($i$) Manipulate the aging behaviors of clock paths, introduced in Section~\ref{sec:mot:exp1}. ($ii$) Reassign the $V_{th}$ of clock buffers, introduced in Section~\ref{sec:mot:exp2}. %The section is organized as follows: Section~\ref{sec:mot:exp1} details how aging tolerance can be achieved based on ($i$). Then, Section~\ref{sec:mot:exp2} details how aging tolerance can be further improved by ($ii$). Finally, Section~\ref{subsec:apm} and Section~\ref{sec:mot:$V_{th}^{h}$} introduce the timing model of aging prediction and high-$V_{th}$ clock buffers.
+This section introduces two illustrative examples, motivating our idea of making clock skew useful, based on the two methodologies: ($i$) Manipulate the aging behaviors of clock paths, introduced in Section~\ref{sec:mot:exp1}. ($ii$) Reassign the $V_{th}$ of clock buffers, introduced in Section~\ref{sec:mot:exp2}. %The section is organized as follows: Section~\ref{sec:mot:exp1} details how aging tolerance can be achieved based on ($i$). Then, Section~\ref{sec:mot:exp2} details how aging tolerance can be further improved by ($ii$). Finally, Section~\ref{subsec:apm} and Section~\ref{sec:mot:$V_{th}^{h}$} introduce the timing model of aging prediction and high-$V_{th}$ clock buffers.
 
-\subsection{Aging Manipulation of Clock Paths}
+\subsection{Manipulation of Aging Behaviors of Clock Paths}
 \label{sec:mot:exp1}
 Consider the circuit in Figure~\ref{fig:sub:example} where \ce{FF_X}, \ce{FF_Y} and \ce{FF_Z} are three edge-triggered flip-flops, and \ce{L_{XY}} and \ce{L_{YZ}} are the corresponding in-between logic networks. Other notations to be used later are listed in Figure~\ref{fig:sub:notations}.
 
@@ -78,12 +78,12 @@ In the example, the two approaches, High-$V_{th}$ ($V_{th}^{h}$) assignment and 
 
 Consider the circuit in Figure~\ref{fig:sub:example} again, we identically insert/deploy 20\% DCC and 80\% DCC at the inputs of buffers 1 and 2, respectively. Moreover, buffer 2 is selected as a \textit{High-$V_{th}$/$V_{th}^{h}$ buffer leader}\footnote{\textit{$V_{th}^{h}$ buffer leader} denotes that, the $V_{th}$ of downstream (toward terminals/flip-flops) clock buffers are reassigned to a specific high counterpart.}. Therefore, for the clock buffers, which are located in the intervals from buffer 2 to \ce{FF_x} and  to \ce{FF_y}, their $V_{th}$ are assigned to $V_{th}^{h}$. To include the timing information of $V_{th}^{h}$ buffers in the setup-time constraint, we assume that, the fresh/intrinsic delay of $V_{th}^{h}$ buffer is 1.2X longer than that of nominal buffer, and aging rates of $V_{th}^{h}$ buffer, with the duty cycle of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%\footnote{The aging rates of $V_{th}^{h}$ buffer are lower than those of nominal buffer, because the higher/lower $V_{th}$ leads to lower/higher aging rates.}, respectively. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
-	\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{(1.2+0.08)}C_Y+T_c$} 
+	\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad$\textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.28}C_Y+T_c$} 
 	\label{eq:lxy2}
 \end{equation}
 \begin{equation}
 	\centering
-	\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{(1.2+0.08)}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{(1.2+0.08)}C_Z+T_c$} 
+	\mbox{\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad$\textbf{1.28}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.28}C_Z+T_c$} 
 	\label{eq:lyz2}
 \end{equation}
 By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
