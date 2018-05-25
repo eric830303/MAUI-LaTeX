@@ -1,10 +1,7 @@
 \section{PROPOSED FRAMEWORK (MAUI) BASED ON BOOLEAN SATISFIABILITY (SAT)}
 \label{sec:framework}
-In the proposed framework, aging tolerance is achieved by assigning specific/beneficial slacks into the designs, based on the following two idea and timing borrowing:
-\begin{enumerate}[leftmargin=*]
-	\item \textbf{Aging manipulation on clock paths:} The beneficial slacks is progressively created by different aging behaviors of the two clock paths $C_{i}$ and $C_{j}$, due to the different duty cycles of clock signal caused by DCCs.
-	\item  \textbf{$V_{th}^h$ assignment for clock buffers:} The beneficial slack is created by assigning the $V_{th}$ of certain clock buffers to high counterpart. In this way, clock latency is changed and thus give us an opportunity to further improve the aging tolerability of designs.
-\end{enumerate}
+In the proposed framework, aging tolerance is achieved by assigning specific/beneficial slacks into the designs, based on the following two idea and timing borrowing: ($i$) Aging manipulation on clock paths: The beneficial slacks is progressively created by different aging behaviors of the two clock paths $C_{i}$ and $C_{j}$, due to the different duty cycles of clock signal caused by DCCs. ($ii$) $V_{th}^h$ assignment for clock buffers: The beneficial slack is created by assigning the $V_{th}$ of certain clock buffers to high counterpart. In this way, clock latency is changed and thus give us an opportunity to further improve the aging tolerability of designs.
+
 The overall flow of the proposed framework is depicted in Figure~\ref{fig:flow}, where we focus the following two issues:
 \begin{enumerate}[leftmargin=*]
 	\item \textbf{Minimization of clock period:} The clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful clock skews. The minimum required clock period thus implies maximum level of aging tolerance. As depicted in Figure~\ref{fig:flow}, a binary search for optimal clock period is involved in the proposed framework.
@@ -22,7 +19,7 @@ The basic idea of our MAUI framework for aging tolerance is to insert \textit{du
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\columnwidth]{Flow_chart.png}
+	\includegraphics[width=1.0\columnwidth]{Flow_chart.png}
 	\caption{The overall flow of MAUI}
 	\label{fig:flow}
 \end{figure}
@@ -34,7 +31,7 @@ The section is organized as follows: Section~\ref{subsec:eddcd} explains how the
 \begin{figure}
 	\centering
 	%\includegraphics[width=0.9\columnwidth]{All_types_of_DCCs.png}
-	\includegraphics[width=0.9\columnwidth]{All_types_of_DCCs_and_leaders.png}
+	\includegraphics[width=1.0\columnwidth]{All_types_of_DCCs_and_leaders.png}
 	\caption{Generalized DCC insertion and $V_{th}^h$ buffer leader selection, for a target pair of flip-flops}
 	\label{fig:dcctype}
 \end{figure}
@@ -61,11 +58,6 @@ Without loss of generality, we assume $N$ = 3, and $M$ = 1. Thus, there are thre
   	(7)\quad & $V_{th}^h$ & 40\% &  \{1, 1, 0\} \\ 
   	(8)\quad & $V_{th}^h$ & 80\% &  \{1, 1, 1\} \\ 
 \end{tabular}}
-
- %Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. Note that, when a DCC/HTV leader is inserted, it is inserted at the input of a buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the number of buffers. For each buffer, Boolean variables $B_{p,q}\left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1)\rceil \right)$ are introduced where $\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$ encode the aforementioned ($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
-
-%(4) DATE 2018
-%Without loss of generality, we assume $N$ = 3 (types of DCCs) and they are 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, two Boolean variables are used for encoding four possibilities of DCC insertion at the input of any buffer. The four possibilities can be encoded as follows:
 
 %(5) DATE 2018
 \begin{comment}
@@ -109,23 +101,26 @@ In Figure~\ref{fig:dcctype}, buffers 1 $\hyphen$ 7 are candidate locations for D
 
 {\noindent \textbf{\uline{DCC constraint: At most one DCC on a single clock path (from the clock source to one of the flip-flops)}}}
 
-{\noindent \textbf{\uline{Leader constraint: At most one clock buffer on a single clock path is selected as $V_{th}^h$ buffer leader}}}
-
 In order to ensure no more than one DCC on any clock path, we can use the Boolean variables introduced for DCC insertion, i.e., $B_{p,q} \left(1 \leq p \leq P, 1 \leq q \leq Q = \lceil \lg (N + 1) \rceil \right)$, to generate some clauses which suppress the occurrence of having two DCCs on a clock path. Consider buffer 2 (encoded by $\left\{B_{2,2}, B_{2,1}\right\}$) and buffer 3 (encoded by $\left\{B_{3,2}, B_{3,1}\right\}$) in Figure~\ref{fig:dcctype}. If there is a DCC at buffer 2 (i.e., $\{B_{2,2}, B_{2,1}\} \not\equiv \{0, 0\}$), then there must no DCC at buffer 3 (i.e., $\{B_{3,2}, B_{3,1}\} \equiv \{0, 0\}$), and vice versa. The constraint can be formally written as:
-{\fontsize{8}{8.4}
 \begin{gather*}
 \left(\{B_{2,2}, B_{2,1}\} \equiv \{0, 0\}\right) \lor \left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 0\}\right)
-\end{gather*}}
-Next, it can be translated into 4 CNF clauses:
-\begin{gather*}
-\mbox{\fontsize{7}{8.4}\selectfont ($\neg B_{2,1}\lor\neg B_{3,1}$) $\land$ ($\neg B_{2,1}\lor\neg B_{3,2}$) $\land$ ($\neg B_{2,2}\lor\neg B_{3,1}$) $\land$ ($\neg B_{2,2}\lor\neg B_{3,2}$)} 
 \end{gather*}
+Next, it can be translated into 4 CNF clauses:
+\begin{equation*}
+\begin{split}
+(\neg B_{2,1}\lor\neg B_{3,1}) \land (\neg B_{2,1}\lor\neg B_{3,2}) \\
+\land (\neg B_{2,2}\lor\neg B_{3,1}) \land (\neg B_{2,2}\lor\neg B_{3,2})
+\end{split}
+\end{equation*}
 
 Any pair of buffers along a single clock path should be constrained in this way. Among buffers 1 $\hyphen$ 7 in Figure~\ref{fig:dcctype}, there are 12 pairs: $\langle1, 2\rangle$, $\langle1, 3\rangle$, $\langle1, 4\rangle$, $\langle1, 5\rangle$, $\langle1, 6\rangle$, $\langle1, 7\rangle$, $\langle2, 3\rangle$, $\langle2, 4\rangle$, $\langle3, 4\rangle$, $\langle5, 6\rangle$, $\langle5, 7\rangle$, $\langle6, 7\rangle$. Each pair translates to 4 clauses and a total of 48 clauses will be generated accordingly.
 The corresponding clauses for leader constraints can also be generated in a similar manner. In the example, the 12 clauses are generated but are not shown in the paper due to brevity.
 
-With DCC constraints, leader constraints and corresponding clauses, we can drastically reduce the possibilities of DCC insertions and leader selections to be formulated. In the above example, the 48 clauses associated with DCC constraints reduce the possibility count of DCC insertions from 16,384 to 103. Similarly, the 12 clauses associated with leader constraints reduce the counterpart of leader selection from 128 to 17. In the next subsection, we describe what the 103 and 17 possibilities are and how they are translated into the final CNF representation.
+With DCC constraints and corresponding clauses, we can drastically reduce the possibilities of DCC insertions to be formulated. In the above example where the 48 clauses associated with DCC constraints are generated, the possibility count of DCC insertions drops from 16,384 to 103. In the next subsection, we describe what the 103 possibilities are and how they are translated into the final CNF representation.
 
+{\noindent \textbf{\uline{Leader constraint: At most one clock buffer on a single clock path is selected as $V_{th}^h$ buffer leader}}}
+
+To suppress the occurrence that, two buffers along a clock path are selected as $V_{th}^h$ buffer leaders, the associated 12 clauses can be generated in a similar manner, but they are not shown in the paper for brevity. Because of leader constraints and corresponding clauses, we can reduce the possibilities of leader selections to be formulated. Actually, the 12 clauses associated with leader constraints reduce the possibility count of leader selection from 128 to 17. In the next subsection, we describe what the 103 possibilities are and how they are translated into the final CNF representation.
 
 %(3) C
 \subsection{Timing Constraints and Corresponding Clauses}
