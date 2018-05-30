@@ -45,6 +45,14 @@ Duty cycle is the percentage of one period in which a signal is high (i.e., logi
 
 The unit we use to change the clock duty cycle is duty-cycle converter (DCC), which can converts the duty cycle of a clock signal to a smaller/larger one (e.g., $50\% \rightarrow 20\%$ or $50\% \rightarrow 80\%$), as shown in Figure~\ref{fig:dcc}. It separates the source clock wave (black line) and original wave. Then, the two waves are combined with the OR gate to obtain a new wave (red line) of 80\% duty cycle. Once a DCC is inserted into the clock tree, the downstream sub-tree of the DCC insertion point will receive a clock signal whose duty cycle is no longer 50\%. This way, aging rate manipulation of downstream clock buffers can be achieved.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{Aging_impacted_on_DCC.png}
+    \caption{Aging impact on 20\%/80\% DCC under BTI}
+    \label{fig:exp4}
+\end{figure}
+
+Figure~\ref{fig:exp4} shows the change in the duty cycle of a 20\%/80\% DCC over 10-year aging. The y axis on the left represents the duty cycle of a 20\% DCC, and the one on the right represents the duty cycle of an 80\% DCC. As it can be seen, the growth in both cases are marginal: $20\% \to 21.07\%$ for a 20\% DCC and $80\% \to 81.35\%$ for an 80\% DCC, which in turn should not affect the benefit of our proposed framework significantly.
 
 \begin{figure}
     \centering
