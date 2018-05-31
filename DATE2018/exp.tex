@@ -33,3 +33,24 @@ As you can see, the DCC counts in Column 13 are different from those in Column 9
 
 \subsection{Discussion: Dramatic Increase in Runtime}
 In addition, the run time of the framework, involving $V_{th}^h$ assignment, dramatically increases due to the possibility explosion of DCC deployment and leader selection. To be specific, given a pair of flip-flops and associated clock paths, we need to consider the various possibilities of leader selections, for each possibility of DCC deployment. Therefore, the total possibility count of DCC deployments and leader selections is equal to their mutual multiplication, i.e., DCC possibilities multiplied by the leader counterparts, accounting for the dramatic increase of run time.
+
+\subsection{Discussion: Aging Impact on DCC}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{Aging_impacted_on_DCC.png}
+    \caption{Aging impact on 20\%/80\% DCC under BTI}
+    \label{fig:exp4}
+\end{figure}
+
+Figure~\ref{fig:exp4} shows the change in the duty cycle of a 20\%/80\% DCC over 10-year aging. The y axis on the left represents the duty cycle of a 20\% DCC, and the one on the right represents the duty cycle of an 80\% DCC. As it can be seen, the growth in both cases are marginal: $20\% \to 21.07\%$ for a 20\% DCC and $80\% \to 81.35\%$ for an 80\% DCC, which in turn should not affect the benefit of our proposed framework significantly.
+
+
+\subsection{Discussion: Depth Boundary for DCC Deployment}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{Boundary_level_vs_improvement.png}
+    \caption{Improvement/Cost versus clock tree level considered}
+    \label{fig:boundary}
+\end{figure}
+
+As mentioned in Section~\ref{sec:framework}, inserting DCCs deep in the clock tree is less effective. For benchmark \textit{des\_perf}, we considered the deployment of DCCs on the upper half of the clock tree (i.e., level 1 to 5) and achieved 38.66\% improvement in terms of aging tolerance. As demonstrated in Figure~\ref{fig:boundary}, if we expand the boundary of DCC deployment from level 1 in the clock tree to level 6 and further up to level 10 progressively, we cannot gain more improvement; however, more DCCs are required.

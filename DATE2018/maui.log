@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  30 MAY 2018 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  31 MAY 2018 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1069,28 +1069,15 @@ File: figures/agr.png Graphic file (type png)
 Package pdftex.def Info: figures/agr.png used on input line 39.
 (pdftex.def)             Requested size: 252.0pt x 144.64314pt.
 
-<figures/Aging_impacted_on_DCC.png, id=34, 2186.92032pt x 1265.47781pt>
-File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
-
-<use figures/Aging_impacted_on_DCC.png>
-Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 5
-0.
-(pdftex.def)             Requested size: 201.60077pt x 116.64935pt.
-
-<figures/DCC_reduction.png, id=35, 738.09084pt x 547.37833pt>
+<figures/DCC_reduction.png, id=34, 738.09084pt x 547.37833pt>
 File: figures/DCC_reduction.png Graphic file (type png)
 
 <use figures/DCC_reduction.png>
-Package pdftex.def Info: figures/DCC_reduction.png used on input line 59.
+Package pdftex.def Info: figures/DCC_reduction.png used on input line 51.
 (pdftex.def)             Requested size: 126.0pt x 93.43729pt.
-) (./framework.tex [4 <./figures/dcc.png> <./figures/agr.png> <./figures/Aging_
-impacted_on_DCC.png
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
-DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
-G to fix this)
-> <./figures/DCC_reduction.png>]
-<figures/Flow_chart.png, id=44, 594.22pt x 418.56375pt>
+) (./framework.tex [4 <./figures/dcc.png> <./figures/agr.png> <./figures/DCC_re
+duction.png>]
+<figures/Flow_chart.png, id=42, 594.22pt x 418.56375pt>
 File: figures/Flow_chart.png Graphic file (type png)
 
 <use figures/Flow_chart.png>
@@ -1099,60 +1086,81 @@ Package pdftex.def Info: figures/Flow_chart.png used on input line 13.
  Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
- [5 <./figures/Flow_chart.png>] <figures/All_types_of_DCCs.png, id=51, 1117.842
-91pt x 529.64542pt>
+ [5 <./figures/Flow_chart.png>] <figures/All_types_of_DCCs.png, id=49, 914.4162
+4pt x 397.485pt>
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 84.
-(pdftex.def)             Requested size: 252.0pt x 119.39944pt.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 92.
+(pdftex.def)             Requested size: 252.0pt x 109.53615pt.
 
-<figures/A_examlpe_of_DCC_placement1.png, id=52, 1083.04625pt x 461.05583pt>
+<figures/A_examlpe_of_DCC_placement1.png, id=50, 907.39pt x 372.39125pt>
 File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 84.
-(pdftex.def)             Requested size: 226.79846pt x 96.54317pt.
+line 92.
+(pdftex.def)             Requested size: 226.79846pt x 93.07484pt.
 
-<figures/A_examlpe_of_DCC_placement2.png, id=53, 909.3975pt x 420.57124pt>
+<figures/A_examlpe_of_DCC_placement2.png, id=51, 909.3975pt x 371.3875pt>
 File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 84.
-(pdftex.def)             Requested size: 226.79846pt x 104.88585pt.
+line 92.
+(pdftex.def)             Requested size: 226.79846pt x 92.61996pt.
  [6 <./figures/All_types_of_DCCs.png>] [7 <./figures/A_examlpe_of_DCC_placement
 1.png> <./figures/A_examlpe_of_DCC_placement2.png>]
-<figures/All_types_of_DCCs_and_leaders.png, id=63, 912.40875pt x 452.69125pt>
+<figures/All_types_of_DCCs_and_leaders.png, id=59, 906.38625pt x 453.695pt>
 File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs_and_leaders.png>
 Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
-t line 235.
-(pdftex.def)             Requested size: 252.0pt x 125.0258pt.
+t line 229.
+(pdftex.def)             Requested size: 252.0pt x 126.14069pt.
 
-<figures/2DCC_2Leader.png, id=64, 912.40875pt x 420.57124pt>
+<figures/2DCC_2Leader.png, id=60, 907.39pt x 375.4025pt>
 File: figures/2DCC_2Leader.png Graphic file (type png)
 
 <use figures/2DCC_2Leader.png>
-Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 251.
-(pdftex.def)             Requested size: 252.0pt x 116.15479pt.
+Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 245.
+(pdftex.def)             Requested size: 252.0pt x 104.25275pt.
 
-Overfull \hbox (9.90953pt too wide) in paragraph at lines 269--269
+Overfull \hbox (8.88176pt too wide) in paragraph at lines 264--264
 [] 
  []
 
-[8 <./figures/All_types_of_DCCs_and_leaders.png> <./figures/2DCC_2Leader.png>])
-(./exp.tex
-<figures/Experimental_result_DCC_TVA.png, id=68, 1457.445pt x 532.99126pt>
+) (./exp.tex [8 <./figures/All_types_of_DCCs_and_leaders.png> <./figures/2DCC_2
+Leader.png>]
+<figures/Experimental_result_DCC_TVA.png, id=64, 1460.45625pt x 532.99126pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
 line 13.
-(pdftex.def)             Requested size: 504.0pt x 184.31322pt.
-) (./conclude.tex) [9]
+(pdftex.def)             Requested size: 504.0pt x 183.93097pt.
+
+<figures/Aging_impacted_on_DCC.png, id=65, 2186.92032pt x 1265.47781pt>
+File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
+
+<use figures/Aging_impacted_on_DCC.png>
+Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
+0.
+(pdftex.def)             Requested size: 226.79846pt x 131.22812pt.
+
+<figures/Boundary_level_vs_improvement.png, id=66, 582.0144pt x 260.6538pt>
+File: figures/Boundary_level_vs_improvement.png Graphic file (type png)
+
+<use figures/Boundary_level_vs_improvement.png>
+Package pdftex.def Info: figures/Boundary_level_vs_improvement.png used on inpu
+t line 51.
+(pdftex.def)             Requested size: 226.79846pt x 101.57103pt.
+) (./conclude.tex [9 <./figures/Aging_impacted_on_DCC.png
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
+DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
+G to fix this)
+> <./figures/Boundary_level_vs_improvement.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1164,9 +1172,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10
-
- <./figures/Experimental_result_DCC_TVA.png>] (./maui.aux)
+[10 <./figures/Experimental_result_DCC_TVA.png>] (./maui.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1179,10 +1185,10 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21021 strings out of 492995
- 394685 string characters out of 6132703
- 680792 words of memory out of 5000000
- 24307 multiletter control sequences out of 15000+600000
+ 21027 strings out of 492995
+ 394915 string characters out of 6132703
+ 681792 words of memory out of 5000000
+ 24312 multiletter control sequences out of 15000+600000
  578762 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,15n,50p,10375b,12305s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1207,10 +1213,10 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on maui.pdf (10 pages, 2589311 bytes).
+Output written on maui.pdf (10 pages, 2384214 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
