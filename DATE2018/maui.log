@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  31 MAY 2018 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  3 JUN 2018 13:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1140,27 +1140,23 @@ Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input
 line 13.
 (pdftex.def)             Requested size: 504.0pt x 183.93097pt.
 
-<figures/Aging_impacted_on_DCC.png, id=65, 2186.92032pt x 1265.47781pt>
+<figures/Aging_impacted_on_DCC.png, id=65, 574.7874pt x 326.1786pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use figures/Aging_impacted_on_DCC.png>
 Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
 0.
-(pdftex.def)             Requested size: 226.79846pt x 131.22812pt.
+(pdftex.def)             Requested size: 226.79846pt x 128.70226pt.
 
-<figures/Boundary_level_vs_improvement.png, id=66, 582.0144pt x 260.6538pt>
+<figures/Boundary_level_vs_improvement.png, id=66, 622.0038pt x 294.8616pt>
 File: figures/Boundary_level_vs_improvement.png Graphic file (type png)
 
 <use figures/Boundary_level_vs_improvement.png>
 Package pdftex.def Info: figures/Boundary_level_vs_improvement.png used on inpu
 t line 51.
-(pdftex.def)             Requested size: 226.79846pt x 101.57103pt.
-) (./conclude.tex [9 <./figures/Aging_impacted_on_DCC.png
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Aging_impacted_on_
-DCC.png): large interlaced PNG might cause out of memory (use non-interlaced PN
-G to fix this)
-> <./figures/Boundary_level_vs_improvement.png>])
+(pdftex.def)             Requested size: 226.79846pt x 107.51335pt.
+) (./conclude.tex [9 <./figures/Aging_impacted_on_DCC.png> <./figures/Boundary_
+level_vs_improvement.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1213,7 +1209,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on maui.pdf (10 pages, 2384214 bytes).
+Output written on maui.pdf (10 pages, 2138595 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
