@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  3 JUN 2018 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  4 JUN 2018 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1091,24 +1091,24 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 File: figures/All_types_of_DCCs.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs.png>
-Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 92.
+Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 91.
 (pdftex.def)             Requested size: 252.0pt x 109.53615pt.
 
-<figures/A_examlpe_of_DCC_placement1.png, id=50, 907.39pt x 372.39125pt>
+<figures/A_examlpe_of_DCC_placement1.png, id=50, 920.43875pt x 365.365pt>
 File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
-line 92.
-(pdftex.def)             Requested size: 226.79846pt x 93.07484pt.
+line 91.
+(pdftex.def)             Requested size: 226.79846pt x 90.02531pt.
 
-<figures/A_examlpe_of_DCC_placement2.png, id=51, 909.3975pt x 371.3875pt>
+<figures/A_examlpe_of_DCC_placement2.png, id=51, 907.39pt x 365.365pt>
 File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
-line 92.
-(pdftex.def)             Requested size: 226.79846pt x 92.61996pt.
+line 91.
+(pdftex.def)             Requested size: 226.79846pt x 91.31873pt.
  [6 <./figures/All_types_of_DCCs.png>] [7 <./figures/A_examlpe_of_DCC_placement
 1.png> <./figures/A_examlpe_of_DCC_placement2.png>]
 <figures/All_types_of_DCCs_and_leaders.png, id=59, 906.38625pt x 453.695pt>
@@ -1116,17 +1116,17 @@ File: figures/All_types_of_DCCs_and_leaders.png Graphic file (type png)
 
 <use figures/All_types_of_DCCs_and_leaders.png>
 Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
-t line 229.
+t line 231.
 (pdftex.def)             Requested size: 252.0pt x 126.14069pt.
 
-<figures/2DCC_2Leader.png, id=60, 907.39pt x 375.4025pt>
+<figures/2DCC_2Leader.png, id=60, 900.36375pt x 374.39874pt>
 File: figures/2DCC_2Leader.png Graphic file (type png)
 
 <use figures/2DCC_2Leader.png>
-Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 245.
-(pdftex.def)             Requested size: 252.0pt x 104.25275pt.
+Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 248.
+(pdftex.def)             Requested size: 252.0pt x 104.78522pt.
 
-Overfull \hbox (8.88176pt too wide) in paragraph at lines 264--264
+Overfull \hbox (8.88176pt too wide) in paragraph at lines 267--267
 [] 
  []
 
@@ -1140,21 +1140,21 @@ Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input
 line 13.
 (pdftex.def)             Requested size: 504.0pt x 183.93097pt.
 
-<figures/Aging_impacted_on_DCC.png, id=65, 574.7874pt x 326.1786pt>
+<figures/Aging_impacted_on_DCC.png, id=65, 574.7874pt x 306.9066pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use figures/Aging_impacted_on_DCC.png>
 Package pdftex.def Info: figures/Aging_impacted_on_DCC.png used on input line 4
 0.
-(pdftex.def)             Requested size: 226.79846pt x 128.70226pt.
+(pdftex.def)             Requested size: 226.79846pt x 121.09799pt.
 
-<figures/Boundary_level_vs_improvement.png, id=66, 622.0038pt x 294.8616pt>
+<figures/Boundary_level_vs_improvement.png, id=66, 583.9416pt x 262.581pt>
 File: figures/Boundary_level_vs_improvement.png Graphic file (type png)
 
 <use figures/Boundary_level_vs_improvement.png>
 Package pdftex.def Info: figures/Boundary_level_vs_improvement.png used on inpu
 t line 51.
-(pdftex.def)             Requested size: 226.79846pt x 107.51335pt.
+(pdftex.def)             Requested size: 226.79846pt x 101.98146pt.
 ) (./conclude.tex [9 <./figures/Aging_impacted_on_DCC.png> <./figures/Boundary_
 level_vs_improvement.png>])
 
@@ -1181,13 +1181,13 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21027 strings out of 492995
- 394915 string characters out of 6132703
- 681792 words of memory out of 5000000
- 24312 multiletter control sequences out of 15000+600000
+ 21029 strings out of 492995
+ 394940 string characters out of 6132703
+ 682792 words of memory out of 5000000
+ 24314 multiletter control sequences out of 15000+600000
  578762 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 45i,15n,50p,10375b,12305s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,15n,50p,10375b,12307s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1209,7 +1209,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on maui.pdf (10 pages, 2138595 bytes).
+Output written on maui.pdf (10 pages, 2140404 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream

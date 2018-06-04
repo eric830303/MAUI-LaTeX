@@ -5,7 +5,7 @@ The overall flow of the proposed framework is depicted in Figure~\ref{fig:flow},
 \begin{enumerate}[leftmargin=*]
 	\item \textbf{Minimization of clock period:} The clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful clock skews. The minimum required clock period thus implies maximum level of aging tolerance. As depicted in Figure~\ref{fig:flow}, a binary search for optimal clock period is involved in the proposed framework.
 	\item \textbf{DCC deployment:} The problem of  DCC deployment is formulated as a Boolean Satisfiability (SAT) problem. Therefore, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thanks to the efficiency of existing SAT solver, the solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) of DCCs, such that when aging-induced clock skews are considered, the required clock period of the given circuit under $n$-year BTI is minimized. 
-	\item \textbf{Additive improvement by $V_{th}^h$ assignment for clock buffers:} To simplify the problem of selecting buffers whose $V_{th}$ are assigned to high $V_{th}$, we select certain clock buffers as $V_{th}^h$ buffer leaders, indicating where we begin assigning high $V_{th}$ toward flip-flops. The problem of selecting $V_{th}^h$ buffer leaders from existing clock buffers is also formulated as a SAT-based problem, represented in CNF and solved by existing SAT solver, as we tackle the problem of DCC deployment.
+	\item \textbf{Additive improvement by $V_{th} ^h$ assignment for clock buffers:} To increase the yield rate of designs during the process of manufacturing, we select certain clock buffers as $V_{th}^h$ buffer leaders, indicating where we begin continuously assigning high $V_{th}$ toward flip-flops. In this way, the dopant concentrations of continuous target buffers are same, increasing the yield rate of designs. The problem of selecting $V_{th}^h$ buffer leaders from existing clock buffers is also formulated as a SAT-based problem, represented in CNF and solved by existing SAT solver, as we tackle the problem of DCC deployment.
 \end{enumerate}
 
 \begin{figure}
@@ -16,7 +16,7 @@ The overall flow of the proposed framework is depicted in Figure~\ref{fig:flow},
 \end{figure}
  
 
-The section is organized as follows: Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion are encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation. Finally, we detail the timing model of aging (BTI degradation) prediction and $V_{th}^h$ buffers.
+The section is organized as follows: Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion are encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation. Finally, Section~\ref{sec:VTA}-\ref{sec:VTA:timing} introduce the additive improvement by $V_{th}^h$ assignment for buffers.
 
 \afterpage{ 
 \begin{figure}
@@ -198,6 +198,7 @@ Considering all of the above cases, a maximum number of 1 + 3 + 18 + 81 = 103 cl
 \end{class}
 
 \subsection{Additive Improvement in Aging Tolerance: $V_{th}^h$ Assignment for Clock Buffers}
+\label{sec:VTA}
 In this subsection, the approach of $V_{th}^h$ assignment for clock buffers is involved in the proposed framework to further improve the aging tolerability of designs. To increase the yield rate of designs during the manufacturing process, we make a rule/definition: 
 
 \noindent \textbf{Definition:} Once the clock buffer is selected as the \uline{$V_{th}^h$ buffer leader}, the $V_{th}$ of the selected buffer and its downstream buffers will be assigned to $V_{th}^h$.
@@ -222,6 +223,7 @@ The problem of selecting $V_{th}^h$ buffer leaders is also formulated as a SAT-b
   	(8)\quad & $V_{th}^h$ & 80\% &  \{1, 1, 1\} \\ 
 \end{tabular}}
 
+Note that, if the buffer, located deep in the clock tree, is selected as the leader, then the count of affected buffers is limited, diminishing the benefit from $V_{th}^h$ assignment for aging tolerance. Therefore, as we do for DCC deployment, we similarly set a rule of prohibiting selecting buffer leaders at a clock tree level larger/deeper than a a specified boundary.
 \subsection{Constraints on the Selection of $V_{th}^h$ Buffer Leader}
 \begin{figure}
 	\centering
@@ -240,6 +242,7 @@ The constraints are analogous to the aforementioned DCC constraints. The corresp
 
 %------------------ Timing Constraints ()
 \subsection{Timing Constraints Considering DCC Deployment and Selection of $V_{th}^h$ Buffer Leader}
+\label{sec:VTA:timing}
 \begin{figure}
     \centering
     \includegraphics[width=1.0\columnwidth]{2DCC_2Leader.png}
