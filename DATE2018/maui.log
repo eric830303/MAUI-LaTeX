@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  4 JUN 2018 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  4 JUN 2018 11:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1183,7 +1183,7 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 Here is how much of TeX's memory you used:
  21029 strings out of 492995
  394940 string characters out of 6132703
- 682792 words of memory out of 5000000
+ 681792 words of memory out of 5000000
  24314 multiletter control sequences out of 15000+600000
  578762 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1209,7 +1209,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on maui.pdf (10 pages, 2140404 bytes).
+Output written on maui.pdf (10 pages, 2140429 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
