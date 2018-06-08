@@ -4,8 +4,8 @@ In the proposed framework, aging tolerance is achieved by specifically assigning
 The overall flow of the proposed framework is depicted in Figure~\ref{fig:flow}, where we focus the following three issues:
 \begin{enumerate}[leftmargin=*]
 	\item \textbf{Minimization of clock period:} The clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful clock skews. The minimum required clock period thus implies maximum level of aging tolerance. As depicted in Figure~\ref{fig:flow}, a binary search for optimal clock period is involved in the proposed framework.
-	\item \textbf{DCC deployment:} The problem of  DCC deployment is formulated as a Boolean Satisfiability (SAT) problem. Therefore, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thanks to the efficiency of existing SAT solver, the solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) of DCCs, such that when aging-induced clock skews are considered, the required clock period of the given circuit under $n$-year BTI is minimized. 
-	\item \textbf{Additive improvement by $V_{th} ^h$ assignment for clock buffers:} To increase the yield rate of designs during the process of manufacturing, we select certain clock buffers as $V_{th}^h$ buffer leaders, indicating where we begin continuously assigning high $V_{th}$ toward flip-flops. In this way, the dopant concentrations of continuous target buffers are same, increasing the yield rate of designs. The problem of selecting $V_{th}^h$ buffer leaders from existing clock buffers is also formulated as a SAT-based problem, represented in CNF and solved by existing SAT solver, as we tackle the problem of DCC deployment.
+	\item \textbf{DCC deployment:} The problem of  DCC deployment is formulated as a Boolean Satisfiability (SAT) problem. Therefore, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thanks to the efficiency of existing SAT solver, the solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) of DCCs, such that the required clock period of the given circuit under $n$-year BTI is minimized when aging-induced clock skews are considered. 
+	\item \textbf{Additive improvement by $V_{th} ^h$ assignment for clock buffers:} Fragmentary $V_{th}$ assignment for clock buffers may decrease the feasibility/manufacturability of designs. Thus, we select certain clock buffers as $V_{th}^h$ buffer leaders, indicating where we begin continuously assigning high $V_{th}$ toward flip-flops. The problem of selecting $V_{th}^h$ buffer leaders from existing clock buffers is also formulated as a SAT-based problem, represented in CNF and solved by existing SAT solver.
 \end{enumerate}
 
 \begin{figure}
@@ -16,7 +16,7 @@ The overall flow of the proposed framework is depicted in Figure~\ref{fig:flow},
 \end{figure}
  
 
-The section is organized as follows: Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion are encoded by Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation. Finally, Section~\ref{sec:VTA}-\ref{sec:VTA:timing} introduce the additive improvement by $V_{th}^h$ assignment for buffers.
+The section is organized as follows: Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertion are encoded with Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation. Finally, Section~\ref{sec:VTA}-\ref{sec:VTA:timing} introduce the additive improvement by $V_{th}^h$ assignment for buffers.
 
 \afterpage{ 
 \begin{figure}
@@ -78,9 +78,9 @@ Without loss of generality, we assume $N$ = 3. Thus, there are three types of DC
 \end{figure*}
 }
 
-For example, in Figure~\ref{fig:sub:dcci2}, a 20\% DCC and an 80\% DCC are inserted at buffer 3 and buffer 6, respectively. Therefore, {\fontsize{9}{10}{$\left\{B_{3,2}, B_{3,1}\right\}$ = \{0, 1\}}}, {\fontsize{9}{10}{$\left\{B_{5,2}, B_{5,1}\right\}$ = \{0, 0\}}}, {\fontsize{9}{10}{$\left\{B_{6,2}, B_{6,1}\right\}$ = \{1, 1\}}}, and {\fontsize{9}{10}{$\left\{B_{p,2}, B_{p,1}\right\}$ = \{0, 0\}}} for $p$ = 1, 2, 4 , 5 or 7.
+For example, in Figure~\ref{fig:sub:dcci2}, a 20\% DCC and an 80\% DCC are inserted at buffer 3 and buffer 5, respectively. Therefore, {\fontsize{9}{10}{$\left\{B_{3,2}, B_{3,1}\right\}$ = \{0, 1\}}}, {\fontsize{9}{10}{$\left\{B_{5,2}, B_{5,1}\right\}$ = \{1, 1\}}}, and {\fontsize{9}{10}{$\left\{B_{p,2}, B_{p,1}\right\}$ = \{0, 0\}}} for $p$ = 1, 2, 4 , 6 or 7.
 
-The 20\% DCC will mitigate the aging of buffer 3 and its downstream buffers, while the 80\% DCC will aggravate the aging of buffer 6 and its downstream buffers. It can be found that, if a DCC is deployed deep in the clock tree (i.e., close to the flip-flops), the count of affected buffers is limited and thus the overall impact of aging mitigation/aggravation on $C_i$/$C_j$ may be insignificant, diminishing the benefit from deploying DCCs for aging tolerance.  To avoid the phenomena, we set a rule of prohibiting DCC deployment at a clock tree level larger/deeper than a specified boundary. This rule also greatly reduces the complexity of our SAT-based formulation because a significant fraction of buffers are excluded from being considered inserted DCC at their inputs. For example, in Figure~\ref{fig:dcctype}, those dashed buffers and their downstream buffers are excluded. 
+The 20\% DCC will mitigate the aging of buffer 3 and its downstream buffers, while the 80\% DCC will aggravate the aging of buffer 5 and its downstream buffers. It can be found that, if a DCC is deployed deep in the clock tree (i.e., close to the flip-flops), the count of affected buffers is limited and thus the overall impact of aging mitigation/aggravation on $C_i$/$C_j$ may be insignificant, diminishing the benefit from deploying DCCs for aging tolerance.  To avoid the phenomena, we set a rule of prohibiting DCC deployment at a clock tree level larger/deeper than a specified boundary. This rule also greatly reduces the complexity of our SAT-based formulation because a significant fraction of buffers are excluded from being considered inserted DCC at their inputs. For example, in Figure~\ref{fig:dcctype}, those dashed buffers and their downstream buffers are excluded. 
 
 %(2) B
 \subsection{Constraints on DCC Deployment}
@@ -181,7 +181,7 @@ This class targets buffers 2, 3, 4, 5, 6, 7. If the insertion of a 20\% DCC at b
 \label{class:c3}
 Inserting two DCCs on two clock paths respectively
 
-Given the DCC deployment in Figure~\ref{fig:sub:dcci2} (a 20\% DCC inserted at buffer 3 and a 80\% DCC inserted at buffer 6), if it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,
+Given the DCC deployment in Figure~\ref{fig:sub:dcci2} (a 20\% DCC inserted at buffer 3 and a 80\% DCC inserted at buffer 5), if it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,
 {\fontsize{9}{10}
 \begin{gather*}
 \left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{5,2}, B_{5,1}\} \equiv \{1, 1\} \right),
@@ -199,16 +199,16 @@ Considering all of the above cases, a maximum number of 1 + 3 + 18 + 81 = 103 cl
 
 \subsection{Additive Improvement in Aging Tolerance: $V_{th}^h$ Assignment for Clock Buffers}
 \label{sec:VTA}
-In this subsection, the approach of $V_{th}^h$ assignment for clock buffers is involved in the proposed framework to further improve the aging tolerability of designs. To increase the yield rate of designs during the manufacturing process, we make a rule/definition: 
+In this subsection, the approach of $V_{th}^h$ assignment for clock buffers is involved in the proposed framework to further improve the aging tolerability of designs. Because the fragmentary $V_{th}$ assignment for clock buffers may decrease the feasibility/manufacturability of the proposed framework, we make a rule/definition: 
 
 \noindent \textbf{Definition:} Once the clock buffer is selected as the \uline{$V_{th}^h$ buffer leader}, the $V_{th}$ of the selected buffer and its downstream buffers will be assigned to $V_{th}^h$.
 
-In this way, we avoid considering the cases that the $V_{th}$ of serial buffers along a clock path interlace between high and nominal $V_{th}$ (i.e., $V_{th}^h$ and $V_{th}^n$), thus increasing the yield rate of designs during the manufacturing process.
+In this way, we avoid the cases that the $V_{th}$ of serial buffers along a clock path interlace between high and nominal $V_{th}$ (i.e., $V_{th}^h$ and $V_{th}^n$). Such a rule can suppress the occurrence of fragmentary $V_{th}$ assignment for clock buffers and thus can increase the feasibility of the proposed framework.
 
-Conceptually, there exists one difference between DCCs and $V_{th}^h$ buffer leaders. DCCs are physical gates inserted at the inputs of clock buffers to manipulate the aging behaviors of downstream buffers. However, $V_{th}^h$ buffer leaders are selected from the existing clock buffers and indicate where we begin assigning $V_{th}^h$ toward flip-flops (excluding flip-flops).
+Conceptually, there exists one difference between DCCs and $V_{th}^h$ buffer leaders. DCCs are physical gates inserted at the inputs of clock buffers to manipulate the aging behaviors of downstream buffers. However, $V_{th}^h$ buffer leaders are selected from the existing clock buffers where their threshold voltage will be assigned to $V_{th}^h$ toward flip-flops (exlusive).
 
 \subsection{Boolean Encoding for $V_{th}^h$ Buffer Leaders and DCCs}
-The problem of selecting $V_{th}^h$ buffer leaders is also formulated as a SAT-based problem, solved by existing SAT solver, as we do for DCC deployment. The end result of the formulation involves the selected clock buffers and the locations of DCCs. Assume that there are three types of DCCs (20\%, 40\%, and 80\%) and one type of $V_{th}^h$ buffer leader. Therefore, three Boolean variables are used for encoding eight possibilities of DCC insertions and leader selections at any buffer\footnote{Any clock buffer can be inserted DCC at its input and can be selected as $V_{th}^h$ buffer leader.}. Consider the clock buffer $p$, the eight possibilities can be encoded as follows:
+The problem of selecting $V_{th}^h$ buffer leaders is also formulated as a SAT-based problem, solved by existing SAT solver, as we do for DCC deployment. The end result of the formulation involves the selected clock buffers and locations of DCCs. Assume that there are three types of DCCs (20\%, 40\%, and 80\%) and one type of $V_{th}^h$ buffer leader. Therefore, three Boolean variables are used for encoding eight possibilities of DCC insertions and leader selections at any buffer\footnote{Any clock buffer can be inserted DCC at its input and can be selected as $V_{th}^h$ buffer leader.}. Consider the clock buffer $p$, the eight possibilities can be encoded as follows:
 
 {\small
 \begin{tabular}{  c  c  c  c  }
@@ -227,31 +227,29 @@ Note that, if the buffer, located deep in the clock tree, is selected as the lea
 \subsection{Constraints on the Selection of $V_{th}^h$ Buffer Leader}
 \begin{figure}
 	\centering
-	%\includegraphics[width=1.0\columnwidth]{All_types_of_DCCs.png}
 	\includegraphics[width=1\columnwidth]{All_types_of_DCCs_and_leaders.png}
 	\caption{Generalized DCC insertion and $V_{th}^h$ buffer leader selection, for a target pair of flip-flops}
-	%\caption{Generalized DCC insertion for a target pair of flip-flops}
 	\label{fig:leadertype}
 \end{figure}
-
-Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments drops from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of $V_{th}^h$ buffer leaders:
-
-\noindent \textbf{\uline{Leader constraints: At most one buffer on a single clock path is selected as $V_{th}^h$ buffer leader.}}
-
-The constraints are analogous to the aforementioned DCC constraints. The corresponding clauses can be generated in a similar manner, but are not shown in the paper for brevity. In the example, the 12 clauses associated with leader constraints will be generated, in such a way that, the possibility count of leader selections drops from 128 to 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
-
-%------------------ Timing Constraints ()
-\subsection{Timing Constraints Considering DCC Deployment and Selection of $V_{th}^h$ Buffer Leader}
-\label{sec:VTA:timing}
-\begin{figure}
+\begin{figure}[t!]
     \centering
     \includegraphics[width=1.0\columnwidth]{2DCC_2Leader.png}
     \caption{Example of DCC insertion and $V_{th}^h$ buffer leader selection}
     \label{fig:2dcc2leader}
 \end{figure}
-The timing constraints are analogous to the former timing constraints, while here we more consider the influence of $V_{th}^h$ buffer leader on clock latency. Remind that, the former timing constraints are divided into 3 classes according to the used DCC count. Because we simultaneously consider the DCC deployment and leader selection in the existing clock network, each of the former 3 classes is further divided into 3 subclasses, according to the leader count (0, 1 and 2). Therefore, the timing constraints are divided into 9 ($3 \times 3$) subclasses, according to the used DCC count and leader count.
 
-For simplicity, we make an illustrative example from one of the 9 subclasses: 2 used DCC and 2 $V_{th}^h$ buffer leaders in the clock network associated aging-critical path in Figure~\ref{fig:2dcc2leader}, where 20\% and 80\% DCC are inserted at the inputs of buffers 3 and 6, respectively, and buffers 2 and 5 are selected as $V_{th}^h$ buffer leaders, implying that the $V_{th}$ of buffers 2, 3, 4, 5, 6 and 7 are assigned to $V_{th}^h$. In the case, if it causes a timing violation along the aging-critical path, the Boolean representation of the DCC deployment and leader selection,
+Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments has been dropped from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of $V_{th}^h$ buffer leaders:
+
+\noindent \textbf{\uline{Leader constraints: At most one buffer on a single clock path is selected as $V_{th}^h$ buffer leader.}}
+
+The constraints are analogous to the aforementioned DCC constraints. The corresponding clauses can be generated in a similar manner, but are not shown in the paper for brevity. In the example, the 12 clauses associated with leader constraints will be generated, in such a way that, the possibility count of leader selections is dropped from 128 to 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
+
+%------------------ Timing Constraints ()
+\subsection{Timing Constraints Considering DCC Deployment and Selection of $V_{th}^h$ Buffer Leader}
+\label{sec:VTA:timing}
+The timing constraints are analogous to the former timing constraints, while here we more consider the influence of $V_{th}^h$ buffer leader on clock latency. Remind that, the former timing constraints are divided into 3 classes according to the used DCC count. Because we simultaneously consider the DCC deployment and leader selection in the existing clock network, each of the former 3 classes is further divided into 3 subclasses, in terms of the leader count (0, 1 and 2). Therefore, the timing constraints are divided into 9 ($3 \times 3$) subclasses, according to the used DCC count and leader count.
+
+For simplicity, we make an illustrative example from one of the 9 subclasses: 2 used DCC and 2 $V_{th}^h$ buffer leaders in the clock network associated aging-critical paths in Figure~\ref{fig:2dcc2leader}, where 20\% and 80\% DCC are inserted at the inputs of buffers 3 and 5, respectively, and buffers 2 and 6 are selected as $V_{th}^h$ buffer leaders, implying that the $V_{th}$ of buffer set \{2, 3, 4\} and buffer set \{6, 7\} are assigned to $Vt{h}_{th}$ because of the leader buffer 2, 6, respectively. In the case, if it causes a timing violation along the aging-critical path, the Boolean representation of the DCC deployment and leader selection,
 {\fontsize{9}{10}
 \begin{gather*}
 \left(\{B_{1,3}, B_{1,2}, B_{1,1}\} \equiv \{0, 0, 0\} \right) \land \left( \{B_{2,3}, B_{2,2}, B_{2,1}\} \equiv \{1, 0, 0\} \right)\\ 

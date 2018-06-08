@@ -15,7 +15,7 @@ Next, the authors of~\cite{wang2007efficient} simplify this predictive model to 
 \label{eq:dtv2}
 \Delta V_{th}=b\cdot  \alpha^n \cdot t^n = b \cdot \left(\alpha \cdot t \right)^n
 \end{equation}
-where $b = 3.9 \times 10^{-3} V \cdot s^{-1/_5}$.
+where $b = 3.9 \times 10^{-3} V \cdot s^{-1/5}$.
 
 Finally, the rising/falling propagation delay of a gate through the degraded P-type/N-type MOSFET can be derived as a first-order approximation:
 \begin{equation}
@@ -43,7 +43,7 @@ We apply Equation (\ref{eq:pd}) to calculate the delay of each gate under BTI, a
 
 Duty cycle is the percentage of one period in which a signal is high (i.e., logic 1). The aging of logic gates highly depends on the stress time~\cite{wang2010impact}. For a clock buffer on the clock tree, its stress time is proportional to the clock duty cycle. Therefore, by adjusting the clock duty cycle, we can manipulate the aging of clock buffers and then control the effective degradation of logic paths. Figure~\ref{fig:agr} shows the aging rates of clock buffers receiving different clock duty cycles. 
 
-The unit we use to change the clock duty cycle is duty-cycle converter (DCC), which can converts the duty cycle of a clock signal to a smaller/larger one (e.g., $50\% \rightarrow 20\%$ or $50\% \rightarrow 80\%$), as shown in Figure~\ref{fig:dcc}. It separates the source clock wave (black line) and original wave. Then, the two waves are combined with the OR gate to obtain a new wave (red line) of 80\% duty cycle. Once a DCC is inserted into the clock tree, the downstream sub-tree of the DCC insertion point will receive a clock signal whose duty cycle is no longer 50\%. This way, aging rate manipulation of downstream clock buffers can be achieved.
+The unit we use to change the clock duty cycle is duty-cycle converter (DCC), which can converts the duty cycle of a clock signal to a smaller/larger one (e.g., $50\% \rightarrow 20\%$ or $50\% \rightarrow 80\%$), as shown in Figure~\ref{fig:dcc}. Take 80\% DCC's duty cycle transformation as an example, the delayed waveform (green waveform) is separated from the source clock waveform (black waveform). Then, the two waves are combined with the OR gate to obtain a new waveform (red waveform) of 80\% duty cycle. Once a DCC is inserted into the clock tree, the downstream sub-tree of the DCC insertion point will receive a clock signal whose duty cycle is no longer 50\%. This way, aging rate manipulation of downstream clock buffers can be achieved.
 
 
 \begin{figure}
