@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  8 JUN 2018 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  12 JUN 2018 18:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1099,11 +1099,11 @@ File: figures/dcc.png Graphic file (type png)
 Package pdftex.def Info: figures/dcc.png used on input line 32.
 (pdftex.def)             Requested size: 252.0pt x 101.056pt.
 
-<figures/agr.png, id=37, 1010.77625pt x 580.1675pt>
+<figures/agr.png, id=37, 996.72375pt x 600.2425pt>
 File: figures/agr.png Graphic file (type png)
  <use figures/agr.png>
 Package pdftex.def Info: figures/agr.png used on input line 39.
-(pdftex.def)             Requested size: 252.0pt x 144.64314pt.
+(pdftex.def)             Requested size: 226.79846pt x 136.57828pt.
 
 <figures/DCC_reduction.png, id=38, 738.09084pt x 547.37833pt>
 File: figures/DCC_reduction.png Graphic file (type png)
@@ -1130,21 +1130,21 @@ Package pdftex.def Info: figures/All_types_of_DCCs.png used on input line 40.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
  [5 <./figures/Flow_chart.png> <./figures/All_types_of_DCCs.png>]
-<figures/A_examlpe_of_DCC_placement1.png, id=50, 920.43875pt x 365.365pt>
+<figures/A_examlpe_of_DCC_placement1.png, id=50, 917.4275pt x 364.36125pt>
 File: figures/A_examlpe_of_DCC_placement1.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement1.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement1.png used on input 
 line 92.
-(pdftex.def)             Requested size: 226.79846pt x 90.02531pt.
+(pdftex.def)             Requested size: 231.83954pt x 92.07414pt.
 
-<figures/A_examlpe_of_DCC_placement2.png, id=51, 907.39pt x 365.365pt>
+<figures/A_examlpe_of_DCC_placement2.png, id=51, 906.38625pt x 363.3575pt>
 File: figures/A_examlpe_of_DCC_placement2.png Graphic file (type png)
 
 <use figures/A_examlpe_of_DCC_placement2.png>
 Package pdftex.def Info: figures/A_examlpe_of_DCC_placement2.png used on input 
 line 92.
-(pdftex.def)             Requested size: 226.79846pt x 91.31873pt.
+(pdftex.def)             Requested size: 231.83954pt x 92.94046pt.
  [6]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 194.
@@ -1157,12 +1157,12 @@ Package pdftex.def Info: figures/All_types_of_DCCs_and_leaders.png used on inpu
 t line 230.
 (pdftex.def)             Requested size: 252.0pt x 126.14069pt.
 
-<figures/2DCC_2Leader.png, id=56, 900.36375pt x 374.39874pt>
+<figures/2DCC_2Leader.png, id=56, 901.3675pt x 382.42876pt>
 File: figures/2DCC_2Leader.png Graphic file (type png)
 
 <use figures/2DCC_2Leader.png>
 Package pdftex.def Info: figures/2DCC_2Leader.png used on input line 236.
-(pdftex.def)             Requested size: 252.0pt x 104.78522pt.
+(pdftex.def)             Requested size: 252.0pt x 106.91592pt.
  [7 <./figures/A_examlpe_of_DCC_placement1.png> <./figures/A_examlpe_of_DCC_pla
 cement2.png>]
 Overfull \hbox (8.88176pt too wide) in paragraph at lines 265--265
@@ -1170,15 +1170,19 @@ Overfull \hbox (8.88176pt too wide) in paragraph at lines 265--265
  []
 
 ) (./exp.tex
-<figures/Experimental_result_DCC_TVA.png, id=61, 1452.42625pt x 527.9725pt>
+<figures/Experimental_result_DCC_TVA.png, id=61, 1500.60625pt x 533.995pt>
 File: figures/Experimental_result_DCC_TVA.png Graphic file (type png)
 
 <use figures/Experimental_result_DCC_TVA.png>
 Package pdftex.def Info: figures/Experimental_result_DCC_TVA.png used on input 
 line 13.
-(pdftex.def)             Requested size: 504.0pt x 183.20607pt.
- [8 <./figures/All_types_of_DCCs_and_leaders.png> <./figures/2DCC_2Leader.png>]
+(pdftex.def)             Requested size: 511.5597pt x 182.03664pt.
 
+Overfull \hbox (7.55971pt too wide) in paragraph at lines 11--16
+ [][] 
+ []
+
+[8 <./figures/All_types_of_DCCs_and_leaders.png> <./figures/2DCC_2Leader.png>]
 <figures/Aging_impacted_on_DCC.png, id=65, 574.7874pt x 306.9066pt>
 File: figures/Aging_impacted_on_DCC.png Graphic file (type png)
 
@@ -1194,8 +1198,8 @@ File: figures/Boundary_level_vs_improvement.png Graphic file (type png)
 Package pdftex.def Info: figures/Boundary_level_vs_improvement.png used on inpu
 t line 52.
 (pdftex.def)             Requested size: 226.79846pt x 101.98146pt.
-) (./conclude.tex [9 <./figures/Experimental_result_DCC_TVA.png> <./figures/Agi
-ng_impacted_on_DCC.png>])
+) [9 <./figures/Experimental_result_DCC_TVA.png> <./figures/Aging_impacted_on_D
+CC.png>] (./conclude.tex)
 [10 <./figures/Boundary_level_vs_improvement.png>] (./maui.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1213,11 +1217,11 @@ Package logreq Info: Writing requests to 'maui.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21046 strings out of 492995
- 395137 string characters out of 6132703
- 685176 words of memory out of 5000000
+ 21045 strings out of 492995
+ 395131 string characters out of 6132703
+ 684176 words of memory out of 5000000
  24330 multiletter control sequences out of 15000+600000
- 581833 words of font info for 120 fonts, out of 8000000 for 9000
+ 580755 words of font info for 119 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,15n,50p,10375b,12305s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -1241,7 +1245,7 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on maui.pdf (10 pages, 2143343 bytes).
+Output written on maui.pdf (10 pages, 2180436 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream

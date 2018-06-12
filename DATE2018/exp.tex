@@ -10,7 +10,7 @@ Under 10-year BTI, the aging rates of clock buffers were obtained from HSPICE. T
 \caption{Results of aging tolerance}
 	\begin{tabular}{l}
 	%\includegraphics[width=1.3\columnwidth]{Experimental_result_(CG).png}
-	\includegraphics[width=2\columnwidth]{Experimental_result_DCC_TVA.png}
+	\includegraphics[width=2.03\columnwidth]{Experimental_result_DCC_TVA.png}
 	\end{tabular}
 \label{table:exp1}
 \end{table*}
@@ -31,10 +31,10 @@ As we can see, the DCC counts in Column 13 are different from those in Column 9,
 
 %Take \textit{des\_perf} for example, DCC count is 7; however, the DCC count increases to 33 after $V_{th}^h$ assignment is involved. The DCC counts of the same design differ because the DCC deployments are not identical anymore. Specifically speaking, when V\textsubscript{th} assignment is considered, some clock buffers become candidate buffers to be inserted DCC at their inputs, because timing constraints (i.e., setup-time and hold-time) are met based on the inequality Equation (1) and (2), such that DCC can be redeployed to obtain lower Tc. Thus, even thought the two frameworks target the identical benchmark, the DCC deployments/counts may differ. 
 
-\subsection{Discussion: Dramatic Increase in Runtime}
-In addition, the run time of the framework, involving $V_{th}^h$ assignment, dramatically increases due to the possibility explosion of DCC deployment and leader selection. To be specific, given a pair of flip-flops and associated clock paths, we need to consider the various possibilities of leader selections, for each DCC deployment. Therefore, the total  count of DCC deployment and leader selection is equal to combination, i.e., DCC possibilities multiplied by the leader counterparts, accounting for the dramatic increase of run time. 
+\subsection{Discussion: Increase in Runtime}
+In addition, the run time of the framework, involving $V_{th}^h$ assignment, increases due to the possibility explosion of DCC deployment and leader selection. To be specific, given a pair of flip-flops and associated clock paths, we need to consider the various possibilities of leader selections, for each DCC deployment. Therefore, the total  count of DCC deployment and leader selection is equal to combination, i.e., DCC possibilities multiplied by the leader counterparts, accounting for the increase of run time. 
 
-Even though the runtime increase dramatically while $V_{th}$ assignment is involved, the resulting framework is still practical for aging tolerance because it at most takes 1370 seconds (e.g., \textit{netcard}).
+Even though the runtime increase while $V_{th}$ assignment is involved, the resulting framework is still practical for aging tolerance because it at most takes 1370 seconds (e.g., \textit{netcard}).
 \subsection{Discussion: Aging Impact on DCC}
 \begin{figure}
     \centering
