@@ -9,7 +9,7 @@
     \hspace{1.6cm}
     \subfigure[Notations]{
     	\label{fig:sub:notations}
-        \includegraphics[width=0.8\columnwidth]{Notations.png}
+        \includegraphics[width=0.85\columnwidth]{Notations.png}
     }
     \caption{Illustrative example and notations for the proposed framework based on DCC deployment and $V_{th}$ assgnment}
     \label{fig:en}
@@ -83,14 +83,14 @@ For the circuit in Figure~\ref{fig:sub:example}, the approach of high-$V_{th}$ (
 Follow the previous DCC deployment for manipulation of aging, that is, 20\%DCC and 80\% DCC inserted at the inputs of buffer 1 and 2, respectively, we can further alter the threshold voltage $V_{th}$ to $V^{h}_{th}$ from buffer 2 to \ce{FF_Y} and \ce{FF_Z} so as to achieve a better utilization of clock skew. To include the timing information of $V_{th}^{h}$ buffers in the setup-time constraint, we assume that, the fresh/intrinsic delay of $V_{th}^{h}$ buffer is 1.2X longer than that of nominal buffer deducted from power-law model, and aging rates of $V_{th}^{h}$ buffers, receiving clock duty cycles of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%\footnote{The aging rates of $V_{th}^{h}$ buffers are lower than those of nominal buffers, because the higher/lower $V_{th}$ leads to lower/higher aging rate.}, respectively. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
 	\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad \textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.28}C_Y+T_c
-	\label{eq:lxy2}
+	\label{eq:lxy3}
 \end{equation}
 \begin{equation}
 	\centering
 	\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad \textbf{1.28}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.28}C_Z+T_c
-	\label{eq:lyz2}
+	\label{eq:lyz3}
 \end{equation}
-By re-arranging Equations (\ref{eq:lxy2}) and (\ref{eq:lyz2}):
+By re-arranging Equations (\ref{eq:lxy3}) and (\ref{eq:lyz3}):
 {\fontsize{9}{9.6}
 \begin{flalign*}
 	\hspace{1.2em}\ce{L_{XY}}: T_c &> 96.5 &\\
