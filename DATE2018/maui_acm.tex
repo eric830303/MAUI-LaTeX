@@ -1,0 +1,190 @@
+ 
+
+\documentclass[format=acmsmall, review=false, screen=true]{acmart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Metadata Information
+\acmJournal{TODAES}
+%\acmVolume{9}
+%\acmNumber{4}
+\acmArticle{1}
+\acmYear{2018}
+\acmMonth{6}
+\copyrightyear{2018}
+%\acmArticleSeq{9}
+
+% Copyright
+%\setcopyright{acmcopyright}
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+%--------- DOI ---------------------
+%\acmDOI{0000001.0000001}
+
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{multirow}
+%LaTeX package conflicts with several others over the use of the algorithm identifier.  
+%A common indicator is something like this message: Too many }'s.l.1616     }
+%To resolve the issues, simply put the following just before the inclusion of the algorithm2
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[linesnumbered,boxed,ruled]{algorithm2e}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+
+
+\usepackage{csquotes}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+%\usepackage[style=acm,backend=bibtex8,maxnames=3,minnames=1,sorting=none]{biblatex}
+%\usepackage{natbib}
+%\bibliographystyle{unsrtnat}
+\usepackage[version=4]{mhchem}
+\usepackage[bottom]{footmisc}
+\usepackage[normalem]{ulem}
+
+
+\usepackage{afterpage}
+\usepackage{comment}
+% graphics path
+\graphicspath{{figures/}}
+% figure name bold
+\renewcommand{\figurename}{\textbf{Figure}}
+% table name bold
+\renewcommand{\tablename}{\textbf{Table}}
+% footnote mark
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+% add bib resource
+%\addbibresource{maui.bib} 
+% class format
+
+\newtheorem{class}{Class}
+%bibtex font size
+\renewcommand*{\bibfont}{\footnotesize}
+
+% correct bad hyphenation here
+\hyphenation{optical networks semiconductor}
+
+\pagenumbering{gobble}
+%\usepackage{caption}
+%\usepackage[font=small,labelfont=bf]{caption}
+
+
+\received{June 2018}
+%\received[revised]{March 2009}
+%\received[accepted]{June 2009}
+
+
+
+
+
+
+\begin{document}
+\title[MAUI: Making Aging Useful, Intentionally]{MAUI: Making Aging Useful, Intentionally}
+
+
+\author{Tien-Hung Tseng}
+\affiliation{%
+  \institution{National Chiao Tung University}
+  \city{Hsinchu}
+  \country{Taiwan}}
+\email{eric830303.cs05g@g2.nctu.edu.tw}
+
+
+\author{Shou-Chun Li}
+\affiliation{%
+  \institution{National Chiao Tung University}
+  \city{Hsinchu}
+  \country{Taiwan}
+}
+\email{scli.cs02g@nctu.edu.tw}
+
+
+\author{Kai-Chiang Wu}
+\affiliation{%
+  \institution{National Chiao Tung University}
+  \streetaddress{30 Shuangqing Rd}
+  \city{Hsinchu}
+  \country{Taiwan}
+}
+\email{kcw@cs.nctu.edu.tw}
+
+
+
+\begin{abstract}
+Device aging, which causes significant loss on circuit performance and lifetime, has been a primary factor in reliability degradation of nanoscale designs. In this paper, we propose to take advantage of aging-induced clock skews (i.e., make them useful for aging tolerance) by manipulating these time-varying skews to compensate for the performance degradation of logic networks. The goal is to assign achievable/reasonable aging-induced clock skews in a circuit, such that its overall performance degradation due to aging can be minimized, that is, the lifespan can be maximized.  On average, 24.95\% aging tolerance can be achieved with insignificant design overhead. Moreover, we also apply $V_{th}$ assignment to further mitigate the aging-induced degradation of logic networks. Averagely, 37.61\% aging tolerance can be achieved when aging manipulation and $V_{th}$ assignment are applied.
+\end{abstract}
+
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10010583.10010682</concept_id>
+<concept_desc>Hardware~Electronic design automation</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010583.10010682.10010696</concept_id>
+<concept_desc>Hardware~Modeling and parameter extraction</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010583.10010750</concept_id>
+<concept_desc>Hardware~Robustness</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010583.10010750.10010762.10010763</concept_id>
+<concept_desc>Hardware~Aging of circuits and systems</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Hardware~Electronic design automation}
+\ccsdesc[500]{Hardware~Modeling and parameter extraction}
+\ccsdesc[500]{Hardware~Robustness}
+\ccsdesc[500]{Hardware~Aging of circuits and systems}
+\keywords{Clocks, Aging, Degradation, Logic gates, Mathematical model, Reliability}
+
+
+
+
+
+\maketitle
+
+%\input abstract
+\input introduction
+\input related
+\input motivate
+\input preliminary
+\input framework
+\input exp
+\input conclude
+
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{maui}
+
+
+% that's all folks
+\end{document}
+
+

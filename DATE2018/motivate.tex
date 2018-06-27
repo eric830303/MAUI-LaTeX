@@ -4,12 +4,14 @@
     \centering
     \subfigure[Example]{
     	\label{fig:sub:example}
-        \includegraphics[width=0.9\columnwidth]{Motivating_example.png}
+        %\includegraphics[width=0.9\columnwidth]{Motivating_example.png} %IEEE Journal
+        \includegraphics[width=0.5\columnwidth]{Motivating_example.png} %ACM Journal
     }
-    \hspace{1.6cm}
+    \hspace{0.0cm}
     \subfigure[Notations]{
     	\label{fig:sub:notations}
-        \includegraphics[width=0.85\columnwidth]{Notations.png}
+        %\includegraphics[width=0.85\columnwidth]{Notations.png} %IEEE Journal
+        \includegraphics[width=0.45\columnwidth]{Notations.png} %ACM Journal
     }
     \caption{Illustrative example and notations for the proposed framework based on DCC deployment and $V_{th}$ assignment}
     \label{fig:en}
@@ -97,7 +99,6 @@ By re-arranging Equations (\ref{eq:lxy3}) and (\ref{eq:lyz3}):
 	\hspace{1.2em}\ce{L_{YZ}}: T_c &> 104
 \end{flalign*}
 }
-
 Apparently, the required $T_c$ is further reduced/optimized from 108.5 to 104 (dominated by \ce{L_{YZ}} rather than \ce{L_{XY}} in the first example), by inserting two DCCs and assigning the $V_{th}$ of certain buffers to high value. As it can be seen, the skew for \ce{L_{XY}}, which equals 1.28$C_Y$ minus 1.09$C_X$, is larger than that in the first example. Therefore, the new skew for \ce{L_{XY}} is more useful/beneficial and accounts for the better optimization of required $T_c$. 
 
 %Note that, there exists a difference between DCC and $V_{th}^{h}$ buffer leader. DCC is a physical gate which is inserted at the inputs of certain clock buffers to manipulate the aging behaviors of downstream buffers. However, $V_{th}^{h}$ buffer leader is selected from existing clock buffers and indicates the start location where we begin assign $V_{th}^{h}$ toward flip-flops. 
