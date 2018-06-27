@@ -54,6 +54,7 @@ Without loss of generality, we assume $N$ = 3. Thus, there are three types of DC
 %(5) DATE 2018
 {\small
 \begin{tabular}{ c c c }
+\centering
    & DCC type & $\left\{B_{p,2},B_{p,1}\right\}$ \\
   (1)\quad & None & \{0, 0\} \\
   (2)\quad & 20\% &  \{0, 1\} \\
@@ -135,7 +136,7 @@ Given one clock period $T_c$ derived by binary search, one aging-critical path, 
 Consider the situation that no DCC is inserted at buffers 1- 7. If it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,
 {\fontsize{9}{10}
 \begin{gather*}
-\left(\{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb \\
+\left(\{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb 
 \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right),
 \end{gather*}}
 equivalent to the following CNF clause:
@@ -154,7 +155,7 @@ This class can be further classified into 2 sub-classes based on the location of
 In Figure~\ref{fig:dccinsert}, buffer 1 is on the common clock path. Consider the DCC insertion shown in Figure~\ref{fig:sub:dcci1}: if the insertion of a 40\% DCC at buffer 1 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment,
 {\fontsize{9}{10}
 \begin{gather*}
-\left(\{B_{1,2}, B_{1,1}\} \equiv \{1, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb \\
+\left(\{B_{1,2}, B_{1,1}\} \equiv \{1, 0\} \right) \land \left( \{B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \dotsb 
 \land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right),
 \end{gather*}}equivalent to the following clause:
 {\fontsize{9}{10}
@@ -166,12 +167,12 @@ In Figure~\ref{fig:dccinsert}, buffer 1 is on the common clock path. Consider th
 This class targets buffers 2, 3, 4, 5, 6, 7. If the insertion of a 20\% DCC at buffer 3 causes a timing violation within 10 years, then the Boolean representation of the DCC deployment, 
 {\fontsize{9}{10}
 \begin{gather*}
-	\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \dotsb \\
+	\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \dotsb 
 	\land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right),
 \end{gather*}}equivalent to the following CNF clause:
 {\fontsize{9}{10}
 \begin{gather*}
-	(B_{3,2} \lor \neg B_{3,1} \lor B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor B_{3,2} \dotsb \\ 
+	(B_{3,2} \lor \neg B_{3,1} \lor B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor B_{3,2} \dotsb  
 \lor B_{7,2} \lor B_{7,1}),
 \end{gather*}}should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable. This class includes 6 candidates: buffers 2, 3, 4, 5, 6, 7, and each has 3 choices of DCCs. Therefore, a total of 18 CNF clauses will be generated in the worst case.
 
@@ -257,9 +258,8 @@ For simplicity, we make an illustrative example from one of the 9 subclasses: 2 
 \end{gather*}}equivalent to the following CNF clause:
 {\fontsize{9}{10}
 \begin{gather*}
-(B_{1,3} \lor B_{1,2} \lor B_{1,1} \lor \neg B_{2,3} \lor B_{2,2} \lor B_{2,1}  \lor B_{3,3} \lor B_{3,2} \lor \neg B_{3,1}\\ 
-\lor B_{4,3} \lor B_{4,2} \lor B_{4,1} \lor B_{5,3} \lor \neg B_{5,2} \lor \neg B_{5,1} \lor \neg  B_{6,3} \lor B_{6,2} \lor B_{6,1}\\
-\lor B_{7,3} \lor B_{7,2} \lor B_{7,1} )
+(B_{1,3} \lor B_{1,2} \lor B_{1,1} \lor \neg B_{2,3} \lor B_{2,2} \lor B_{2,1}  \lor B_{3,3} \lor B_{3,2} \lor \neg B_{3,1} \lor B_{4,3} \lor B_{4,2} \\
+\lor B_{4,1} \lor B_{5,3} \lor \neg B_{5,2} \lor \neg B_{5,1} \lor \neg  B_{6,3} \lor B_{6,2} \lor B_{6,1} \lor B_{7,3} \lor B_{7,2} \lor B_{7,1} )
 \end{gather*}}should be generated such that the solver will not output the corresponding DCC deployment and leader selection in the result if the CNF is satisfiable. In this case, a total of 1 CNF clause is generated.
 
 Note that, given the DCC deployment, if the leader count is 2, there exist 9 ($3 \times 3$) possibilities of leader selection (one among buffers $\{2, 3, 4\}$, the other one among buffers $\{5, 6, 7\}$).
