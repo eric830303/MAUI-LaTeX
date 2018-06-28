@@ -103,8 +103,7 @@ Next, it can be translated into 4 CNF clauses:
 {\fontsize{9}{10}
 \begin{equation*}
 \begin{split}
-(\neg B_{2,1}\lor\neg B_{3,1}) \land (\neg B_{2,1}\lor\neg B_{3,2}) \\
-\land (\neg B_{2,2}\lor\neg B_{3,1}) \land (\neg B_{2,2}\lor\neg B_{3,2})
+(\neg B_{2,1}\lor\neg B_{3,1}) \land (\neg B_{2,1}\lor\neg B_{3,2}) \land (\neg B_{2,2}\lor\neg B_{3,1}) \land (\neg B_{2,2}\lor\neg B_{3,2})
 \end{split}
 \end{equation*}}
 Any pair of buffers along a single clock path should be constrained in this way. Among buffers 1- 7 in Figure~\ref{fig:dcctype}, there are 12 pairs: $\langle1, 2\rangle$, $\langle1, 3\rangle$, $\langle1, 4\rangle$, $\langle1, 5\rangle$, $\langle1, 6\rangle$, $\langle1, 7\rangle$, $\langle2, 3\rangle$, $\langle2, 4\rangle$, $\langle3, 4\rangle$, $\langle5, 6\rangle$, $\langle5, 7\rangle$, $\langle6, 7\rangle$. Each pair translates to 4 clauses and a total of 48 clauses will be generated accordingly.
@@ -225,14 +224,14 @@ Note that, if the buffer, located deep in the clock tree, is selected as the lea
 \begin{figure}
 	\centering
 	%\includegraphics[width=1\columnwidth]{All_types_of_DCCs_and_leaders.png} %IEEE
-	\includegraphics[width=0.65\columnwidth]{All_types_of_DCCs_and_leaders.png} %ACM
+	\includegraphics[width=0.8\columnwidth]{All_types_of_DCCs_and_leaders.png} %ACM
 	\caption{Generalized DCC insertion and $V_{th}^h$ buffer leader selection, for a target pair of flip-flops}
 	\label{fig:leadertype}
 \end{figure}
 \begin{figure}[t!]
     \centering
     %\includegraphics[width=1.0\columnwidth]{2DCC_2Leader.png} %IEEE
-    \includegraphics[width=0.65\columnwidth]{2DCC_2Leader.png} %ACM
+    \includegraphics[width=0.71\columnwidth]{2DCC_2Leader.png} %ACM
     \caption{Example of DCC insertion and $V_{th}^h$ buffer leader selection}
     \label{fig:2dcc2leader}
 \end{figure}
@@ -251,9 +250,8 @@ The timing constraints are analogous to the former timing constraints, while her
 For simplicity, we make an illustrative example from one of the 9 subclasses: 2 used DCCs and 2 $V_{th}^h$ buffer leaders in the clock network associated aging-critical paths in Figure~\ref{fig:2dcc2leader}, where 20\% and 80\% DCC are inserted at the inputs of buffers 3 and 5, respectively, and buffers 2 and 6 are selected as $V_{th}^h$ buffer leaders, implying that the $V_{th}$ of buffer set \{2, 3, 4\} and buffer set \{6, 7\} are assigned to $V_{th}^{h}$ because of the leader buffer 2, 6, respectively. In the case, if it causes a timing violation along the aging-critical path, the Boolean representation of the DCC deployment and leader selection,
 {\fontsize{9}{10}
 \begin{gather*}
-\left(\{B_{1,3}, B_{1,2}, B_{1,1}\} \equiv \{0, 0, 0\} \right) \land \left( \{B_{2,3}, B_{2,2}, B_{2,1}\} \equiv \{1, 0, 0\} \right)\\ 
-\left(\{B_{3,3}, B_{3,2}, B_{3,1}\} \equiv \{0, 0, 1\} \right) \land \left( \{B_{4,3}, B_{4,2}, B_{4,1}\} \equiv \{0, 0, 0\} \right)\\
-\left(\{B_{5,3}, B_{5,2}, B_{5,1}\} \equiv \{0, 1, 1\} \right) \land \left( \{B_{6,3}, B_{6,2}, B_{6,1}\} \equiv \{1, 0, 0\} \right)\\
+\left(\{B_{1,3}, B_{1,2}, B_{1,1}\} \equiv \{0, 0, 0\} \right) \land \left( \{B_{2,3}, B_{2,2}, B_{2,1}\} \equiv \{1, 0, 0\} \right) \land \left(\{B_{3,3}, B_{3,2}, B_{3,1}\} \equiv \{0, 0, 1\} \right) \\ 
+\land \left( \{B_{4,3}, B_{4,2}, B_{4,1}\} \equiv \{0, 0, 0\} \right) \land \left(\{B_{5,3}, B_{5,2}, B_{5,1}\} \equiv \{0, 1, 1\} \right) \land \left( \{B_{6,3}, B_{6,2}, B_{6,1}\} \equiv \{1, 0, 0\} \right)\\
 \land \left( \{B_{7,3}, B_{7,2}, B_{7,1}\} \equiv \{0, 0, 0\} \right),
 \end{gather*}}equivalent to the following CNF clause:
 {\fontsize{9}{10}
