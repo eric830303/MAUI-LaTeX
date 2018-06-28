@@ -18,7 +18,7 @@
 \end{figure*}
 
 
-This section introduces the example, motivating our idea of making clock skew useful, by manipulating the aging behaviors of clock paths, introduced in Section~\ref{sec:mot:exp1}. Moreover, high-$V_{th}$ assignment for clock buffers are also involved in the example to enhance the benefit of useful clock skew for aging tolerance, introduced in Section~\ref{sec:mot:exp2}. 
+This section introduces the motivating example of motivating our idea of making clock skew useful, by manipulating the aging behaviors of clock paths, detailed in Section~\ref{sec:mot:exp1}. Moreover, high-$V_{th}$ assignment for clock buffers is also incorporated in the example to enhance the benefit of useful clock skew for aging tolerance, intred in Section~\ref{sec:mot:exp2}. 
 
 \subsection{Manipulation of Aging Behaviors of Clock Paths}
 \label{sec:mot:exp1}
@@ -80,11 +80,11 @@ As it can be seen, we can reduce the required $T_c$ from 115.5 to 108.5 (dominat
 
 \subsection{High-$V_{th}$ Assignment for Clock Buffers}
 \label{sec:mot:exp2}
-For the circuit in Figure~\ref{fig:sub:example}, the approach of high-$V_{th}$ ($V_{th}^{h}$) assignment for clock buffers is involved to explore more beneficial clock skew, i.e., further optimize/reduce required $T_c$. 
+For the circuit in Figure~\ref{fig:sub:example}, the approach of high-$V_{th}$ (denoted by $V_{th}^{h}$) assignment for clock buffers is incorporated to explore more beneficial clock skew, i.e., further optimize/reduce required $T_c$. 
 
-Follow the previous DCC deployment for manipulation of aging, that is, 20\%DCC and 80\% DCC inserted at the inputs of buffer 1 and 2, respectively, we can further alter the threshold voltage $V_{th}$ to $V^{h}_{th}$ from buffer 2 to \ce{FF_Y} and \ce{FF_Z} so as to achieve a better utilization of clock skew. To include the timing information of $V_{th}^{h}$ buffers in the setup-time constraint, we assume that, the fresh/intrinsic delay of $V_{th}^{h}$ buffer is 1.2X longer than that of nominal buffer deducted from power-law model, and aging rates of $V_{th}^{h}$ buffers, receiving clock duty cycles of 20\%, 40\%, 50\% and 80\%, are 0.5\%, 4.1\%, 5.4\% and 8.2\%\footnote{The aging rates of $V_{th}^{h}$ buffers are lower than those of nominal buffers, because the higher/lower $V_{th}$ leads to lower/higher aging rate.}, respectively. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
+Follow the previous DCC deployment for manipulation of aging, that is, 20\%DCC and 80\% DCC inserted at the inputs of buffers 1 and 2, respectively, we can alter the threshold voltage of clock buffers to $V^{h}_{th}$ from buffer 2 to \ce{FF_Y} and \ce{FF_Z} so as to achieve a better utilization of clock skew. To include the timing information of $V_{th}^{h}$ buffers in the setup-time constraint, we assume that, the fresh/intrinsic delay of $V_{th}^{h}$ buffer is 1.15X longer than that of nominal buffer derived from power-law model, and aging rates of $V_{th}^{h}$ buffers, receiving clock duty cycles of 80\%, are 8\%\footnote{The aging rates of $V_{th}^{h}$ buffers are lower than those of nominal buffers, because the higher/lower $V_{th}$ leads to lower/higher aging rate.}, respectively. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
-	\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad \textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<\textbf{1.28}C_Y+T_c
+	\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad \textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<(\textbf{1.15} \cdot \textbf{1.08}) \cdot C_Y+T_c
 	\label{eq:lxy3}
 \end{equation}
 \begin{equation}

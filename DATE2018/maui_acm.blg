@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: maui_acm.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: maui.bib
+Warning--no key, author in itrs2013
+Warning--no author, editor, organization, or key in itrs2013
+Warning--to sort, need author or key in itrs2013
+Warning--no key, author in itrs2013
+Warning--no key, author in itrs2013
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in itrs2013
+Warning--no author, editor, organization, or key in itrs2013
+Warning--empty publisher in chakravarthi2004comprehensive
+Warning--empty address in chakravarthi2004comprehensive
+Warning--empty publisher in chen2013novel
+Warning--empty address in chen2013novel
+Warning--empty publisher in kang2007efficient
+Warning--empty address in kang2007efficient
+Warning--empty publisher in kimizuka1999impact
+Warning--empty address in kimizuka1999impact
+Warning--empty publisher in kumar2006analytical
+Warning--empty address in kumar2006analytical
+Warning--empty publisher in kumar2007nbti
+Warning--empty address in kumar2007nbti
+Warning--empty publisher in mcpherson2006reliability
+Warning--empty address in mcpherson2006reliability
+Warning--empty publisher in paul2006temporal
+Warning--empty address in paul2006temporal
+Warning--empty year in stathis2006negative
+Warning--empty publisher in wang2007efficient
+Warning--empty address in wang2007efficient
+Warning--empty publisher in yang2007combating
+Warning--empty address in yang2007combating
+You've used 18 entries,
+            5706 wiz_defined-function locations,
+            1401 strings with 18181 characters,
+and the built_in function-call counts, 21222 in all, are:
+= -- 2646
+> -- 794
+< -- 0
++ -- 258
+- -- 272
+* -- 1461
+:= -- 2134
+add.period$ -- 89
+call.type$ -- 18
+change.case$ -- 128
+chr.to.int$ -- 18
+cite$ -- 50
+duplicate$ -- 1761
+empty$ -- 1279
+format.name$ -- 332
+if$ -- 5243
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 78
+newline$ -- 174
+num.names$ -- 136
+pop$ -- 849
+preamble$ -- 1
+purify$ -- 218
+quote$ -- 0
+skip$ -- 653
+stack$ -- 0
+substring$ -- 1503
+swap$ -- 178
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 442
+warning$ -- 28
+while$ -- 145
+width$ -- 0
+write$ -- 333
+(There were 28 warnings)
