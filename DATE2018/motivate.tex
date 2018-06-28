@@ -84,22 +84,22 @@ For the circuit in Figure~\ref{fig:sub:example}, the approach of high-$V_{th}$ (
 
 Follow the previous DCC deployment for manipulation of aging, that is, 20\%DCC and 80\% DCC inserted at the inputs of buffers 1 and 2, respectively, we can alter the threshold voltage of clock buffers to $V^{h}_{th}$ from buffer 2 to \ce{FF_Y} and \ce{FF_Z} so as to achieve a better utilization of clock skew. To include the timing information of $V_{th}^{h}$ buffers in the setup-time constraint, we assume that, the fresh/intrinsic delay of $V_{th}^{h}$ buffer is 1.15X longer than that of nominal buffer derived from power-law model, and aging rates of $V_{th}^{h}$ buffers, receiving clock duty cycles of 80\%, are 8\%\footnote{The aging rates of $V_{th}^{h}$ buffers are lower than those of nominal buffers, because the higher/lower $V_{th}$ leads to lower/higher aging rate.}, respectively. Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
 \begin{equation}
-	\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad \textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<(\textbf{1.15} \cdot \textbf{1.08}) \cdot C_Y+T_c
+	\fontsize{9}{9.6}\selectfont \ce{L_{XY}}:\quad \textbf{1.09}C_X+1.2T_{cq}+1.15D_{XY}+1.2T_{su}<(\textbf{1.15} \times \textbf{1.08})C_Y+T_c
 	\label{eq:lxy3}
 \end{equation}
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad \textbf{1.28}C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<\textbf{1.28}C_Z+T_c
+	\fontsize{9}{9.6}\selectfont \ce{L_{YZ}}:\quad (\textbf{1.15} \times \textbf{1.08})C_Y+1.2T_{cq}+1.15D_{YZ}+1.2T_{su}<(\textbf{1.15} \times \textbf{1.08})C_Z+T_c
 	\label{eq:lyz3}
 \end{equation}
 By re-arranging Equations (\ref{eq:lxy3}) and (\ref{eq:lyz3}):
 {\fontsize{9}{9.6}
 \begin{flalign*}
-	\hspace{1.2em}\ce{L_{XY}}: T_c &> 96.5 &\\
+	\hspace{1.2em}\ce{L_{XY}}: T_c &> 100.3 &\\
 	\hspace{1.2em}\ce{L_{YZ}}: T_c &> 104
 \end{flalign*}
 }
-Apparently, the required $T_c$ is further reduced/optimized from 108.5 to 104 (dominated by \ce{L_{YZ}} rather than \ce{L_{XY}} in the first example), by inserting two DCCs and assigning the $V_{th}$ of certain buffers to high value. As it can be seen, the skew for \ce{L_{XY}}, which equals 1.28$C_Y$ minus 1.09$C_X$, is larger than that in the first example. Therefore, the new skew for \ce{L_{XY}} is more useful/beneficial and accounts for the better optimization of required $T_c$. 
+Apparently, the required $T_c$ is further reduced/optimized from 108.5 to 104 (dominated by \ce{L_{YZ}} rather than \ce{L_{XY}} in the first example), by inserting two DCCs and assigning the $V_{th}$ of certain buffers to high value. As it can be seen, the skew for \ce{L_{XY}}, which equals $(1.15 \times 1.08)C_Y$ minus 1.09$C_X$, is larger than that in the first example. Therefore, the new skew for \ce{L_{XY}} is more useful/beneficial and accounts for the better optimization of required $T_c$. 
 
 %Note that, there exists a difference between DCC and $V_{th}^{h}$ buffer leader. DCC is a physical gate which is inserted at the inputs of certain clock buffers to manipulate the aging behaviors of downstream buffers. However, $V_{th}^{h}$ buffer leader is selected from existing clock buffers and indicates the start location where we begin assign $V_{th}^{h}$ toward flip-flops. 
 
