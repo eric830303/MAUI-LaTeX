@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  29 JUN 2018 01:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  1 JUL 2018 20:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1978,34 +1978,34 @@ Class acmart Info: Suppressing bibformat on input line 102.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 172.
+(Font)              scaled to size 14.4pt on input line 166.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 172.
+(Font)              scaled to size 14.4pt on input line 166.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 172.
+nput line 166.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 172.
+(Font)              scaled to size 14.4pt on input line 166.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 14.0pt on input line 172.
+(Font)              scaled to size 14.0pt on input line 166.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 172.
+(Font)              scaled to size 10.95pt on input line 166.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 172.
+(Font)              scaled to size 10.95pt on input line 166.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 172.
+(Font)              scaled to size 9.0pt on input line 166.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 172.
+(Font)              scaled to size 9.0pt on input line 166.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 172.
+ input line 166.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -2013,19 +2013,19 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 172.
+(Font)              scaled to size 8.0pt on input line 166.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 172.
+(Font)              scaled to size 9.0pt on input line 166.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 172.
+(Font)              scaled to size 7.3pt on input line 166.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
@@ -2033,9 +2033,9 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 172.
+(Font)              scaled to size 9.0pt on input line 166.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 172.
+(Font)              scaled to size 9.0pt on input line 166.
 
 (./introduction.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
@@ -2378,32 +2378,32 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.190 \end{document}
+l.184 \end{document}
                      [18.18]pdfTeX warning (ext4): destination with the same id
 entifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.190 \end{document}
+l.184 \end{document}
                      [19.19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
  (./maui_acm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
 Package rerunfilecheck Info: File `maui_acm.out' has not changed.
 (rerunfilecheck)             Checksum: 7F0590556EE26C513D9659254350F49E;6960.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 29987 strings out of 492995
- 507806 string characters out of 6132705
+ 29986 strings out of 492995
+ 507777 string characters out of 6132703
  643611 words of memory out of 5000000
  32405 multiletter control sequences out of 15000+600000
- 750836 words of font info for 440 fonts, out of 8000000 for 9000
+ 750721 words of font info for 439 fonts, out of 8000000 for 9000
  1305 hyphenation exceptions out of 8191
  60i,17n,94p,10379b,6962s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced bu
@@ -2440,7 +2440,7 @@ texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 public/newtx/zxlri.pfb>
-Output written on maui_acm.pdf (19 pages, 2307313 bytes).
+Output written on maui_acm.pdf (19 pages, 2306679 bytes).
 PDF statistics:
  489 PDF objects out of 1000 (max. 8388607)
  405 compressed objects within 5 object streams
