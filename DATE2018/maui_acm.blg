@@ -36,28 +36,28 @@ Warning--empty publisher in yang2007combating
 Warning--empty address in yang2007combating
 You've used 18 entries,
             5706 wiz_defined-function locations,
-            1402 strings with 18185 characters,
-and the built_in function-call counts, 21222 in all, are:
-= -- 2646
+            1403 strings with 18222 characters,
+and the built_in function-call counts, 21718 in all, are:
+= -- 2721
 > -- 794
 < -- 0
 + -- 258
-- -- 272
-* -- 1461
-:= -- 2134
+- -- 309
+* -- 1500
+:= -- 2172
 add.period$ -- 89
 call.type$ -- 18
 change.case$ -- 128
 chr.to.int$ -- 18
 cite$ -- 50
-duplicate$ -- 1761
-empty$ -- 1279
+duplicate$ -- 1762
+empty$ -- 1280
 format.name$ -- 332
-if$ -- 5243
+if$ -- 5319
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 78
-newline$ -- 174
+newline$ -- 176
 num.names$ -- 136
 pop$ -- 849
 preamble$ -- 1
@@ -65,14 +65,14 @@ purify$ -- 218
 quote$ -- 0
 skip$ -- 653
 stack$ -- 0
-substring$ -- 1503
+substring$ -- 1652
 swap$ -- 178
-text.length$ -- 0
+text.length$ -- 75
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 442
 warning$ -- 28
-while$ -- 145
+while$ -- 146
 width$ -- 0
-write$ -- 333
+write$ -- 335
 (There were 28 warnings)

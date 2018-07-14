@@ -43,6 +43,8 @@
 \newblock \bibinfo{title}{International Technology Roadmap for Semiconductor}.
 \newblock   (\bibinfo{year}{2015}).
 \newblock
+\showURL{%
+\url{http://www.itrs2.net/itrs-reports.htm}}
 
 
 \bibitem[\protect\citeauthoryear{Chakraborty and Pan}{Chakraborty and
