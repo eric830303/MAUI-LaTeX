@@ -219,35 +219,35 @@ The problem of selecting high-$V_{th}$ buffer leaders is also formulated as a SA
   	(8)\quad & $V_{th}^h$ & 80\% &  \{1, 1, 1\} \\ 
 \end{tabular}}
 
-Note that, if the buffer, located deep in the clock tree, is selected as the leader, then the count of affected buffers is limited, diminishing the benefit from $V_{th}^h$ assignment for aging tolerance. Therefore, as we do for DCC deployment, we similarly set a rule of prohibiting selecting buffer leaders at a clock tree level larger/deeper than a a specified boundary.
+Note that, if the buffer, located deep in the clock tree, is selected as the leader, then the count of affected buffers is limited, diminishing the benefit from high-$V_{th}$ assignment for aging tolerance. Therefore, as we do for DCC deployment, we similarly set a rule of prohibiting selecting buffer leaders at a clock tree level larger/deeper than a a specified boundary.
 \subsection{Constraints on High-$V_{th}$ Assignment for Clock Buffers}
 \begin{figure}
 	\centering
 	%\includegraphics[width=1\columnwidth]{All_types_of_DCCs_and_leaders.png} %IEEE
 	\includegraphics[width=0.8\columnwidth]{All_types_of_DCCs_and_leaders.png} %ACM
-	\caption{Generalized DCC insertion and $V_{th}^h$ buffer leader selection, for a target pair of flip-flops}
+	\caption{Generalized DCC insertion and high-$V_{th}$ buffer leader selection, for a target pair of flip-flops}
 	\label{fig:leadertype}
 \end{figure}
 \begin{figure}[t!]
     \centering
     %\includegraphics[width=1.0\columnwidth]{2DCC_2Leader.png} %IEEE
     \includegraphics[width=0.71\columnwidth]{2DCC_2Leader.png} %ACM
-    \caption{Example of DCC insertion and $V_{th}^h$ buffer leader selection}
+    \caption{Example of DCC insertion and high-$V_{th}$ buffer leader selection}
     \label{fig:2dcc2leader}
 \end{figure}
 
-Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments has been dropped from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of $V_{th}^h$ buffer leaders:
+Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments has been dropped from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of high-$V_{th}$ buffer leaders:
 
-\noindent \textbf{\uline{Leader constraints: At most one buffer on a single clock path is selected as $V_{th}^h$ buffer leader.}}
+\noindent \textbf{\uline{Leader constraints: At most one buffer on a single clock path is selected as high-$V_{th}$ buffer leader.}}
 
 The constraints are analogous to the aforementioned DCC constraints. The corresponding clauses can be generated in a similar manner, but are not shown in the paper for brevity. In the example, the 12 clauses associated with leader constraints will be generated, in such a way that, the possibility count of leader selections is dropped from 128 to 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
 
 %------------------ Timing Constraints ()
 \subsection{Timing Constraints Considering DCC Deployment and High-$V_{th}$ Assignment}
 \label{sec:VTA:timing}
-The timing constraints are analogous to the former timing constraints, while here we more consider the influence of $V_{th}^h$ buffer leader on clock latency. Remind that, the former timing constraints are divided into 3 classes according to the used DCC count. Because we simultaneously consider the DCC deployment and leader selection in the existing clock network, each of the former 3 classes is further divided into 3 subclasses, in terms of the leader count (0, 1 and 2). Therefore, the timing constraints are divided into 9 ($3 \times 3$) subclasses, according to the used DCC count and leader count.
+The timing constraints are analogous to the former timing constraints, while here we more consider the influence of high-$V_{th}$ buffer leader on clock latency. Remind that, the former timing constraints are divided into 3 classes according to the used DCC count. Because we simultaneously consider the DCC deployment and leader selection in the existing clock network, each of the former 3 classes is further divided into 3 subclasses, in terms of the leader count (0, 1 and 2). Therefore, the timing constraints are divided into 9 ($3 \times 3$) subclasses, according to the used DCC count and leader count.
 
-For simplicity, we make an illustrative example from one of the 9 subclasses: 2 used DCCs and 2 $V_{th}^h$ buffer leaders in the clock network associated aging-critical paths in Figure~\ref{fig:2dcc2leader}, where 20\% and 80\% DCC are inserted at the inputs of buffers 3 and 5, respectively, and buffers 2 and 6 are selected as $V_{th}^h$ buffer leaders, implying that the $V_{th}$ of buffer set \{2, 3, 4\} and buffer set \{6, 7\} are assigned to high-$V_{th}$ because of the leader buffer 2, 6, respectively. In the case, if it causes a timing violation along the aging-critical path, the Boolean representation of the DCC deployment and leader selection,
+For simplicity, we make an illustrative example from one of the 9 subclasses: 2 used DCCs and 2 high-$V_{th}$ buffer leaders in the clock network associated aging-critical paths in Figure~\ref{fig:2dcc2leader}, where 20\% and 80\% DCC are inserted at the inputs of buffers 3 and 5, respectively, and buffers 2 and 6 are selected as high-$V_{th}$ buffer leaders, implying that the $V_{th}$ of buffer set \{2, 3, 4\} and buffer set \{6, 7\} are assigned to high $V_{th}$ because of the leader buffer 2, 6, respectively. In the case, if it causes a timing violation along the aging-critical path, the Boolean representation of the DCC deployment and leader selection,
 {\fontsize{9}{10}
 \begin{gather*}
 \left(\{B_{1,3}, B_{1,2}, B_{1,1}\} \equiv \{0, 0, 0\} \right) \land \left( \{B_{2,3}, B_{2,2}, B_{2,1}\} \equiv \{1, 0, 0\} \right) \land \left(\{B_{3,3}, B_{3,2}, B_{3,1}\} \equiv \{0, 0, 1\} \right) \\ 
