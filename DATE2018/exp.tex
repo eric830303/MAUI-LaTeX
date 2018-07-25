@@ -30,9 +30,9 @@ Table~\ref{table:exp1} and Table~\ref{table:exp2} reports the information of eac
 1 - (T_{c\_aged\_opt} - T_{c\_fresh}) / (T_{c\_aged} - T_{c\_fresh})
 \end{gather*}
 
-For benchmark \textit{des\_perf}, $T_{c\_fresh}$ is 773.9ps and $T_{c\_aged}$ is 897.8ps, which means after 10-year aging the clock period of circuit will increase by 123.9ps. With DCC insertion using the proposed framework, the clock period achieved is 849.9ps, an increment of 76ps against $T_{c\_fresh}$ (38.66\% improvement). As shown in Table~\ref{table:exp2}, the improvement ranges from 7.38\% to 49.77\% and is 24.95\% on average. \iffalse As shown in Table~\ref{table:exp1}.\fi The number of inserted DCCs is between 2 (for benchmark \textit{s38584}) to 16 (for benchmark \textit{des\_perf}), implying very limited degree of circuit modification and insignificant design overhead. Moreover, as it can be seen in Column 12 to 16, when high-$V_{th}$ assignment for clock buffers is incorporated in the proposed framework, the resulting framework can give rise to lower clock periods, implying better improvement in aging tolerance. 
+For benchmark \textit{des\_perf}, $T_{c\_fresh}$ is 773.9ps and $T_{c\_aged}$ is 897.8ps, which means after 10-year aging the clock period of circuit will increase by 123.9ps. With DCC insertion using the proposed framework, the clock period achieved is 849.9ps, an increment of 76ps against $T_{c\_fresh}$ (38.66\% improvement). As shown in Table~\ref{table:exp2}, the improvement ranges from 7.38\% to 49.77\% and is 24.95\% on average. \iffalse As shown in Table~\ref{table:exp1}.\fi The number of inserted DCCs is between 2 (for benchmark \textit{s38584}) to 16 (for benchmark \textit{des\_perf}), implying very limited degree of circuit modification and insignificant design overhead. Moreover, as it can be seen in Column 8 to 12, when high-$V_{th}$ assignment for clock buffers is incorporated in the proposed framework, the resulting framework can give rise to lower clock periods (Column 8), implying better improvement in aging tolerance. 
 
-\subsection{Discussion: DCC Redeployment due to High-$V_{th}$ Assignment}
+\subsection{Discussion: DCC Redeployment due to High-$V_{th}$ Assignment for Clock Buffers}
 As we can see, the DCC counts in Column 9 are different from those in Column 5, implying that DCCs are redeployed in the clock tree while high-$V_{th}$ assignment is incorporated in the framework. More specifically, when high-$V_{th}$ assignment is considered, some clock buffers become candidate buffers to be inserted DCCs at their inputs, because timing constraints (i.e., setup-time and hold-time) are met based on the inequality Equation~(\ref{eq:tsu}) and (\ref{eq:th}). In this way, DCCs can be redeployed to obtain lower clock periods, exploring better improvement in aging tolerance.
 
 
@@ -43,7 +43,7 @@ As we can see, the DCC counts in Column 9 are different from those in Column 5, 
 \subsection{Discussion: Increase in Runtime}
 In addition, the run time of the framework, incorporating high-$V_{th}$ assignment, increases due to the possibility explosion of DCC deployment and leader selection. To be specific, given a pair of flip-flops and associated clock paths, we need to consider the various possibilities of leader selections, for each DCC deployment. Therefore, the total  count of DCC deployment and leader selection is equal to the combination of DCC deployment plus leader selection, i.e., DCC possibilities multiplied by the leader counterparts, accounting for the increase of run time. 
 
-Even though the runtime increase while high-$V_{th}$ assignment is incorporated, the resulting framework is still practical for aging tolerance because it at most takes 1370 seconds for a comparative design (e.g., \textit{netcard}).
+Even though the runtime increases while high-$V_{th}$ assignment is incorporated, the resulting framework is still practical for aging tolerance because it at most takes 1370 seconds for a comparative design (e.g., \textit{netcard}).
 \subsection{Discussion: Aging Impact on DCC}
 \begin{figure}
     \centering
