@@ -42,13 +42,13 @@ Warning--empty address in yang2007combating
 You've used 19 entries,
             5732 wiz_defined-function locations,
             1399 strings with 17666 characters,
-and the built_in function-call counts, 24262 in all, are:
-= -- 3047
+and the built_in function-call counts, 24259 in all, are:
+= -- 3046
 > -- 832
 < -- 0
 + -- 289
 - -- 288
-* -- 1672
+* -- 1670
 := -- 2357
 add.period$ -- 94
 call.type$ -- 19
@@ -64,13 +64,13 @@ int.to.str$ -- 1
 missing$ -- 82
 newline$ -- 182
 num.names$ -- 144
-pop$ -- 881
+pop$ -- 882
 preamble$ -- 1
 purify$ -- 299
 quote$ -- 0
 skip$ -- 771
 stack$ -- 0
-substring$ -- 1855
+substring$ -- 1854
 swap$ -- 239
 text.length$ -- 0
 text.prefix$ -- 0

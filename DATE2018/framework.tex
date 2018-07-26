@@ -238,7 +238,7 @@ Note that, if the buffer, located deep in the clock tree, is selected as the lea
 
 %Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments has been dropped from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of high-$V_{th}$ buffer leaders:
 
-In order to suppress the occurrence of fragmentary high-$V_{th}$ assignment for clock buffers, the following constraints are incorporated in the framework, such that SAT solver will not output the corresponding $V_{th}$ assignment in the result if the CNF is satisfiable.
+In order to suppress the occurrence of fragmentary high-$V_{th}$ assignment for clock buffers, the following constraints are considered, such that the SAT solver will not output the corresponding $V_{th}$ assignment in the result if the CNF is satisfiable.
 
 \noindent \textbf{\uline{Leader constraints: At most one buffer on a single clock path is selected as high-$V_{th}$ buffer leader.}}
 
