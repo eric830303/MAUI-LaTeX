@@ -197,7 +197,7 @@ In this subsection, the approach of high-$V_{th}$ assignment for clock buffers i
 
 \noindent \textbf{\uline{Definition 1} (\textit{High-$V_{th}$ buffer leader}):} Once a clock buffer is selected as the \textit{high-$V_{th}$ buffer leader}, the $V_{th}$ of the selected buffer and its downstream buffers will be assigned to high $V_{th}$.
 
-In this way, we avoid the cases that the $V_{th}$ of serial buffers along a clock path interlace between high and nominal $V_{th}$. Such a rule can suppress the occurrence of fragmentary $V_{th}$ assignments for clock buffers and thus can increase the feasibility of the proposed framework.
+In this way, we avoid the cases that the $V_{th}$ of serial buffers along a clock path interlace between high and nominal $V_{th}$. Such a rule can suppress the occurrence of fragmentary high-$V_{th}$ assignments for clock buffers and thus can increase the feasibility of the proposed framework.
 
 Conceptually, there exists one difference between DCCs and high-$V_{th}$ buffer leaders. DCCs are physical gates inserted at the inputs of clock buffers to manipulate the aging behaviors of downstream buffers. However, high-$V_{th}$ buffer leaders, selected from the existing clock buffers, indicate where we begin assigning high $V_{th}$ to the buffers toward flip-flops (exlusive).
 
@@ -238,11 +238,12 @@ Note that, if the buffer, located deep in the clock tree, is selected as the lea
 
 %Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments has been dropped from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of high-$V_{th}$ buffer leaders:
 
-In order to suppress the occurrence of fragmentary high-$V_{th}$ assignment for clock buffers, the following constraints are considered, such that the SAT solver will not output the corresponding $V_{th}$ assignment in the result if the CNF is satisfiable.
+When two clock buffers along a single clock path are selected as leaders, the leader selection is meaningless, so that the following constraints are considered. In this way, the SAT solver will not output the corresponding leader selection in the result if the CNF is satisfiable.
+%In order to suppress the occurrence of fragmentary high-$V_{th}$ assignment for clock buffers, the following constraints are considered, such that the SAT solver will not output the corresponding $V_{th}$ assignment in the result if the CNF is satisfiable.
 
-\noindent \textbf{\uline{Leader constraints: At most one buffer on a single clock path is selected as high-$V_{th}$ buffer leader.}}
+\noindent \textbf{\uline{Leader constraints: At most one buffer along a single clock path is selected as high-$V_{th}$ buffer leader.}}
 
-The constraints are analogous to the aforementioned DCC constraints. The corresponding clauses can be generated in a similar manner, but are not shown in the paper for brevity. In the example, the 12 clauses associated with leader constraints will be generated, in such a way that, the possibility count of leader selections is dropped from 128 to 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
+The constraints are analogous to the aforementioned DCC constraints. The corresponding clauses can be generated in a similar manner, but are not shown in the paper for brevity. In the example, the 12 clauses associated with leader constraints will be generated, in such a way that, the possibility count of leader selections is 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
 
 %------------------ Timing Constraints ()
 \subsection{Timing Constraints Considering DCC Deployment and High-$V_{th}$ Assignment}
