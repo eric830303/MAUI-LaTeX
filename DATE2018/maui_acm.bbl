@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{00}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -41,7 +41,7 @@
         {itrs2015}
  \bibinfo{year}{2015}\natexlab{}.
 \newblock \bibinfo{title}{International Technology Roadmap for Semiconductor}.
-\newblock
+\newblock   (\bibinfo{year}{2015}).
 \newblock
 
 
@@ -50,10 +50,11 @@
         {chakraborty2013skew}
 \bibfield{author}{\bibinfo{person}{Ashutosh Chakraborty} {and}
   \bibinfo{person}{David~Z Pan}.} \bibinfo{year}{2013}\natexlab{}.
-\newblock \showarticletitle{Skew management of {NBTI} impacted gated clock
+\newblock \showarticletitle{Skew management of NBTI impacted gated clock
   trees}.
-\newblock \bibinfo{journal}{\emph{IEEE TCAD}} \bibinfo{volume}{32},
-  \bibinfo{number}{6} (\bibinfo{year}{2013}), \bibinfo{pages}{918--927}.
+\newblock \bibinfo{journal}{{\em IEEE Transactions on Computer-Aided Design of
+  Integrated Circuits and Systems\/}} \bibinfo{volume}{32}, \bibinfo{number}{6}
+  (\bibinfo{year}{2013}), \bibinfo{pages}{918--927}.
 \newblock
 
 
@@ -64,8 +65,9 @@
   Krishnan}, \bibinfo{person}{Vijay Reddy}, \bibinfo{person}{CF Machala}, {and}
   \bibinfo{person}{Srikanth Krishnan}.} \bibinfo{year}{2004}\natexlab{}.
 \newblock \showarticletitle{A comprehensive framework for predictive modeling
-  of negative bias temperature instability}. In \bibinfo{booktitle}{\emph{Proc.
-  of Int'l Reliability Physics Symp. (IRPS)}}. \bibinfo{pages}{273--282}.
+  of negative bias temperature instability}. In \bibinfo{booktitle}{{\em
+  Proceedings of the International Reliability Physics Symposium}}.
+  \bibinfo{pages}{273--282}.
 \newblock
 
 
@@ -75,8 +77,9 @@
 \bibfield{author}{\bibinfo{person}{Jifeng Chen} {and} \bibinfo{person}{Mohammad
   Tehranipoor}.} \bibinfo{year}{2013}\natexlab{}.
 \newblock \showarticletitle{A novel flow for reducing clock skew considering
-  {NBTI} effect and process variations}. In \bibinfo{booktitle}{\emph{Proc. of
-  ISQED}}. \bibinfo{pages}{327--334}.
+  nbti effect and process variations}. In \bibinfo{booktitle}{{\em Proceedings
+  of the International Symposium on Quality Electronic Design}}.
+  \bibinfo{pages}{327--334}.
 \newblock
 
 
@@ -85,9 +88,8 @@
 \bibfield{author}{\bibinfo{person}{John~P. Fishburn}.}
   \bibinfo{year}{1990}\natexlab{}.
 \newblock \showarticletitle{Clock skew optimization}.
-\newblock \bibinfo{journal}{\emph{IEEE Trans. on Computers}}
-  \bibinfo{volume}{39}, \bibinfo{number}{7} (\bibinfo{date}{July}
-  \bibinfo{year}{1990}), \bibinfo{pages}{945--951}.
+\newblock \bibinfo{journal}{{\it IEEE Trans. Comput.}} \bibinfo{volume}{39},
+  \bibinfo{number}{7} (\bibinfo{year}{1990}), \bibinfo{pages}{945--951}.
 \newblock
 
 
@@ -97,8 +99,8 @@
   \bibinfo{person}{Victor Champac}.} \bibinfo{year}{2016}\natexlab{}.
 \newblock \showarticletitle{Early selection of critical paths for reliable nbti
   aging-delay monitoring}.
-\newblock \bibinfo{journal}{\emph{IEEE Transactions on Very Large Scale
-  Integration (VLSI) Systems}} \bibinfo{volume}{24}, \bibinfo{number}{7}
+\newblock \bibinfo{journal}{{\em IEEE Transactions on Very Large Scale
+  Integration (VLSI) Systems\/}} \bibinfo{volume}{24}, \bibinfo{number}{7}
   (\bibinfo{year}{2016}), \bibinfo{pages}{2438--2448}.
 \newblock
 
@@ -110,21 +112,9 @@
   Tu}, \bibinfo{person}{Chia-Ming Chang}, {and} \bibinfo{person}{Song-Bin
   Pan}.} \bibinfo{year}{2013}\natexlab{}.
 \newblock \showarticletitle{Low-power anti-aging zero skew clock gating}.
-\newblock \bibinfo{journal}{\emph{ACM TODAES}} \bibinfo{volume}{18},
-  \bibinfo{number}{2} (\bibinfo{date}{March} \bibinfo{year}{2013}),
-  \bibinfo{pages}{27}.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Kang, Kufluoglu, Alam, and Roy}{Kang
-  et~al\mbox{.}}{2007}]%
-        {kang2007efficient}
-\bibfield{author}{\bibinfo{person}{Kunhyuk Kang}, \bibinfo{person}{Haldun
-  Kufluoglu}, \bibinfo{person}{Muhammad~Ashraful Alam}, {and}
-  \bibinfo{person}{Kaushik Roy}.} \bibinfo{year}{2007}\natexlab{}.
-\newblock \showarticletitle{Efficient transistor-level sizing technique under
-  temporal performance degradation due to {NBTI}}. In
-  \bibinfo{booktitle}{\emph{Proc. of ICCD}}. \bibinfo{pages}{216--221}.
+\newblock \bibinfo{journal}{{\em ACM Transactions on Design Automation of
+  Electronic Systems\/}} \bibinfo{volume}{18}, \bibinfo{number}{2}
+  (\bibinfo{year}{2013}), \bibinfo{pages}{27}.
 \newblock
 
 
@@ -136,9 +126,9 @@
   \bibinfo{person}{Kazuhiro Imai}, {and} \bibinfo{person}{T Horiuchi}.}
   \bibinfo{year}{1999}\natexlab{}.
 \newblock \showarticletitle{The impact of bias temperature instability for
-  direct-tunneling ultra-thin gate oxide on {MOSFET} scaling}. In
-  \bibinfo{booktitle}{\emph{Proc. of Symp. on VLSI Technology}}.
-  \bibinfo{pages}{73--74}.
+  direct-tunneling ultra-thin gate oxide on MOSFET scaling}. In
+  \bibinfo{booktitle}{{\em Proceedings of the Symposium on VLSI Technology.
+  Digest of Technical Papers.}} \bibinfo{pages}{73--74}.
 \newblock
 
 
@@ -149,8 +139,8 @@
   Kim}, {and} \bibinfo{person}{Sachin~S Sapatnekar}.}
   \bibinfo{year}{2006}\natexlab{}.
 \newblock \showarticletitle{An analytical model for negative bias temperature
-  instability}. In \bibinfo{booktitle}{\emph{Proc. of ICCAD}}.
-  \bibinfo{pages}{493--496}.
+  instability}. In \bibinfo{booktitle}{{\em Proceedings of the International
+  Conference on Computer-Aided Design}}. \bibinfo{pages}{493--496}.
 \newblock
 
 
@@ -160,8 +150,9 @@
 \bibfield{author}{\bibinfo{person}{Sanjay~V Kumar}, \bibinfo{person}{Chris~H
   Kim}, {and} \bibinfo{person}{Sachin~S Sapatnekar}.}
   \bibinfo{year}{2007}\natexlab{}.
-\newblock \showarticletitle{{NBTI}-aware synthesis of digital circuits}. In
-  \bibinfo{booktitle}{\emph{Proc. of DAC}}. \bibinfo{pages}{370--375}.
+\newblock \showarticletitle{NBTI-aware synthesis of digital circuits}. In
+  \bibinfo{booktitle}{{\em Proceedings of the Design Automation Conference}}.
+  \bibinfo{pages}{370--375}.
 \newblock
 
 
@@ -171,11 +162,21 @@
 \bibfield{author}{\bibinfo{person}{Liangzhen Lai}, \bibinfo{person}{Vikas
   Chandra}, \bibinfo{person}{Robert Aitken}, {and} \bibinfo{person}{Puneet
   Gupta}.} \bibinfo{year}{2014}\natexlab{}.
-\newblock \showarticletitle{{BTI}-Gater: An aging-resilient clock gating
+\newblock \showarticletitle{BTI-Gater: An aging-resilient clock gating
   methodology}.
-\newblock \bibinfo{journal}{\emph{IEEE Journal on Emerging and Selected Topics
-  in Circuits and Systems}} \bibinfo{volume}{4}, \bibinfo{number}{2}
-  (\bibinfo{date}{June} \bibinfo{year}{2014}), \bibinfo{pages}{180--189}.
+\newblock \bibinfo{journal}{{\em IEEE Journal on Emerging and Selected Topics
+  in Circuits and Systems\/}} \bibinfo{volume}{4}, \bibinfo{number}{2}
+  (\bibinfo{year}{2014}), \bibinfo{pages}{180--189}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Li, Lu, and Zhou}{Li et~al\mbox{.}}{2011}]%
+        {li2011optimal}
+\bibfield{author}{\bibinfo{person}{Li Li}, \bibinfo{person}{Yinghai Lu}, {and}
+  \bibinfo{person}{Hai Zhou}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Optimal multi-domain clock skew scheduling}. In
+  \bibinfo{booktitle}{{\em Proceedings of the Design Automation Conference}}.
+  \bibinfo{pages}{152--157}.
 \newblock
 
 
@@ -184,7 +185,8 @@
 \bibfield{author}{\bibinfo{person}{Joseph~W McPherson}.}
   \bibinfo{year}{2006}\natexlab{}.
 \newblock \showarticletitle{Reliability challenges for 45nm and beyond}. In
-  \bibinfo{booktitle}{\emph{Proc. of DAC}}. \bibinfo{pages}{176--181}.
+  \bibinfo{booktitle}{{\em Proceedings of the Design Automation Conference}}.
+  \bibinfo{pages}{176--181}.
 \newblock
 
 
@@ -194,34 +196,34 @@
 \bibfield{author}{\bibinfo{person}{Bipul~C Paul}, \bibinfo{person}{Kunhyuk
   Kang}, \bibinfo{person}{Haldun Kufluoglu}, \bibinfo{person}{Muhammad~Ashraful
   Alam}, {and} \bibinfo{person}{Kaushik Roy}.} \bibinfo{year}{2006}\natexlab{}.
-\newblock \showarticletitle{Temporal performance degradation under {NBTI}:
-  estimation and design for improved reliability of nanoscale circuits}. In
-  \bibinfo{booktitle}{\emph{Proc. of DATE}}. \bibinfo{pages}{780--785}.
+\newblock \showarticletitle{Temporal performance degradation under NBTI:
+  Estimation and design for improved reliability of nanoscale circuits}. In
+  \bibinfo{booktitle}{{\em Proceedings of the Design, Automation and Test in
+  Europe Conference}}. \bibinfo{pages}{780--785}.
 \newblock
 
 
 \bibitem[\protect\citeauthoryear{Schroder and Babcock}{Schroder and
-  Babcock}{2003}]%
+  Babcock}{}]%
         {schroder2003negative}
 \bibfield{author}{\bibinfo{person}{Dieter~K Schroder} {and}
-  \bibinfo{person}{Jeff~A Babcock}.} \bibinfo{year}{2003}\natexlab{}.
+  \bibinfo{person}{Jeff~A Babcock}.}
 \newblock \showarticletitle{Negative bias temperature instability: Road to
   cross in deep submicron silicon semiconductor manufacturing}.
-\newblock \bibinfo{journal}{\emph{Journal of applied Physics}}
-  \bibinfo{volume}{94}, \bibinfo{number}{1} (\bibinfo{date}{July}
-  \bibinfo{year}{2003}), \bibinfo{pages}{1--18}.
+\newblock \bibinfo{journal}{{\em Journal of Applied Physics\/}}
+  \bibinfo{volume}{94}, \bibinfo{number}{1} (\bibinfo{year}{????}),
+  \bibinfo{pages}{1--18}.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Stathis and Zafar}{Stathis and Zafar}{[n.
-  d.]}]%
+\bibitem[\protect\citeauthoryear{Stathis and Zafar}{Stathis and Zafar}{2006}]%
         {stathis2006negative}
 \bibfield{author}{\bibinfo{person}{James~H Stathis} {and} \bibinfo{person}{Sufi
-  Zafar}.} \bibinfo{year}{[n. d.]}\natexlab{}.
-\newblock \showarticletitle{The negative bias temperature instability in {MOS}
+  Zafar}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{The negative bias temperature instability in MOS
   devices: A review}.
-\newblock \bibinfo{journal}{\emph{Microelectronics Reliability}}
-  \bibinfo{volume}{46}, \bibinfo{number}{2} (\bibinfo{year}{[n. d.]}),
+\newblock \bibinfo{journal}{{\em Microelectronics Reliability\/}}
+  \bibinfo{volume}{46}, \bibinfo{number}{2-4} (\bibinfo{year}{2006}),
   \bibinfo{pages}{270--286}.
 \newblock
 
@@ -233,7 +235,8 @@
   \bibinfo{person}{Shengqi Yang}, {and} \bibinfo{person}{Yu Cao}.}
   \bibinfo{year}{2007}\natexlab{}.
 \newblock \showarticletitle{An efficient method to identify critical gates
-  under circuit aging}. In \bibinfo{booktitle}{\emph{Proc. of ICCAD}}.
+  under circuit aging}. In \bibinfo{booktitle}{{\em Proceedings of the
+  International Conference on Computer-Aided Design}}.
   \bibinfo{pages}{735--740}.
 \newblock
 
@@ -245,11 +248,11 @@
   Yang}, \bibinfo{person}{Sarvesh Bhardwaj}, \bibinfo{person}{Sarma Vrudhula},
   \bibinfo{person}{Frank Liu}, {and} \bibinfo{person}{Yu Cao}.}
   \bibinfo{year}{2010}\natexlab{}.
-\newblock \showarticletitle{The impact of {NBTI} effect on combinational
-  circuit: modeling, simulation, and analysis}.
-\newblock \bibinfo{journal}{\emph{IEEE TVLSI}} \bibinfo{volume}{18},
-  \bibinfo{number}{2} (\bibinfo{date}{Feb.} \bibinfo{year}{2010}),
-  \bibinfo{pages}{173--183}.
+\newblock \showarticletitle{The impact of NBTI effect on combinational circuit:
+  modeling, simulation, and analysis}.
+\newblock \bibinfo{journal}{{\em IEEE Transactions on Very Large Scale
+  Integration (VLSI) Systems\/}} \bibinfo{volume}{18}, \bibinfo{number}{2}
+  (\bibinfo{year}{2010}), \bibinfo{pages}{173--183}.
 \newblock
 
 
@@ -257,8 +260,9 @@
         {yang2007combating}
 \bibfield{author}{\bibinfo{person}{Xiangning Yang} {and} \bibinfo{person}{Kewal
   Saluja}.} \bibinfo{year}{2007}\natexlab{}.
-\newblock \showarticletitle{Combating {NBTI} degradation via gate sizing}. In
-  \bibinfo{booktitle}{\emph{Proc. of ISQED}}. \bibinfo{pages}{47--52}.
+\newblock \showarticletitle{Combating NBTI degradation via gate sizing}. In
+  \bibinfo{booktitle}{{\em Proceedings of the International Symposium on
+  Quality Electronic Design}}. \bibinfo{pages}{47--52}.
 \newblock
 
 

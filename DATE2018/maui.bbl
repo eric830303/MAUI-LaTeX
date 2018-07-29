@@ -30,10 +30,9 @@
     \strng{fullhash}{MJW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of DAC}
+    \field{booktitle}{Proceedings of the Design Automation Conference}
     \field{pages}{176\bibrangedash 181}
     \field{title}{Reliability challenges for 45nm and beyond}
-    \field{month}{07}
     \field{year}{2006}
   \endentry
 
@@ -61,9 +60,7 @@
     \field{title}{Negative bias temperature instability: Road to cross in deep
   submicron silicon semiconductor manufacturing}
     \field{volume}{94}
-    \field{journaltitle}{Journal of applied Physics}
-    \field{month}{07}
-    \field{year}{2003}
+    \field{journaltitle}{Journal of Applied Physics}
   \endentry
 
   \entry{stathis2006negative}{article}{}
@@ -85,16 +82,13 @@
     \strng{fullhash}{SJHZS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{2}
+    \field{number}{2-4}
     \field{pages}{270\bibrangedash 286}
-    \field{title}{The negative bias temperature instability in {MOS} devices: A
+    \field{title}{The negative bias temperature instability in MOS devices: A
   review}
     \field{volume}{46}
     \field{journaltitle}{Microelectronics Reliability}
-    \field{month}{02}
     \field{year}{2006}
-    \field{endmonth}{04}
-    \field{endyear}{2006}
   \endentry
 
   \entry{chakravarthi2004comprehensive}{inproceedings}{}
@@ -134,11 +128,11 @@
     \strng{fullhash}{CSKARVMCKS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of Int'l Reliability Physics Symp. (IRPS)}
+    \field{booktitle}{Proceedings of the International Reliability Physics
+  Symposium}
     \field{pages}{273\bibrangedash 282}
     \field{title}{A comprehensive framework for predictive modeling of negative
   bias temperature instability}
-    \field{month}{04}
     \field{year}{2004}
   \endentry
 
@@ -185,11 +179,11 @@
     \strng{fullhash}{KNYTMTYKIKHT1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of Symp. on VLSI Technology}
+    \field{booktitle}{Proceedings of the Symposium on VLSI Technology. Digest
+  of Technical Papers.}
     \field{pages}{73\bibrangedash 74}
     \field{title}{The impact of bias temperature instability for
-  direct-tunneling ultra-thin gate oxide on {MOSFET} scaling}
-    \field{month}{06}
+  direct-tunneling ultra-thin gate oxide on MOSFET scaling}
     \field{year}{1999}
   \endentry
 
@@ -218,11 +212,11 @@
     \strng{fullhash}{KSVKCHSSS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ICCAD}
+    \field{booktitle}{Proceedings of the International Conference on
+  Computer-Aided Design}
     \field{pages}{493\bibrangedash 496}
     \field{title}{An analytical model for negative bias temperature
   instability}
-    \field{month}{11}
     \field{year}{2006}
   \endentry
 
@@ -271,11 +265,11 @@
     \field{labeltitlesource}{title}
     \field{number}{2}
     \field{pages}{173\bibrangedash 183}
-    \field{title}{The impact of {NBTI} effect on combinational circuit:
-  modeling, simulation, and analysis}
+    \field{title}{The impact of NBTI effect on combinational circuit: modeling,
+  simulation, and analysis}
     \field{volume}{18}
-    \field{journaltitle}{IEEE TVLSI}
-    \field{month}{02}
+    \field{journaltitle}{IEEE Transactions on Very Large Scale Integration
+  (VLSI) Systems}
     \field{year}{2010}
   \endentry
 
@@ -298,11 +292,11 @@
     \strng{fullhash}{CJTM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ISQED}
+    \field{booktitle}{Proceedings of the International Symposium on Quality
+  Electronic Design}
     \field{pages}{327\bibrangedash 334}
-    \field{title}{A novel flow for reducing clock skew considering {NBTI}
-  effect and process variations}
-    \field{month}{03}
+    \field{title}{A novel flow for reducing clock skew considering nbti effect
+  and process variations}
     \field{year}{2013}
   \endentry
 
@@ -341,8 +335,8 @@
     \field{pages}{27}
     \field{title}{Low-power anti-aging zero skew clock gating}
     \field{volume}{18}
-    \field{journaltitle}{ACM TODAES}
-    \field{month}{03}
+    \field{journaltitle}{ACM Transactions on Design Automation of Electronic
+  Systems}
     \field{year}{2013}
   \endentry
 
@@ -367,9 +361,10 @@
     \field{labeltitlesource}{title}
     \field{number}{6}
     \field{pages}{918\bibrangedash 927}
-    \field{title}{Skew management of {NBTI} impacted gated clock trees}
+    \field{title}{Skew management of NBTI impacted gated clock trees}
     \field{volume}{32}
-    \field{journaltitle}{IEEE TCAD}
+    \field{journaltitle}{IEEE Transactions on Computer-Aided Design of
+  Integrated Circuits and Systems}
     \field{year}{2013}
   \endentry
 
@@ -406,11 +401,10 @@
     \field{labeltitlesource}{title}
     \field{number}{2}
     \field{pages}{180\bibrangedash 189}
-    \field{title}{{BTI}-Gater: An aging-resilient clock gating methodology}
+    \field{title}{BTI-Gater: An aging-resilient clock gating methodology}
     \field{volume}{4}
     \field{journaltitle}{IEEE Journal on Emerging and Selected Topics in
   Circuits and Systems}
-    \field{month}{06}
     \field{year}{2014}
   \endentry
 
@@ -439,10 +433,9 @@
     \strng{fullhash}{KSVKCHSSS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of DAC}
+    \field{booktitle}{Proceedings of the Design Automation Conference}
     \field{pages}{370\bibrangedash 375}
-    \field{title}{{NBTI}-aware synthesis of digital circuits}
-    \field{month}{06}
+    \field{title}{NBTI-aware synthesis of digital circuits}
     \field{year}{2007}
   \endentry
 
@@ -483,51 +476,12 @@
     \strng{fullhash}{PBCKKKHAMARK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of DATE}
+    \field{booktitle}{Proceedings of the Design, Automation and Test in Europe
+  Conference}
     \field{pages}{780\bibrangedash 785}
-    \field{title}{Temporal performance degradation under {NBTI}: estimation and
+    \field{title}{Temporal performance degradation under NBTI: Estimation and
   design for improved reliability of nanoscale circuits}
-    \field{month}{03}
     \field{year}{2006}
-  \endentry
-
-  \entry{kang2007efficient}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=KK}{%
-         family={Kang},
-         familyi={K\bibinitperiod},
-         given={Kunhyuk},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=KH}{%
-         family={Kufluoglu},
-         familyi={K\bibinitperiod},
-         given={Haldun},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=AMA}{%
-         family={Alam},
-         familyi={A\bibinitperiod},
-         given={Muhammad\bibnamedelima Ashraful},
-         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=RK}{%
-         family={Roy},
-         familyi={R\bibinitperiod},
-         given={Kaushik},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KK+1}
-    \strng{fullhash}{KKKHAMARK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ICCD}
-    \field{pages}{216\bibrangedash 221}
-    \field{title}{Efficient transistor-level sizing technique under temporal
-  performance degradation due to {NBTI}}
-    \field{month}{10}
-    \field{year}{2007}
   \endentry
 
   \entry{yang2007combating}{inproceedings}{}
@@ -549,10 +503,10 @@
     \strng{fullhash}{YXSK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ISQED}
+    \field{booktitle}{Proceedings of the International Symposium on Quality
+  Electronic Design}
     \field{pages}{47\bibrangedash 52}
-    \field{title}{Combating {NBTI} degradation via gate sizing}
-    \field{month}{03}
+    \field{title}{Combating NBTI degradation via gate sizing}
     \field{year}{2007}
   \endentry
 
@@ -587,11 +541,11 @@
     \strng{fullhash}{WWWZYSCY1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ICCAD}
+    \field{booktitle}{Proceedings of the International Conference on
+  Computer-Aided Design}
     \field{pages}{735\bibrangedash 740}
     \field{title}{An efficient method to identify critical gates under circuit
   aging}
-    \field{month}{11}
     \field{year}{2007}
   \endentry
 
@@ -612,8 +566,7 @@
     \field{pages}{945\bibrangedash 951}
     \field{title}{Clock skew optimization}
     \field{volume}{39}
-    \field{journaltitle}{IEEE Trans. on Computers}
-    \field{month}{07}
+    \field{journaltitle}{IEEE Transactions on Computers}
     \field{year}{1990}
   \endentry
 \endsortlist

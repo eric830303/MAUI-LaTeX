@@ -8,7 +8,10 @@ Before discussing the proposed framework, we briefly introduce the aging (BTI de
 \label{eq:dtv}
 \Delta V_{th\_bti}=\left(\frac{\sqrt{K_v^2 \cdot T_{clk} \cdot \alpha}}{1-\beta_t^{1/_{2n}}}\right)^{2n}
 \end{equation}
-where $\Delta V_{th\_bti}$ is the BTI-induced $V_{th}$ shift, $K_v$ is a function of threshold voltage ($V_{th}$), temperature, electrical field, and carrier concentration, $\alpha$ is the stress probability, and $n$ is the time exponential constant, 0.2 for the used technology. The detailed explanation of each parameter can be found in~\cite{wang2010impact}. Next, the authors of~\cite{gomez2016early} simplify this predictive model to be:
+where $\Delta V_{th\_bti}$ is the BTI-induced $V_{th}$ shift, $K_v$ is a function of threshold voltage ($V_{th}$), temperature, electrical field, and carrier concentration, $\alpha$ is the stress probability, and $n$ is the time exponential constant, 0.2 for the used technology. The detailed explanation of each parameter can be found in~\cite{wang2010impact}. 
+
+Next, as previously indicated in~\cite{wang2010impact, gomez2016early} , the variation in $V_{th}$ can be compensated by the BTI effect. That is, the transistor with a higher (lower) fresh $V_{th}$ ages at a lower (higher) rate and thus, the high $V_{th}$ and the low $V_{th}$ tend to converge toward the nominal case as the stress of BTI continues. The phenomenon is concretely modeled as below~\cite{gomez2016early}:
+%Next, the authors of~\cite{gomez2016early} simplify this predictive model to be:
 %\begin{equation}
 %	\label{eq:dtv2}
 %	\Delta V_{th}=b\cdot  \alpha^n \cdot t^n = b \cdot \left(\alpha \cdot t \right)^n
