@@ -5,19 +5,20 @@ The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: maui.bib
-I was expecting an "="---line 41 of file maui.bib
- :   y 
- :     ear={2003}
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "kang2007efficient"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--no key, author in itrs2015
 Warning--no author, editor, organization, or key in itrs2015
 Warning--to sort, need author or key in itrs2015
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Warning--no key, author in itrs2015
 Warning--no key, author in itrs2015
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--no key, author in itrs2015
 Warning--no author, editor, organization, or key in itrs2015
+Warning--empty author in itrs2015
 Warning--empty publisher in chakravarthi2004comprehensive
 Warning--empty address in chakravarthi2004comprehensive
 Warning--empty publisher in chen2013novel
@@ -34,44 +35,43 @@ Warning--empty publisher in mcpherson2006reliability
 Warning--empty address in mcpherson2006reliability
 Warning--empty publisher in paul2006temporal
 Warning--empty address in paul2006temporal
-Warning--empty year in schroder2003negative
 Warning--empty publisher in wang2007efficient
 Warning--empty address in wang2007efficient
 Warning--empty publisher in yang2007combating
 Warning--empty address in yang2007combating
 You've used 19 entries,
-            5706 wiz_defined-function locations,
-            1407 strings with 18601 characters,
-and the built_in function-call counts, 22369 in all, are:
-= -- 2829
+            5732 wiz_defined-function locations,
+            1397 strings with 17879 characters,
+and the built_in function-call counts, 24136 in all, are:
+= -- 2997
 > -- 821
 < -- 0
-+ -- 266
++ -- 285
 - -- 284
-* -- 1514
-:= -- 2243
+* -- 1651
+:= -- 2345
 add.period$ -- 94
 call.type$ -- 19
 change.case$ -- 133
 chr.to.int$ -- 19
 cite$ -- 51
-duplicate$ -- 1853
-empty$ -- 1347
+duplicate$ -- 2192
+empty$ -- 1533
 format.name$ -- 348
-if$ -- 5551
-int.to.chr$ -- 1
-int.to.str$ -- 0
+if$ -- 5893
+int.to.chr$ -- 2
+int.to.str$ -- 1
 missing$ -- 82
 newline$ -- 182
 num.names$ -- 144
-pop$ -- 888
+pop$ -- 870
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 304
 quote$ -- 0
-skip$ -- 690
+skip$ -- 781
 stack$ -- 0
-substring$ -- 1599
-swap$ -- 190
+substring$ -- 1873
+swap$ -- 239
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -80,4 +80,4 @@ warning$ -- 28
 while$ -- 156
 width$ -- 0
 write$ -- 350
-(There was 1 error message)
+(There were 29 warnings)
