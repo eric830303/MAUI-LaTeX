@@ -3,7 +3,7 @@
 
 \subsection{Aging Prediction Model}
 \label{subsec:apm}
-Before discussing the proposed framework, we briefly introduce the aging (BTI degradation) model for logic gates/networks~\cite{wang2010impact, wang2007efficient, gomez2016early} used in our paper. This model enables us to analyze the long-term behavior of BTI-induced MOSFET degradation, with both aging and recovery mechanisms taken into account. First, the degradation of threshold voltage at a given time $t$ can be predicted as:
+Before discussing the proposed framework, we briefly introduce the aging (BTI degradation) model for logic gates/networks~\cite{wang2010impact, wang2007efficient, gomez2016early, amrouch2016reliability} used in our paper. This model enables us to analyze the long-term behavior of BTI-induced MOSFET degradation, with both aging and recovery mechanisms taken into account. First, the degradation of threshold voltage at a given time $t$ can be predicted as:
 \begin{equation}
 \label{eq:dtv}
 \Delta V_{th\_bti}=\left(\frac{\sqrt{K_v^2 \cdot T_{clk} \cdot \alpha}}{1-\beta_t^{1/_{2n}}}\right)^{2n}
@@ -32,7 +32,7 @@ Finally, the rising/falling propagation delay of a gate through the degraded P-t
 %where $\tau$ is the intrinsic delay of the gate without BTI degradation and $a$ is a constant.
 where $\Delta \tau$ is the shift of propagation delay.
 
-We apply Equation (\ref{eq:pd}) to calculate the delay of each gate under BTI, and further estimate the performance of a logic circuit. The coefficient $a$ in Equation (\ref{eq:pd}) for each gate type and each input pin is extracted by fitting HSPICE simulation results in 45nm, Predictive Technology Model (PTM). The simplified long-term model successfully predicts the MOSFET degradation, with less than 5\% loss of accuracy against cycle-by-cycle simulations~\cite{wang2007efficient, wang2010impact, gomez2016early}.
+We apply Equation (\ref{eq:pd}) to calculate the delay of each gate under BTI, and further estimate the performance of a logic circuit. The coefficient $a$ in Equation (\ref{eq:pd}) for each gate type and each input pin is extracted by fitting HSPICE simulation results in 45nm, Predictive Technology Model (PTM). The simplified long-term model successfully predicts the MOSFET degradation, with less than 5\% loss of accuracy against cycle-by-cycle simulations~\cite{wang2007efficient, wang2010impact, gomez2016early, amrouch2016reliability}.
 
 \subsection{Duty-Cycle Converter (DCC)}
 \begin{figure}

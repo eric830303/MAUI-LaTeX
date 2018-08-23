@@ -3,7 +3,7 @@
 \subsection{Experimental Setting}
 The proposed framework for aging tolerance is implemented in C++ and the SAT-based formulation is solved by MiniSat on a 2.83GHz Intel Quad-Core CPU workstation running Linux. The benchmark circuits are chosen from the IWLS'05 and ISCAS'89 suites. The technology used is TSMC 45nm GP standard cell series.
 
-Under 10-year BTI, the aging rates of clock buffers were obtained from HSPICE. The aging rates of clock buffers with duty cycles of 20\%, 40\%, 50\%, and 80\% are 8.51\%, 12.08\%, 13.51\%, and 16.41\% respectively and the aging rate of logic is obtained by using the predictive model presented in~\cite{wang2010impact, wang2007efficient, gomez2016early} (detailed in Section~\ref{subsec:apm}).
+Under 10-year BTI, the aging rates of clock buffers were obtained from HSPICE. The aging rates of clock buffers with duty cycles of 20\%, 40\%, 50\%, and 80\% are 8.51\%, 12.08\%, 13.51\%, and 16.41\% respectively and the aging rate of logic is obtained by using the predictive model presented in~\cite{wang2010impact, wang2007efficient, gomez2016early, amrouch2016reliability} (detailed in Section~\ref{subsec:apm}).
 
 
 \begin{table*}
@@ -49,7 +49,7 @@ Even though the runtime increases while high-$V_{th}$ assignment is incorporated
 \begin{figure}
     \centering
     %\includegraphics[width=0.9\columnwidth]{Aging_impacted_on_DCC.png} %IEEE
-     \includegraphics[width=0.6\columnwidth]{Aging_impacted_on_DCC.png} %ACM
+     \includegraphics[width=0.7\columnwidth]{Aging_impacted_on_DCC.png} %ACM
     \caption{Aging impact on 20\%/80\% DCC under BTI}
     \label{fig:exp4}
 \end{figure}
@@ -61,7 +61,7 @@ Figure~\ref{fig:exp4} shows the change in the duty cycle of a 20\%/80\% DCC over
 \begin{figure}
     \centering
     %\includegraphics[width=0.9\columnwidth]{Boundary_level_vs_improvement.png} %IEEE
-    \includegraphics[width=0.6\columnwidth]{Boundary_level_vs_improvement.png} %ACM
+    \includegraphics[width=0.7\columnwidth]{Boundary_level_vs_improvement.png} %ACM
     \caption{Improvement/Cost versus clock tree level considered}
     \label{fig:boundary}
 \end{figure}
@@ -72,14 +72,14 @@ As mentioned in Section~\ref{sec:framework}, inserting DCCs deep in the clock tr
 \subsection{Discussion: Clock period calibrations during binary search}
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\columnwidth]{leo3mp_Tc.png} %ACM
+    \includegraphics[width=0.8\columnwidth]{leo3mp_Tc.png} %ACM
     \caption{Calibrations of upper/lower bounds of $T_{c}$ during iterations of binary search}
     \label{fig:Tc}
 \end{figure}
 
 It is worth reminding that, the proposed framework is based on a binary search for optimized clock period $T_{c}$, with initial two bounds of $T_{c}$ (see Section~\ref{sec:framework} or Figure~\ref{fig:flow}). During the iterations of binary search, the two bounds of $T_{c}$ are calibrated toward a convergent value, based on the satisfiability of the SAT problem, which the problem of DCC deployment and leader selection is formulated as.
 
-Figure~\ref{fig:Tc} shows the calibrations of the two bounds of $T_{c}$ for benchmark $leo3mp$, during iterations of binary search. The X-axis denotes the iteration times of binary search and Y-axis denotes the upper (red line) and lower bounds (blue line) of $T_{c}$. In the 1\textsuperscript{st} iteration of binary search, the upper bound and lower bound are set to 4.24ns and 3ns, respectively. Then, we use the mean value of two bounds (i.e., 3.62ns) to generate the associated CNF clauses based on timing constraints. The CNF clauses are satisfiable from the output of SAT solver, implying that we can explore more lower clock period (i.e., better aging tolerance) by moving the upper bound to 3.62ns, such that the resulting upper and lower bounds are 3.62ns and 3ns, respectively. Then, in the second iteration, we use the mean value of two bounds (i.e., 3.31ns) to generate associated CNF clauses, which are unsatisfiable from the output of SAT solver, implying the clock period 3.31ns is too low, such that we move the lower bound to 3.31ns. In this manner, the upper and lower bounds will converge toward 3.4061ns. The convergent value of 3.406ns is the optimized clock period for aging tolerance.
+Figure~\ref{fig:Tc} shows the calibrations of the two bounds of $T_{c}$ for benchmark $leo3mp$, during iterations of binary search. The X-axis denotes the iteration times of binary search and Y-axis denotes the upper (red line) and lower bounds (blue line) of $T_{c}$. In the 1\textsuperscript{st} iteration of binary search, the upper bound and lower bound are set to 4.24ns and 3ns, respectively. Then, we use the mean value of two bounds (i.e., 3.62ns) to generate the associated CNF clauses based on timing constraints. The CNF clauses are satisfiable from the output of SAT solver, implying that we can explore more lower clock period (i.e., better aging tolerance) by moving the upper bound to 3.62ns, such that the resulting upper and lower bounds are 3.62ns and 3ns, respectively. Then, in the 2\textsuperscript{ed} iteration, we use the mean value of two bounds (i.e., 3.31ns) to generate associated CNF clauses, which are unsatisfiable from the output of SAT solver, implying the clock period 3.31ns is too low, such that we move the lower bound to 3.31ns. In this manner, the upper and lower bounds will converge toward 3.4061ns. The convergent value of 3.406ns is the optimized clock period for aging tolerance.
 
 As observed in Figure~\ref{fig:Tc}, we totally use 14 iterations of binary search to reach the convergent value of $T_{c}$, with the accuracy of third digit below the decimal point. If we degrade the accuracy from the third digit to the second digit, we only need 8 iterations. In this manner, we can nearly save half of the runtime. 
 
@@ -87,7 +87,7 @@ As observed in Figure~\ref{fig:Tc}, we totally use 14 iterations of binary searc
 \subsection{Discussion: Clause count variations during binary search}
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\columnwidth]{leo3mp_Cl.png} %ACM
+    \includegraphics[width=0.8\columnwidth]{leo3mp_Cl.png} %ACM
     \caption{Variations of CNF clause count during iterations of binary search}
     \label{fig:Cl}
 \end{figure}
