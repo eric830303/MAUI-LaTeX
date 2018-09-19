@@ -36,33 +36,15 @@ where $\Delta \tau$ is the shift of propagation delay.
 We apply Equation (\ref{eq:pd}) to calculate the delay of each gate under BTI, and further estimate the performance of a logic circuit. The coefficient $a$ in Equation (\ref{eq:pd}) for each gate type and each input pin is extracted by fitting HSPICE simulation results in 45nm PTM. The simplified long-term model successfully predicts the MOSFET degradation, with less than 5\% loss of accuracy against cycle-by-cycle simulations~\cite{wang2007efficient, wang2010impact, gomez2016early, amrouch2016reliability}.
 
 \subsection{Duty Cycle Converter (DCC)}
-\begin{figure}
-    \centering
-    %\includegraphics[width=0.9\columnwidth]{agr.png} %IEEE Journal
-    \includegraphics[width=0.65\columnwidth]{agr.png} %IEEE ACM
-    \caption{Aging rates of buffers receiving different clock duty cycles}
-    \label{fig:agr}
-\end{figure}
-\begin{figure}
-    \centering
-    %\includegraphics[width=1\columnwidth]{dcc.png} %IEEE Journal
-    \includegraphics[width=0.7\columnwidth]{dcc.png} %IEEE ACM
-    \caption{Construction of DCC and duty-cycle transformation}
-    \label{fig:dcc}
-\end{figure}
+\input{figures/dcc_agr}
+\input{figures/dcc_const}
 
 Duty cycle is the percentage of one period in which a signal is high (i.e., logic 1). The aging of logic gates highly depends on the stress time~\cite{wang2010impact}. For a clock buffer on the clock tree, its stress time is proportional to the clock duty cycle. Therefore, by adjusting the clock duty cycle, we can manipulate the aging rates of clock buffers. Figure~\ref{fig:agr} shows the aging rates of clock buffers receiving different clock duty cycles. 
 
 The unit we use to change the clock duty cycle is duty-cycle converter (DCC), which can converts the duty cycle of a clock signal to a smaller/larger one (e.g., $50\% \rightarrow 20\%$ or $50\% \rightarrow 80\%$), as shown in Figure~\ref{fig:dcc}. Consider the duty-cycle transformation of a clock waveform from 50\% to 80\% as an example, the delayed waveform (green waveform) is separated from the source clock waveform (black waveform). Then, the two waves are combined with the OR gate to obtain a new waveform (red waveform) of 80\% duty cycle. Once a DCC is inserted somewhere into the clock tree, the downstream sub-tree of the DCC insertion point will receive a clock signal whose duty cycle is no longer 50\%, explaining the acceleration/deceleration of aging rates of downstream buffers.
 
 
-\begin{figure}
-    \centering
-    %\includegraphics[width=0.5\columnwidth]{DCC_reduction.png} %IEEE Journal
-    \includegraphics[width=0.4\columnwidth]{DCC_reduction.png} %IEEE ACM
-    \caption{Practical considerations for DCC insertion}
-    \label{fig:dccreduc}
-\end{figure}
+\input{figures/practical}
 
 \subsection{Practical Considerations}
 \label{subsec:tpc}

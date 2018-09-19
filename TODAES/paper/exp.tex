@@ -4,26 +4,8 @@
 The proposed framework for aging tolerance is implemented in C++ and the SAT-based formulation is solved by MiniSat on a 2.83GHz Intel Quad-Core CPU workstation running Linux. The benchmark circuits are chosen from the IWLS'05 and ISCAS'89 suites. The technology used is TSMC 45nm GP standard cell series.
 
 Under 10-year BTI, the aging rates of clock buffers were obtained from HSPICE. The aging rates of clock buffers with duty cycles of 20\%, 40\%, 50\%, and 80\% are 8.51\%, 12.08\%, 13.51\%, and 16.41\% respectively and the aging rate of logic is obtained by using the predictive model presented in~\cite{wang2010impact, wang2007efficient, gomez2016early, amrouch2016reliability} (detailed in Section~\ref{subsec:apm}).
-
-
-\begin{table*}
-\centering
-\caption{Benchmark information}
-	%\begin{tabular}{l}
-	%\includegraphics[width=2.03\columnwidth]{Experimental_result_DCC_TVA.png} %IEEE
-	\includegraphics[width=0.47\columnwidth]{benchmark.png} %ACM
-	%\end{tabular}
-\label{table:exp1}
-\end{table*}
-\begin{table*}
-\centering
-\caption{Results of aging tolerance}
-	%\begin{tabular}{l}
-	%\includegraphics[width=2.03\columnwidth]{Experimental_result_DCC_TVA.png} %IEEE
-	\includegraphics[width=1\columnwidth]{Experimental_result_DCC_TVA.png} %ACM
-	%\end{tabular}
-\label{table:exp2}
-\end{table*}
+\input{figures/table_benchmark_info}
+\input{figures/table_experiment}
 \subsection{Experimental Results}
 Table~\ref{table:exp1} and Table~\ref{table:exp2} reports the information of each benchmark and the experimental results. In Table~\ref{table:exp1}, Columns 2 to 5 show the total count of gates, total count of flip-flops, total count of clock buffers, and maximum level of the clock tree in each benchmark respectively. In Table~\ref{table:exp2}, Column 4 to 7 show the results when DCC deployment is considered in the framework. Column 8 to 12 show the results when high-$V_{th}$ assignment for clock buffers is applied on top of DCC deployment.
 
@@ -46,52 +28,25 @@ In addition, the run time of the framework, incorporating high-$V_{th}$ assignme
 
 Even though the runtime increases while high-$V_{th}$ assignment is incorporated, the resulting framework is still practical for aging tolerance because it at most takes 1370 seconds for a comparative design (e.g., \textit{netcard}).
 \subsection{Discussion: Aging Impact on DCC}
-\begin{figure}
-    \centering
-    %\includegraphics[width=0.9\columnwidth]{Aging_impacted_on_DCC.png} %IEEE
-     \includegraphics[width=0.7\columnwidth]{Aging_impacted_on_DCC.png} %ACM
-    \caption{Aging impact on 20\%/80\% DCC under BTI}
-    \label{fig:exp4}
-\end{figure}
+\input{figures/plot_2080dcc_agr}
 
 Figure~\ref{fig:exp4} shows the change in the duty cycle of a 20\%/80\% DCC over 10-year aging. The y axis on the left represents the duty cycle of a 20\% DCC, and the one on the right represents the duty cycle of an 80\% DCC. As it can be seen, the growth in both cases are marginal: $20\% \to 21.07\%$ for a 20\% DCC and $80\% \to 81.35\%$ for an 80\% DCC, which in turn should not affect the benefit of our proposed framework significantly.
 
 
 \subsection{Discussion: Depth Boundary for DCC Deployment}
-\begin{figure}
-    \centering
-    %\includegraphics[width=0.9\columnwidth]{Boundary_level_vs_improvement.png} %IEEE
-    \includegraphics[width=0.7\columnwidth]{Boundary_level_vs_improvement.png} %ACM
-    \caption{Improvement/Cost versus clock tree level considered}
-    \label{fig:boundary}
-\end{figure}
-
+\input{figures/plot_boundary}
 As mentioned in Section~\ref{sec:framework}, inserting DCCs deep in the clock tree is less effective. For benchmark \textit{des\_perf}, we considered the deployment of DCCs at the upper half of the clock tree (i.e., level 1 to 5) and achieved 38.66\% improvement in terms of aging tolerance. As demonstrated in Figure~\ref{fig:boundary}, if we expand the boundary of DCC deployment from level 1 in the clock tree to level 10 progressively, we can gain a considerable improvement from level 1 to 6; however, from 7 to 10, the improvement become stagnant, but more DCCs are required.
 
 
 \subsection{Discussion: Clock period calibrations during binary search}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\columnwidth]{leo3mp_Tc.png} %ACM
-    \caption{Calibrations of upper/lower bounds of $T_{c}$ during iterations of binary search}
-    \label{fig:Tc}
-\end{figure}
-
+\input{figures/plot_Tc}
 It is worth reminding that, the proposed framework is based on a binary search for optimized clock period $T_{c}$, with initial two bounds of $T_{c}$ (see Section~\ref{sec:framework} or Figure~\ref{fig:flow}). During the iterations of binary search, the two bounds of $T_{c}$ are calibrated toward a convergent value, based on the satisfiability of the SAT problem, which the problem of DCC deployment and leader selection is formulated as.
 
 Figure~\ref{fig:Tc} shows the calibrations of the two bounds of $T_{c}$ for benchmark $leo3mp$, during iterations of binary search. The X-axis denotes the iteration times of binary search and Y-axis denotes the upper (red line) and lower bounds (blue line) of $T_{c}$. In the 1\textsuperscript{st} iteration of binary search, the upper bound and lower bound are set to 4.24ns and 3ns, respectively. Then, we use the mean value of two bounds (i.e., 3.62ns) to generate the associated CNF clauses based on timing constraints. The CNF clauses are satisfiable from the output of SAT solver, implying that we can explore more lower clock period (i.e., better aging tolerance) by moving the upper bound to 3.62ns, such that the resulting upper and lower bounds are 3.62ns and 3ns, respectively. Then, in the 2\textsuperscript{ed} iteration, we use the mean value of two bounds (i.e., 3.31ns) to generate associated CNF clauses, which are unsatisfiable from the output of SAT solver, implying the clock period 3.31ns is too low, such that we move the lower bound to 3.31ns. In this manner, the upper and lower bounds will converge toward 3.4061ns. The convergent value of 3.406ns is the optimized clock period for aging tolerance.
 
 As observed in Figure~\ref{fig:Tc}, we totally use 14 iterations of binary search to reach the convergent value of $T_{c}$, with the accuracy of third digit below the decimal point. If we degrade the accuracy from the third digit to the second digit, we only need 8 iterations. In this manner, we can nearly save half of the runtime. 
-
-
 \subsection{Discussion: Clause count variations during binary search}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\columnwidth]{leo3mp_Cl.png} %ACM
-    \caption{Variations of CNF clause count during iterations of binary search}
-    \label{fig:Cl}
-\end{figure}
-
+\input{figures/plot_clause}
 During binary search, we generate associated CNF clauses based on timing constraints, i.e., inequality Equation~(\ref{eq:tsu}) and (\ref{eq:th}). 
 As the two bounds of $T_{c}$ vary during binary search, the clause count changes because $T_{c}$ is one timing variable in Equation~(\ref{eq:tsu}) and (\ref{eq:th}). 
 

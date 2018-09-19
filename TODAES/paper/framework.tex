@@ -1,33 +1,19 @@
 \section{PROPOSED FRAMEWORK}
 \label{sec:framework}
-In the proposed framework, aging tolerance is achieved by specifically assigning useful/beneficial skews into the designs, based on timing borrowing. The beneficial skews are progressively created by different aging behaviors of clock paths, due to the different duty cycles of clock signal caused by DCCs. Moreover, high-$V_{th}$ assignment for clock buffers is also incorporated in the proposed framework to explore more beneficial skews, further improving the aging tolerance of designs.
-The overall flow of the proposed framework is depicted in Figure~\ref{fig:flow}, where we focus the following three issues:
+In the proposed framework, aging tolerance is achieved by specifically assigning useful/beneficial skews into the designs, based on timing borrowing. The beneficial skews are progressively created due to different aging behaviors of clock paths caused by DCCs. Moreover, high-$V_{th}$ assignment for clock buffers is also incorporated in the proposed framework to explore/recycle more beneficial skews, further improving aging tolerance of the designs.
+The overall flow of our framework is depicted in Figure~\ref{fig:flow}, where we focus on the following three tasks:
 \begin{enumerate}[leftmargin=*]
 	\item \textbf{Minimization of clock period:} The clock period can be minimized since the performance degradation of the logic circuit is \enquote{tolerated} as a result of useful clock skews. The minimum required clock period thus implies maximum level of aging tolerance. As depicted in Figure~\ref{fig:flow}, a binary search for optimal clock period is involved in the proposed framework.
 	\item \textbf{DCC deployment:} The problem of  DCC deployment is formulated as a Boolean Satisfiability (SAT) problem. Therefore, the key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thanks to the efficiency of existing SAT solvers, the solution can be obtained efficiently. The end result of this formulation is the locations (in the existing clock tree) of DCCs, such that the required clock period of the given circuit under $n$-year BTI is minimized when aging-induced clock skews are considered. 
 	\item \textbf{High-$V_{th}$ assignment for clock buffers:} The problem of high-$V_{th}$ assignment for clock buffers is also formulated as a SAT-based problem, represented in CNF and solved by existing SAT solvers.
 \end{enumerate}
 
-\begin{figure}
-	%\includegraphics[width=1\columnwidth]{Flow_chart.png} %IEEE Journal
-	\includegraphics[width=0.85\columnwidth]{Flow_chart.png} %ACM Journal
-	\caption{The overall flow of MAUI}
-	\label{fig:flow}
-\end{figure}
+\input{figures/flow_chart}
  
 
-The section is organized as follows: Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertions are encoded with Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation. Finally, Sections~\ref{sec:VTA}-\ref{sec:VTA:timing} introduce the additive improvements by high-$V_{th}$ assignment for buffers.
+This section is organized as follows: Section~\ref{subsec:eddcd} explains how the proposed problem of DCC deployment/insertions are encoded into Boolean variables. Section~\ref{subsec:dccccc} and Section~\ref{subsec:tccc} describe three major components, DCC constraints and timing constraints, for our SAT-based formulation and how they are translated into legal SAT formula, i.e., CNF representation. Finally, Sections~\ref{sec:VTA}-\ref{sec:VTA:timing} introduce the additive improvements by employing high-$V_{th}$ assignment on buffers.
 
-\afterpage{ 
-\begin{figure}
-	\centering
-	%\includegraphics[width=1.0\columnwidth]{All_types_of_DCCs.png} %IEEE Journal
-	\includegraphics[width=0.7\columnwidth]{All_types_of_DCCs.png} %ACM Journal
-	\caption{Generalized DCC insertion for a target pair of flip-flops} 
-	\label{fig:dcctype} 
-\end{figure}
-}
-
+\input{figures/generalized_dcc}
 %(3) DATE 2018
 \subsection{Boolean Encoding for DCC Deployment}
 \label{subsec:eddcd}
@@ -37,20 +23,7 @@ The problem of DCC deployment needs to be encoded into Boolean representation be
 
 Without loss of generality, we assume $N$ = 3. Thus, there are three types of DCCs, assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, three Boolean variables are used for encoding four possibilities of DCC at any buffer. The four possibilities can be encoded as follows:
 
-\begin{comment}
-{\small
-\begin{tabular}{  c  c  c  c  }
-  	 & Leader type & DCC type & $\{B_{p,3}, B_{p,2}, B_{p,1}\}$ \\ 
-  	(1)\quad & Nominal $V_{th}$ ($V_{th}^n$) & None & \{0, 0, 0\} \\ 
-  	(2)\quad & $V_{th}^n$ &20\% &  \{0, 0, 1\} \\ 
-  	(3)\quad & $V_{th}^n$ &40\% &  \{0, 1, 0\} \\ 
-  	(4)\quad & $V_{th}^n$ &80\% &  \{0, 1, 1\} \\ 
-	(5)\quad & high-$V_{th}$ ($V_{th}^h$) & None & \{1, 0, 0\} \\ 
-  	(6)\quad & $V_{th}^h$ & 20\% &  \{1, 0, 1\} \\ 
-  	(7)\quad & $V_{th}^h$ & 40\% &  \{1, 1, 0\} \\ 
-  	(8)\quad & $V_{th}^h$ & 80\% &  \{1, 1, 1\} \\ 
-\end{tabular}}
-\end{comment}
+
 %(5) DATE 2018
 {\small
 \begin{tabular}{ c c c }
@@ -61,25 +34,7 @@ Without loss of generality, we assume $N$ = 3. Thus, there are three types of DC
   (3)\quad & 40\% &  \{1, 0\} \\
   (4)\quad & 80\% &  \{1, 1\} \\
 \end{tabular}}
-\afterpage{
-\begin{figure*}
-    \centering
-    \subfigure[Class 2-1: one DCC on the common clock path (e.g., at buffer 1)]{
-    	\label{fig:sub:dcci1}
-        %\includegraphics[width=0.92\columnwidth]{A_examlpe_of_DCC_placement1.png}  %IEEE Journal
-        \includegraphics[width=0.65\columnwidth]{A_examlpe_of_DCC_placement1.png}  %ACM Journal
-    }
-    \hspace{1cm}
-    \subfigure[Class 2-2: one DCC on one of the divergent clock paths, or class 3: two DCCs, one on each of the divergent clock paths]{
-    	\label{fig:sub:dcci2}
-        %\includegraphics[width=0.92\columnwidth]{A_examlpe_of_DCC_placement2.png}  %IEEE Journal
-        \includegraphics[width=0.65\columnwidth]{A_examlpe_of_DCC_placement2.png}  %ACM Journal
-    }
-    \caption{Examples of DCC insertion}
-    \label{fig:dccinsert}
-\end{figure*}
-}
-
+\input{figures/example_dcc}
 For example, in Figure~\ref{fig:sub:dcci2}, a 20\% DCC and an 80\% DCC are inserted at buffer 3 and buffer 5, respectively. Therefore, {\fontsize{9}{10}{$\left\{B_{3,2}, B_{3,1}\right\}$ = \{0, 1\}}}, {\fontsize{9}{10}{$\left\{B_{5,2}, B_{5,1}\right\}$ = \{1, 1\}}}, and {\fontsize{9}{10}{$\left\{B_{p,2}, B_{p,1}\right\}$ = \{0, 0\}}} for $p$ = 1, 2, 4 , 6 or 7.
 
 The 20\% DCC will mitigate the aging of buffer 3 and its downstream buffers, while the 80\% DCC will aggravate the aging of buffer 5 and its downstream buffers. It can be found that, if a DCC is deployed deep in the clock tree (i.e., close to the flip-flops), the count of affected buffers is limited and thus the overall impact of aging mitigation/aggravation on $C_i$/$C_j$ may be insignificant, diminishing the benefit from deploying DCCs for aging tolerance.  To avoid the phenomena, we set a rule of prohibiting DCC deployment at a clock tree level larger/deeper than a specified boundary. This rule also greatly reduces the complexity of our SAT-based formulation because a significant fraction of buffers are excluded from being considered inserted DCC at their inputs. For example, in Figure~\ref{fig:dcctype}, those dashed buffers and their downstream buffers are excluded. 
@@ -219,22 +174,7 @@ The problem of selecting high-$V_{th}$ buffer leaders is also formulated as a SA
 
 Note that, if the buffer, located deep in the clock tree, is selected as the leader, then the count of affected buffers is limited, diminishing the benefit from high-$V_{th}$ assignment for aging tolerance. Therefore, as we do for DCC deployment, we similarly set a rule of prohibiting selecting buffer leaders at a clock tree level larger/deeper than a a specified boundary.
 \subsection{Constraints on High-$V_{th}$ Assignment for Clock Buffers}
-\begin{comment}
-\begin{figure}
-	\centering
-	%\includegraphics[width=1\columnwidth]{All_types_of_DCCs_and_leaders.png} %IEEE
-	\includegraphics[width=0.8\columnwidth]{All_types_of_DCCs_and_leaders.png} %ACM
-	\caption{Generalized DCC insertion and high-$V_{th}$ buffer leader selection, for a target pair of flip-flops}
-	\label{fig:leadertype}
-\end{figure}
-\end{comment}
-\begin{figure}[t!]
-    \centering
-    %\includegraphics[width=1.0\columnwidth]{2DCC_2Leader.png} %IEEE
-    \includegraphics[width=0.71\columnwidth]{2DCC_2Leader.png} %ACM
-    \caption{Example of DCC insertion and high-$V_{th}$ buffer leader selection}
-    \label{fig:2dcc2leader}
-\end{figure}
+\input{figures/example_dcc_leader}
 
 %Figure~\ref{fig:leadertype} shows a generalized example of DCC insertion and leader selection. It is worth reminding that, because of DCC constraints, the possibility count of DCC deployments has been dropped from 16,384 to 103. However, for each DCC deployment, there are still up to 128 ($2^7$) possibilities of leader selections, for this pair of flip-flops. Hence, we set up the following constraints on the selections of high-$V_{th}$ buffer leaders:
 
