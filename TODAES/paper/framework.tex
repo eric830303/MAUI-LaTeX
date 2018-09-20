@@ -35,6 +35,7 @@ Without loss of generality, we assume $N$ = 3. Thus, there are three types of DC
   (4)\quad & 80\% &  \{1, 1\} \\
 \end{tabular}}
 \input{figures/example_dcc}
+
 For example, in Figure~\ref{fig:sub:dcci2}, a 20\% DCC and an 80\% DCC are inserted at buffer 3 and buffer 5, respectively. Therefore, {\fontsize{9}{10}{$\left\{B_{3,2}, B_{3,1}\right\}$ = \{0, 1\}}}, {\fontsize{9}{10}{$\left\{B_{5,2}, B_{5,1}\right\}$ = \{1, 1\}}}, and {\fontsize{9}{10}{$\left\{B_{p,2}, B_{p,1}\right\}$ = \{0, 0\}}} for $p$ = 1, 2, 4 , 6 or 7.
 
 The 20\% DCC will mitigate the aging of buffer 3 and its downstream buffers, while the 80\% DCC will aggravate the aging of buffer 5 and its downstream buffers. It can be found that, if a DCC is deployed deep in the clock tree (i.e., close to the flip-flops), the count of affected buffers is limited and thus the overall impact of aging mitigation/aggravation on $C_i$/$C_j$ may be insignificant, diminishing the benefit from deploying DCCs for aging tolerance.  To avoid the phenomena, we set a rule of prohibiting DCC deployment at a clock tree level larger/deeper than a specified boundary. This rule also greatly reduces the complexity of our SAT-based formulation because a significant fraction of buffers are excluded from being considered inserted DCC at their inputs. For example, in Figure~\ref{fig:dcctype}, those dashed buffers and their downstream buffers are excluded. 
@@ -134,11 +135,13 @@ This class targets buffers 2, 3, 4, 5, 6, 7. If the insertion of a 20\% DCC at b
 Given the DCC deployment in Figure~\ref{fig:sub:dcci2} (a 20\% DCC inserted at buffer 3 and a 80\% DCC inserted at buffer 5), if it causes a timing violation along the aging-critical path within 10 years, then the Boolean representation of the deployment,
 {\fontsize{9}{10}
 \begin{gather*}
-\left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \land \left( \{B_{5,2}, B_{5,1}\} \equiv \{1, 1\} \right),
+\left(\{B_{1,2}, B_{1,1}\} \equiv \{0, 0\} \right) \land \left(B_{2,2}, B_{2,1}\} \equiv \{0, 0\} \right) \land \left(\{B_{3,2}, B_{3,1}\} \equiv \{0, 1\} \right) \\ 
+\land \left( \{B_{4,2}, B_{4,1}\} \equiv \{0, 0\} \right) \land \left(\{B_{5,2}, B_{5,1}\} \equiv \{1, 1\} \right) \land \left( \{B_{6,2}, B_{6,1}\} \equiv \{0, 0\} \right)\\
+\land \left( \{B_{7,2}, B_{7,1}\} \equiv \{0, 0\} \right),
 \end{gather*}}equivalent to the following CNF clause,
 {\fontsize{9}{10}
 \begin{gather*}
-\left(B_{3,2} \lor \neg B_{3,1} \lor \neg B_{5,2} \lor \neg B_{5,1} \right), 
+(B_{1,2} \lor B_{1,1} \lor B_{2,2} \lor B_{2,1} \lor B_{3,2}  \lor \neg B_{3,1} \lor B_{4,2} \lor B_{4,1} \lor \neg B_{5,2} \lor \neg B_{5,1} \lor B_{6,2} \lor B_{6,1} \lor B_{7,2} \lor B_{7,1} )
 \end{gather*}}should be generated such that the solver will not output the deployment in the result if the CNF is satisfiable.
 
 Class 3 considers two buffer locations to insert DCCs, one among buffers \{2, 3, 4\} and the other one among buffers \{5, 6, 7\}; thus, there are totally 9 combinations of buffer locations. Each combination includes two buffers and thus 9 possibilities of choosing one specific DCC for each of the two buffers. Therefore, a total of 81 CNF clauses will be generated in the worst case.
