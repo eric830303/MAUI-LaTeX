@@ -67,7 +67,7 @@ Any pair of buffers along a single clock path should be constrained in this way.
 With DCC constraints and corresponding clauses, we can drastically reduce the possibilities of DCC insertions to be formulated. In the above example where the 48 clauses associated with DCC constraints are generated, the possibility count of DCC insertions drops from 16,384 to 103. In the next subsection, we describe what the 103 possibilities are and how they are translated into the final CNF representation.
 
 %(3) C
-\subsection{Timing Constraints}
+\subsection{Timing Constraints and Corresponding Clauses}
 \label{subsec:tccc}
 Given a pair of flip-flops, if there exists one logic path between them, the timing (i.e. setup-time and hold-time) constraints must be met based on the inequalities~(\ref{eq:tsu}) and~(\ref{eq:th}). Different types of DCCs reveal different influence on clock latency. Consider the lifespan specification of 10 years in Figure~\ref{fig:sub:dcci2}: the delay of each clock buffer is changed after 10 years. The clock latency of \ce{FF_i} (i.e., $C_i$) is the sum of clock buffer delays from clock source to \ce{FF_i}: 
 \begin{gather*}
@@ -151,16 +151,18 @@ Considering all of the above cases, a maximum number of 1 + 3 + 18 + 81 = 103 cl
 
 \subsection{Additive Improvement in Aging Tolerance: High-$V_{th}$ Assignment for Clock Buffers}
 \label{sec:VTA}
-In this subsection, the approach of high-$V_{th}$ assignment for clock buffers is incorporated in the proposed framework to further improve the aging tolerability of designs. Because the fragmentary high-$V_{th}$ assignment for clock buffers may decrease the feasibility/manufacturability of the proposed framework, we make a rule/definition:
+Aging tolerance is achieved by exploring/recycling useful aging-induced skews, based on the concept of timing borrowing. So far, the useful skews are progressively formed by inserting 20\%, 40\% and 80\% DCCs in the existing synthesized clock network (i.e., manipulate the aging rates of downstream clock branches of insertion points). In order to enhance the benefit of useful aging-induced skews, the approach of high-$V_{th}$ assignment for clock buffers, an additive methodology for aging tolerance, is incorporated in our framework. In this way, the manipulation dimension\footnote[8]{Because 3 types of DCCs (20\%, 40\% and 80\%) are employed in our framework, the manipulation dimension of clock skew is 3. When the approach of high-$V_{th}$ assignment for clock buffers is employed on top of the framework, the dimension becomes 4.} of clock skews can be increased, such that more useful skews can be recycled/explored, enhancing our idea of making aging useful. In the following subsections, the approach of high-$V_{th}$ assignment for clock buffers is incorporated in our framework, i.e., the approaches of DCC deployment and high-$V_{th}$ assignment for clock buffers are jointly integrated.
+
+Because the fragmentary high-$V_{th}$ assignment for clock buffers may decrease the feasibility/manufacturability of the proposed framework, we make a rule/definition:
 
 \noindent \textbf{\uline{Definition 1} (\textit{High-$V_{th}$ buffer leader}):} Once a clock buffer is selected as the \textit{high-$V_{th}$ buffer leader}, the $V_{th}$ of the selected buffer and its downstream buffers will be assigned to high $V_{th}$.
 
 In this way, we avoid the cases that the $V_{th}$ of serial buffers along a clock path interlace between high and nominal $V_{th}$. Such a rule can suppress the occurrence of fragmentary high-$V_{th}$ assignments for clock buffers and thus can increase the feasibility of the proposed framework.
 
-Conceptually, there exists one difference between DCCs and high-$V_{th}$ buffer leaders. DCCs are physical gates inserted at the inputs of clock buffers to manipulate the aging behaviors of downstream buffers. However, high-$V_{th}$ buffer leaders, selected from the existing clock buffers, indicate where we begin assigning high $V_{th}$ to the buffers toward flip-flops (exlusive).
+Conceptually, there exists one difference between DCCs and high-$V_{th}$ buffer leaders. DCCs are physical gates inserted at the inputs of clock buffers to manipulate the aging behaviors of downstream buffers. However, high-$V_{th}$ buffer leaders, selected from the existing clock buffers, indicate where we begin assigning high $V_{th}$ to the buffers toward flip-flops (exclusive).
 
 \subsection{Boolean Encoding for high-$V_{th}$ Buffer Leaders and DCCs}
-The problem of selecting high-$V_{th}$ buffer leaders is also formulated as a SAT-based problem, solved by existing SAT solver, as we do for DCC deployment. The end result of the formulation involves the selected clock buffers and locations of DCCs. Assume that there are three types of DCCs (20\%, 40\%, and 80\%) and one type of high-$V_{th}$ buffer leader. Therefore, three Boolean variables are used for encoding eight possibilities of DCC insertions and leader selections at any buffer\footnote{Any clock buffer can be inserted DCC at its input and can be selected as a high-$V_{th}$ buffer leader.}. Consider the clock buffer $p$, the eight possibilities can be encoded as follows:
+The problem of selecting high-$V_{th}$ buffer leaders is also formulated as a SAT-based problem, solved by existing SAT solver, as we do for DCC deployment. The end result of the formulation involves the selected clock buffers and locations of DCCs. Assume that there are three types of DCCs (20\%, 40\%, and 80\%) and one type of high-$V_{th}$ buffer leader. Therefore, three Boolean variables are used for encoding eight possibilities of DCC insertions and leader selections at any buffer\footnote[5]{Any clock buffer can be inserted DCC at its input and can be selected as a high-$V_{th}$ buffer leader.}. Consider the clock buffer $p$, the eight possibilities can be encoded as follows:
 
 {\small
 \begin{tabular}{  c  c  c  c  }
