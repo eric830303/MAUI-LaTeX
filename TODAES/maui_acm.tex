@@ -27,6 +27,18 @@
 %--------- DOI ---------------------
 %\acmDOI{0000001.0000001}
 
+\usepackage{amsthm}
+
+\newtheoremstyle{dotless}{}{}{\upshape}{}{\bfseries}{}{ }{}
+%\theoremstyle{definition}
+\theoremstyle{dotless}
+\newtheorem{myrule}{\uline{Rule}}
+\newtheorem{myconst}{\uline{Constraint}}
+\usepackage{hyperref}
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}
+\makeatother
 
 \usepackage{graphicx}
 \usepackage{subfigure}
