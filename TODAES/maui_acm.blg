@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: maui_acm.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: maui.bib
+Warning--no key, author in itrs2015
+Warning--no author, editor, organization, or key in itrs2015
+Warning--to sort, need author or key in itrs2015
+Warning--no key, author in itrs2015
+Warning--no key, author in itrs2015
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in itrs2015
+Warning--no author, editor, organization, or key in itrs2015
+Warning--empty publisher in amrouch2016reliability
+Warning--empty address in amrouch2016reliability
+Warning--empty publisher in chakravarthi2004comprehensive
+Warning--empty address in chakravarthi2004comprehensive
+Warning--empty publisher in chen2013novel
+Warning--empty address in chen2013novel
+Warning--empty publisher in kimizuka1999impact
+Warning--empty address in kimizuka1999impact
+Warning--empty publisher in kumar2006analytical
+Warning--empty address in kumar2006analytical
+Warning--empty publisher in kumar2007nbti
+Warning--empty address in kumar2007nbti
+Warning--empty publisher in li2011optimal
+Warning--empty address in li2011optimal
+Warning--empty publisher in mcpherson2006reliability
+Warning--empty address in mcpherson2006reliability
+Warning--empty publisher in paul2006temporal
+Warning--empty address in paul2006temporal
+Warning--empty publisher in wang2007efficient
+Warning--empty address in wang2007efficient
+Warning--empty publisher in yang2007combating
+Warning--empty address in yang2007combating
+You've used 20 entries,
+            5706 wiz_defined-function locations,
+            1411 strings with 18737 characters,
+and the built_in function-call counts, 23514 in all, are:
+= -- 2948
+> -- 873
+< -- 0
++ -- 282
+- -- 300
+* -- 1604
+:= -- 2366
+add.period$ -- 99
+call.type$ -- 20
+change.case$ -- 141
+chr.to.int$ -- 20
+cite$ -- 53
+duplicate$ -- 1953
+empty$ -- 1419
+format.name$ -- 368
+if$ -- 5818
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 87
+newline$ -- 189
+num.names$ -- 152
+pop$ -- 929
+preamble$ -- 1
+purify$ -- 241
+quote$ -- 0
+skip$ -- 732
+stack$ -- 0
+substring$ -- 1674
+swap$ -- 197
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 488
+warning$ -- 29
+while$ -- 163
+width$ -- 0
+write$ -- 367
+(There were 29 warnings)

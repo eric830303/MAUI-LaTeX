@@ -218,7 +218,7 @@ Next, it can be translated into 1 CNF clause:
 \end{equation*}}
 Any pair of buffers along a single clock path should be constrained in this way. Among buffers 1- 7 in Figure~\ref{fig:dcctype}, there are 12 pairs: $\langle1, 2\rangle$, $\langle1, 3\rangle$, $\langle1, 4\rangle$, $\langle1, 5\rangle$, $\langle1, 6\rangle$, $\langle1, 7\rangle$, $\langle2, 3\rangle$, $\langle2, 4\rangle$, $\langle3, 4\rangle$, $\langle5, 6\rangle$, $\langle5, 7\rangle$, $\langle6, 7\rangle$. Each pair translates to 1 clause and a total of 12 clauses will be generated accordingly.
 
-With leader constraint and corresponding clauses, we can drastically reduce the possibilities of DCC insertions to be formulated. In the above example where the 12 clauses associated with leader constraint are generated, the possibility count of leader selections drops from 128 to 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
+With leader constraint and corresponding clauses, we can drastically reduce the possibilities of leader selections to be formulated. In the above example where the 12 clauses associated with leader constraint are generated, the possibility count of leader selections drops from 128 ($2^7$) to 17. Subsequently, the remaining 17 possibilities are considered in the timing constraints, introduced in the next subsection.
 
 %------------------ Timing Constraints ()
 \subsection{Timing Constraints Considering DCC Deployment and High-$V_{th}$ Assignment}
