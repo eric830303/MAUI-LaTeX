@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  5 OCT 2018 20:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  6 OCT 2018 09:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2523,7 +2523,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 19.
 
 (./figures/plot_2080dcc_agr.tex
-<images/Aging_impacted_on_DCC.png, id=393, 574.7874pt x 306.9066pt>
+<images/Aging_impacted_on_DCC.png, id=391, 574.7874pt x 306.9066pt>
 File: images/Aging_impacted_on_DCC.png Graphic file (type png)
 
 <use images/Aging_impacted_on_DCC.png>
@@ -2531,23 +2531,23 @@ Package pdftex.def Info: images/Aging_impacted_on_DCC.png used on input line 4.
 
 (pdftex.def)             Requested size: 277.07452pt x 147.94101pt.
 ) (./figures/plot_boundary.tex
-<images/Boundary_level_vs_improvement.png, id=395, 582.978pt x 258.7266pt>
+<images/Boundary_level_vs_improvement.png, id=393, 582.978pt x 258.7266pt>
 File: images/Boundary_level_vs_improvement.png Graphic file (type png)
 
 <use images/Boundary_level_vs_improvement.png>
 Package pdftex.def Info: images/Boundary_level_vs_improvement.png used on input
  line 4.
 (pdftex.def)             Requested size: 277.07452pt x 122.96745pt.
-
-Underfull \vbox (badness 2221) has occurred while \output is active []
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7 \end{figure}
-                 [17.17]) (./figures/plot_Tc.tex
-<images/leo3mp_Tc.png, id=402, 675.52374pt x 404.51125pt>
+l.38 
+      [17.17] (./figures/plot_Tc.tex
+<images/leo3mp_Tc.png, id=400, 675.52374pt x 404.51125pt>
 File: images/leo3mp_Tc.png Graphic file (type png)
 
 <use images/leo3mp_Tc.png>
@@ -2566,11 +2566,8 @@ File: images/leo3mp_Cl.png Graphic file (type png)
 <use images/leo3mp_Cl.png>
 Package pdftex.def Info: images/leo3mp_Cl.png used on input line 3.
 (pdftex.def)             Requested size: 316.6592pt x 166.33879pt.
-)) (./paper/conclude.tex
-Underfull \vbox (badness 6412) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+)) (./paper/conclude.texpdfTeX warning (ext4): destination with the same identi
+fier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.4 
@@ -2603,11 +2600,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30196 strings out of 492995
- 511732 string characters out of 6132705
+ 30199 strings out of 492995
+ 511807 string characters out of 6132703
  646942 words of memory out of 5000000
  32550 multiletter control sequences out of 15000+600000
- 751251 words of font info for 445 fonts, out of 8000000 for 9000
+ 751524 words of font info for 447 fonts, out of 8000000 for 9000
  1305 hyphenation exceptions out of 8191
  60i,18n,94p,10397b,4479s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced bu
@@ -2644,7 +2641,7 @@ texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 public/newtx/zxlri.pfb>
-Output written on maui_acm.pdf (21 pages, 2462724 bytes).
+Output written on maui_acm.pdf (21 pages, 2463510 bytes).
 PDF statistics:
  540 PDF objects out of 1000 (max. 8388607)
  453 compressed objects within 5 object streams
