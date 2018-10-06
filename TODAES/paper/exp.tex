@@ -18,7 +18,7 @@ For benchmark \textit{des\_perf}, $T_{c\_fresh}$ is 773.9ps and $T_{c\_aged}$ is
 
 \subsection{Discussion: DCC Redeployment due to High-$V_{th}$ Assignment for Clock Buffers}
 As we can see, the DCC counts in Column 9 are different from those in Column 5, implying that DCCs are redeployed in the clock tree while high-$V_{th}$ assignment is incorporated in the framework. 
-To be specific, certain DCC insertions are not allowed before high-$V_{th}$ assignment is employed, due to the violation of timing constraints, The DCC insertions become allowed after high-$V_{th}$ assignment is employed, because timing constraints become met. 
+To be specific, certain DCC insertions are not allowed due to the violation of timing constraints util high-$V_{th}$ assignment for clock buffers is employed.
 
 For instance, given a clock path $P_{clk}$, a clock buffer $B$ existing along $P_{clk}$, and an associated critical path $P_{critical}$ of $P_{clk}$. Buffer $B$ is not allowed to be inserted any DCC at its input, because the resulting DCC deployment will violate the timing constraints of $P_{critical}$ (i.e., Equation~(\ref{eq:tsu}) and (\ref{eq:th}) are not met). However, when one buffer along $P_{clk}$ is selected as a high-$V_{th}$ buffer leader, buffer $B$ becomes allowed to be inserted certain DCCs at its input, because timing constraints of $P_{critical}$ become met. In short, some clock buffers will become allowed to be inserted at their inputs if high-$V_{th}$ assignment is employed, accounting for the phenomenon of DCC redeployment, as observed in Column 5 and Column 9 in Table~\ref{table:exp2}.
 
