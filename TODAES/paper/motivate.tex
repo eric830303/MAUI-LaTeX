@@ -64,7 +64,7 @@ As it can be seen, we can reduce the required $T_c$ from 115.5 to 108.5 (dominat
 
 \subsection{Assigning High-$V_{th}$ to Clock Buffers}
 \label{sec:mot:exp2}
-For the circuit in Figure~\ref{fig:sub:example}, the approach of high-$V_{th}$ assignment for clock buffers is incorporated to explore more beneficial clock skews and further reduce the required $T_c$. 
+For the circuit in Figure~\ref{fig:sub:example}, the technique of high-$V_{th}$ assignment for clock buffers is incorporated to explore more beneficial clock skews and further reduce the required $T_c$. 
 
 Given that a 20\%DCC and an 80\% DCC have been inserted at the inputs of buffers 1 and 2, respectively, we can alter buffer 2 and all its downstream buffers, by assigning them a higher threshold voltage, so as to achieve better utilization of clock skews. To include the timing information of high-$V_{th}$ buffers in the setup-time constraints, the fresh/intrinsic delay of a high-$V_{th}$ buffer is assumed to be 1.15X longer than that of a nominal-$V_{th}$ buffer, and aging rate of high-$V_{th}$ buffer, receiving a clock duty cycle of 80\%, is 8\%. %\cite{gomez2016early}\footnote{The aging rates of high-$V_{th}$ buffers are lower than those of nominal-$V_{th}$ buffers, because the higher/lower $V_{th}$ leads to lower/higher aging rate.}. 
 Consider the new aging factors in the setup-time constraints on \ce{L_{XY}} and \ce{L_{YZ}}:
