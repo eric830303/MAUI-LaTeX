@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  10 OCT 2018 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  10 OCT 2018 11:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2649,15 +2649,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
  (./maui_acm.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
+Package rerunfilecheck Info: File `maui_acm.out' has not changed.
+(rerunfilecheck)             Checksum: DF063B38ED75AC09E276BD689EB0FCEA;8079.
 
 
-Package rerunfilecheck Warning: File `maui_acm.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `maui_acm.out':
-(rerunfilecheck)             Before: 87C2D907B01DFBC7F2B3DDC568B5D927;8082
-(rerunfilecheck)             After:  22A06B669F63152F3F1E7593F3E9D91C;8079.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  )
 (\end occurred inside a group at level 1)
