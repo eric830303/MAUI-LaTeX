@@ -16,7 +16,7 @@ The overall flow of our framework is depicted in Figure~\ref{fig:flow}, where we
 \label{subsec:eddcd}
 The problem of DCC deployment needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of $N$ types of DCCs can be chosen. Including the DCC-free case where no DCC is inserted, there are ($N$ + 1) possibilities of DCC insertion for each clock buffer. We denote a clock buffer by $p\left(1 \leq p \leq P\right)$ where $P$ is the total count of clock buffers and $p$ is buffer index. For each clock buffer, there exist two types of Boolean variables, {\fontsize{9}{10}$B_{p,q}$} ($1 \leq q \leq Q $, $Q = \lceil \lg (N + 1)\rceil$), where {\fontsize{9}{10}$\left\{B_{p,1}, B_{p,2},\dotsc, B_{p,Q}\right\}$} encode the aforementioned ($N$ + 1) possibilities of DCC insertion at the input of buffer $p$.
 
-Without loss of generality, we assume $N$ = 3. Thus, there are three types of DCCs, assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, three Boolean variables are used for encoding four possibilities of DCC at any buffer. The four possibilities can be encoded as follows:
+Without loss of generality, we assume $N$ = 3. Thus, there are three types of DCCs, assumed to be 20\%, 40\%, and 80\% DCCs, as shown in Figure~\ref{fig:dcctype}. Therefore, three Boolean variables are used for encoding 4 possibilities of DCC at any buffer. The 4 possibilities can be encoded as follows:
 
 %(5) DATE 2018
 {\small

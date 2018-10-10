@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  9 OCT 2018 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  10 OCT 2018 10:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2649,8 +2649,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
  (./maui_acm.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
-Package rerunfilecheck Info: File `maui_acm.out' has not changed.
-(rerunfilecheck)             Checksum: 87C2D907B01DFBC7F2B3DDC568B5D927;8082.
+
+
+Package rerunfilecheck Warning: File `maui_acm.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `maui_acm.out':
+(rerunfilecheck)             Before: 87C2D907B01DFBC7F2B3DDC568B5D927;8082
+(rerunfilecheck)             After:  22A06B669F63152F3F1E7593F3E9D91C;8079.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  )
 (\end occurred inside a group at level 1)
@@ -2659,7 +2666,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
 ### bottom level 
 Here is how much of TeX's memory you used:
  30183 strings out of 492995
- 511618 string characters out of 6132705
+ 511618 string characters out of 6132703
  646951 words of memory out of 5000000
  32548 multiletter control sequences out of 15000+600000
  749225 words of font info for 435 fonts, out of 8000000 for 9000
@@ -2693,7 +2700,7 @@ texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 public/newtx/zxlri.pfb>
-Output written on maui_acm.pdf (21 pages, 2460869 bytes).
+Output written on maui_acm.pdf (21 pages, 2460883 bytes).
 PDF statistics:
  536 PDF objects out of 1000 (max. 8388607)
  449 compressed objects within 5 object streams
